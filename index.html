@@ -1589,7 +1589,7 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
    The cassette library is written first; machine references remain unchanged. */
 (async function(){
  if(!/^https?:$/.test(location.protocol))return;
- const FILE='hexmap-all-data.json';
+ const FILE='official−hexmap-all-data.json'; // GitHub repository's exact filename (U+2212)
  const KEY_C='hexmap-cassettes-v2',KEY_M='hexmap-machine-library-v18';
  const state=document.createElement('div');state.id='officialSyncStatus';
  state.style.cssText='position:fixed;right:8px;bottom:8px;z-index:9999;padding:7px 11px;border-radius:9px;background:#152538;color:white;font:12px sans-serif;max-width:80vw';
@@ -1623,7 +1623,7 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
    if(!alreadyReloaded){sessionStorage.setItem(marker,fingerprint);state.textContent='✅ 一括JSONを優先して反映。画面を更新します…';location.reload();return;}
    finish('✅ 一括JSONを優先して読み込みました');
   }else{finish('✅ 一括JSONは最新版です');}
- }catch(err){console.warn('[combined auto sync]',err);finish('⚠️ 一括JSONの自動読込失敗：端末のデータを維持');}
+ }catch(err){console.warn('[combined auto sync]',err);finish('⚠️ 一括JSON読込失敗：'+String(err.message||err)+'（端末データ維持）');}
 })();
 </script>
 </html>
