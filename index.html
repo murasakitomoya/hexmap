@@ -95,7 +95,7 @@
   #battleTab #mapwrap { max-height: 270px; }
   #battleTab #map { max-height: 256px; }
 }
-</style><main><div class="tabs"><button class="active" id="tabBattle">⚔️ ヘクスマップ</button><button id="tabData">📋 機体データ</button><button id="tabRegister">🔧 機体登録</button></div><div id="dataTab" style="display:none"><h2>📋 アルファ・ブラボー 機体データ</h2><div id="unitDataCards"></div></div><div id="battleTab"><h2>汎用ヘクスマップ Ver.2.1.1｜公式データ同期 修正版</h2><div id="mapwrap"><svg aria-label="15列11行のヘクスマップ" id="map" viewbox="0 0 700 465"></svg></div><button id="phaseChange" type="button"><span class="phase-num" id="phaseA">0</span><span>フェイズチェンジ</span><span class="phase-num" id="phaseB">0</span></button><section aria-label="ユニット状態" class="panel"><div class="unitstats"><div class="unitcard chosen" id="cardA"><button id="unitA" type="button">🔴 アルファ</button><div class="unitloc" id="locA"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignA" placeholder="🔎 機体名を検索" type="search"/><select id="assignA" style="width:100%"></select><button id="setA" type="button">この機体をセット</button></details><div class="muted" id="machineA"></div><div class="transform-control" id="transformA"></div><div class="numbers"><label>HP<input id="hpA" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enA" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteA" placeholder="状態・装備など" rows="3"></textarea></label></details></div><div class="unitcard" id="cardB"><button id="unitB" type="button">🔵 ブラボー</button><div class="unitloc" id="locB"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignB" placeholder="🔎 機体名を検索" type="search"/><select id="assignB" style="width:100%"></select><button id="setB" type="button">この機体をセット</button></details><div class="muted" id="machineB"></div><div class="transform-control" id="transformB"></div><div class="numbers"><label>HP<input id="hpB" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enB" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteB" placeholder="状態・装備など" rows="3"></textarea></label></details></div></div></section><details class="panel compact-toggle" id="optionGear"><summary id="optionGearTitle">オプション兵装 ♟️🛡️🪖</summary>
+</style><main><div class="tabs"><button class="active" id="tabBattle">⚔️ ヘクスマップ</button><button id="tabData">📋 機体データ</button><button id="tabRegister">🔧 機体登録</button></div><div id="dataTab" style="display:none"><h2>📋 アルファ・ブラボー 機体データ</h2><div id="unitDataCards"></div></div><div id="battleTab"><h2>汎用ヘクスマップ Ver.2.1.1｜保存保護 修正版</h2><div id="mapwrap"><svg aria-label="15列11行のヘクスマップ" id="map" viewbox="0 0 700 465"></svg></div><button id="phaseChange" type="button"><span class="phase-num" id="phaseA">0</span><span>フェイズチェンジ</span><span class="phase-num" id="phaseB">0</span></button><section aria-label="ユニット状態" class="panel"><div class="unitstats"><div class="unitcard chosen" id="cardA"><button id="unitA" type="button">🔴 アルファ</button><div class="unitloc" id="locA"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignA" placeholder="🔎 機体名を検索" type="search"/><select id="assignA" style="width:100%"></select><button id="setA" type="button">この機体をセット</button></details><div class="muted" id="machineA"></div><div class="transform-control" id="transformA"></div><div class="numbers"><label>HP<input id="hpA" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enA" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteA" placeholder="状態・装備など" rows="3"></textarea></label></details></div><div class="unitcard" id="cardB"><button id="unitB" type="button">🔵 ブラボー</button><div class="unitloc" id="locB"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignB" placeholder="🔎 機体名を検索" type="search"/><select id="assignB" style="width:100%"></select><button id="setB" type="button">この機体をセット</button></details><div class="muted" id="machineB"></div><div class="transform-control" id="transformB"></div><div class="numbers"><label>HP<input id="hpB" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enB" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteB" placeholder="状態・装備など" rows="3"></textarea></label></details></div></div></section><details class="panel compact-toggle" id="optionGear"><summary id="optionGearTitle">オプション兵装 ♟️🛡️🪖</summary>
 <div id="gearAccordion" class="gear-accordion">
 <div class="gear-choice-row"><b>♟️ トークン</b><button type="button" data-gear-kind="token" data-gear-side="0">🔴 アルファ</button><button type="button" data-gear-kind="token" data-gear-side="1">🔵 ブラボー</button></div>
 <div class="gear-choice-row"><b>🛡️ シールド</b><button type="button" data-gear-kind="shield" data-gear-side="0">🔴 アルファ</button><button type="button" data-gear-kind="shield" data-gear-side="1">🔵 ブラボー</button></div>
@@ -836,11 +836,25 @@ $('searchEditMachine').addEventListener('input',refreshEditList);
 $('editMachine').onchange=()=>{let m=library.find(x=>x.id===$('editMachine').value);showDraft(m||blank())};$('newMachine').onclick=()=>{showDraft(blank());refreshEditList()};$('addWeapon').onclick=()=>editorWeapon();$('addSkill').onclick=()=>editorSkill();$('addShield').onclick=()=>editorShield();$('addEquipment').onclick=()=>editorEquipment();
 function readShot(row,key){let s=row.querySelector(`[data-shot="${key}"]`).value.trim();return s&&!/^(不可|なし)$/i.test(s)&&Number.isFinite(Number(s))?Number(s):null}
 function readDraft(){let m=blank();m.id=editingId||'custom-'+Date.now()+'-'+Math.floor(Math.random()*1e6);m.name=$('regName').value.trim();m.pilot=$('regPilot').value.trim();for(let k of ['Hp','En','Ap'])m[k.toLowerCase()]=Number($('reg'+k).value)||0;for(let n of statNames)m.stats[n]=Number(document.querySelector(`[data-stat="${n}"]`).value)||0;m.source=$('regSource').value;m.tokens=readTokenEditor();m.forms=readForms();m.weapons=[...document.querySelectorAll('#weaponEditor .weapon-row')].map(row=>({cassetteId:row.dataset.cassetteId||'',name:row.querySelector('[data-equip-label]')?.value.trim()||row.querySelector('[data-equip-select]')?.selectedOptions[0]?.text||''})).filter(x=>x.cassetteId&&x.cassetteId!=='__missing__');m.shields=[...document.querySelectorAll('.shield-row')].map(box=>{const get=k=>box.querySelector(`[data-f="${k}"]`).value;return {name:get('name').trim(),physical:Math.max(0,Number(get('physical'))||0),optical:Math.max(0,Number(get('optical'))||0),penalty:Number(get('penalty'))||0,maxUses:Math.max(1,Math.floor(Number(get('maxUses'))||3)),largeShield:box.querySelector('[data-f="largeShield"]').checked,notes:get('notes')}}).filter(x=>x.name);m.equipment=[...document.querySelectorAll('.equipment-row')].map(box=>{let get=k=>box.querySelector(`[data-f="${k}"]`).value;return {name:get('name').trim(),durability:Math.max(0,Number(get('durability'))||0),initial:'装備中',notes:get('notes')}}).filter(x=>x.name);m.skills=[...document.querySelectorAll('#skillEditor .skill-row')].map(row=>({cassetteId:row.dataset.cassetteId||'',name:row.querySelector('[data-equip-label]')?.value.trim()||row.querySelector('[data-equip-select]')?.selectedOptions[0]?.text||''})).filter(x=>x.cassetteId&&x.cassetteId!=='__missing__');for(const [kind,selector] of [['weapons','#weaponEditor .weapon-row'],['skills','#skillEditor .skill-row']]){const rows=[...document.querySelectorAll(selector)];m[kind].forEach((item,i)=>{const ref=rows[i]?.dataset.cassetteId;if(ref)item.cassetteId=ref;if(rows[i]?._pendingCassette)item.pendingCassette=JSON.parse(JSON.stringify(rows[i]._pendingCassette))})}return m}
-$('saveMachine').onclick=()=>{const unresolved=[...document.querySelectorAll('#weaponEditor .weapon-row,#skillEditor .skill-row')].filter(row=>!row.dataset.cassetteId||row.dataset.cassetteId==='__missing__');if(unresolved.length){$('saveStatus').textContent='登録中止：未選択・未登録のカセットが'+unresolved.length+'件あります。ライブラリで登録してから選択してください。';return;}let m=readDraft();try{const d=JSON.parse(localStorage.getItem('hexmap-cassettes-v2'))||{};const invalid=['weapons','skills'].flatMap(k=>(m[k]||[]).filter(x=>!(d[k]||[]).some(c=>c.id===x.cassetteId)));if(invalid.length){$('saveStatus').textContent='登録中止：存在しないカセットIDが'+invalid.length+'件あります。';return}}catch(e){$('saveStatus').textContent='カセットデータを読み込めません。';return}if(!m.name){$('saveStatus').textContent='機体名を入力してください。';return}const cassetteCommit=window.hexmapCommitDraftCassettes;if(typeof cassetteCommit==='function'){const result=cassetteCommit(m);if(!result.ok){$('saveStatus').textContent='登録中止：'+result.message;return}m=result.machine;}/* Preserve cassette IDs and draft references; resolve master data at display/combat time. */let i=library.findIndex(x=>x.id===m.id);const oldLibrary=JSON.stringify(library);if(i>=0)library[i]=m;else library.push(m);try{const serialized=JSON.stringify(library);localStorage.setItem(key,serialized);if(localStorage.getItem(key)!==serialized)throw Error('機体データ保存後の照合に失敗');}catch(err){library=JSON.parse(oldLibrary);$('saveStatus').textContent='⚠️ 機体保存失敗：'+err.message+'。JSONバックアップを確認してください。';alert($('saveStatus').textContent);return}editingId=m.id;for(let u=0;u<2;u++){if(combat[u].machine===m.id){combat[u].equipment=(m.equipment||[]).map(eq=>({durability:Math.max(0,Number(eq.durability)||0),status:'装備中'}));combat[u].shields=(m.shields||[]).map(sh=>({physical:Math.max(0,Number(sh.physical)||0),optical:Math.max(0,Number(sh.optical)||0),status:'装備中',uses:0}));}}refreshEditList();refreshAssignments();renderTokenBattle();$('saveStatus').textContent='登録しました：'+m.name+'。対戦画面で「この機体をセット」を押すと装備も反映されます。'};
+$('saveMachine').onclick=()=>{let m=readDraft();
+  const previous=library.find(x=>x.id===m.id);
+  if(previous){for(const kind of ['weapons','skills']){
+    const rows=[...document.querySelectorAll(kind==='weapons'?'#weaponEditor .weapon-row':'#skillEditor .skill-row')];
+    const preserved=[];
+    rows.forEach((row,i)=>{
+      if(row.dataset.cassetteId&&row.dataset.cassetteId!=='__missing__')return;
+      const old=(previous[kind]||[])[i];
+      if(old)preserved.push({index:i,item:JSON.parse(JSON.stringify(old))});
+    });
+    for(const {index,item} of preserved)m[kind].splice(Math.min(index,m[kind].length),0,item);
+  }}
+  const unresolvedCount=['weapons','skills'].reduce((n,k)=>n+(m[k]||[]).filter(x=>!x.cassetteId).length,0);
+  if(unresolvedCount)console.warn('未登録カセット参照を保持して保存',unresolvedCount);
+  if(!m.name){$('saveStatus').textContent='機体名を入力してください。';return}const cassetteCommit=window.hexmapCommitDraftCassettes;if(typeof cassetteCommit==='function'){const result=cassetteCommit(m);if(!result.ok){$('saveStatus').textContent='登録中止：'+result.message;return}m=result.machine;}/* Preserve cassette IDs and draft references; resolve master data at display/combat time. */let i=library.findIndex(x=>x.id===m.id);const oldLibrary=JSON.stringify(library);if(i>=0)library[i]=m;else library.push(m);try{const serialized=JSON.stringify(library);localStorage.setItem(key,serialized);if(localStorage.getItem(key)!==serialized)throw Error('機体データ保存後の照合に失敗');}catch(err){library=JSON.parse(oldLibrary);$('saveStatus').textContent='⚠️ 機体保存失敗：'+err.message+'。JSONバックアップを確認してください。';alert($('saveStatus').textContent);return}editingId=m.id;for(let u=0;u<2;u++){if(combat[u].machine===m.id){combat[u].equipment=(m.equipment||[]).map(eq=>({durability:Math.max(0,Number(eq.durability)||0),status:'装備中'}));combat[u].shields=(m.shields||[]).map(sh=>({physical:Math.max(0,Number(sh.physical)||0),optical:Math.max(0,Number(sh.optical)||0),status:'装備中',uses:0}));}}refreshEditList();refreshAssignments();renderTokenBattle();$('saveStatus').textContent='登録しました：'+m.name+'。対戦画面で「この機体をセット」を押すと装備も反映されます。'};
 $('deleteMachine').onclick=()=>{if(!editingId||!confirm('この機体を削除しますか？'))return;library=library.filter(m=>m.id!==editingId);saveLibrary();showDraft(blank());refreshEditList();refreshAssignments()};
 function downloadJSON(data,filename){let url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000)}
 $('exportMachines').onclick=()=>downloadJSON({format:'hexmap-machines-v18',machines:library},'hexmap-machines.json');
-$('importMachines').onchange=async e=>{try{let file=e.target.files[0];if(!file)return;let data=JSON.parse(await file.text());if(data.format!=='hexmap-machines-v18'||!Array.isArray(data.machines))throw Error('機体データ形式ではありません');for(let m of data.machines){if(!m||typeof m.name!=='string'||!Array.isArray(m.weapons)||!Array.isArray(m.skills))continue;let existing=library.findIndex(x=>x.id===m.id);if(existing>=0)library[existing]=m;else library.push(m)}saveLibrary();refreshEditList();refreshAssignments();$('saveStatus').textContent='JSONを読み込みました'}catch(err){alert('読み込み失敗：'+err.message)}e.target.value=''};
+$('importMachines').onchange=async e=>{try{let file=e.target.files[0];if(!file)return;let data=JSON.parse(await file.text());if(data.format!=='hexmap-machines-v18'||!Array.isArray(data.machines))throw Error('機体データ形式ではありません');for(let m of data.machines){if(!m||typeof m.name!=='string'||!Array.isArray(m.weapons)||!Array.isArray(m.skills))continue;let existing=library.findIndex(x=>x.id===m.id);if(existing>=0)library[existing]=m;else library.push(m)}const saved=JSON.stringify(library);localStorage.setItem(key,saved);if(localStorage.getItem(key)!==saved)throw Error('JSONの端末保存に失敗');refreshEditList();refreshAssignments();$('saveStatus').textContent='JSONを読み込み、端末に保存しました'}catch(err){alert('読み込み失敗：'+err.message)}e.target.value=''};
 $('restoreMachines').onclick=()=>{if(!confirm('配布版の機体を初期状態に戻しますか？（その他の機体は残ります）'))return;for(let original of defaults){let m=JSON.parse(JSON.stringify(original));let idx=library.findIndex(x=>x.id===m.id||x.name===m.name);if(idx>=0)library[idx]=m;else library.push(m)}saveLibrary();refreshEditList();refreshAssignments();$('saveStatus').textContent='配布版の機体を復元しました'};
 // Parse the user-provided sheet format; never guess unknown fields.
 function parseSheet(text){
@@ -1224,12 +1238,12 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
 
  const normalize=x=>String(x??'').trim();const freshId=type=>type+'-'+(Date.now().toString(36))+'-'+Math.random().toString(36).slice(2,9);
  const sourceRecord=(item,m)=>({machine:m?.name||'登録時',name:item.name||'',notes:item.notes||'',source:'',date:'移行時'});
- function seed(){const data={weapons:[],skills:[]};for(const kind of ['weapons','skills']){
-  const old=get(kind==='weapons'?'hexmap-weapon-hangar-v1':'hexmap-skill-library-v1',[]);
-  for(const m of library)for(const item of m[kind]||[]){if(!item.name)continue;let existing=data[kind].find(x=>x.name===item.name&&JSON.stringify({...x.data,name:null,cassetteId:null})===JSON.stringify({...item,name:null,cassetteId:null}));if(!existing){existing={id:freshId(kind==='weapons'?'WP':'SK'),name:item.name,aliases:[],data:clone(item),sources:[]};data[kind].push(existing)}existing.sources.push(sourceRecord(item,m));item.cassetteId=existing.id}
-  for(const item of old){if(!item?.name)continue;let existing=data[kind].find(x=>x.name===item.name);if(!existing){existing={id:freshId(kind==='weapons'?'WP':'SK'),name:item.name,aliases:[],data:clone(item),sources:[]};data[kind].push(existing)}else if(kind==='skills')existing.aliases=[...new Set([...(existing.aliases||[]),...(item.aliases||[])])];existing.sources.push(sourceRecord(item,null))}
+ // Cassette master is authoritative. Never manufacture a master from machine snapshots.
+ function seed(){
+   const bundled=clone(VERIFIED_BACKUP_CASSETTES);
+   if(Array.isArray(bundled.weapons)&&Array.isArray(bundled.skills))return bundled;
+   return {weapons:[],skills:[]};
  }
- return data}
  if(!db||!Array.isArray(db.weapons)||!Array.isArray(db.skills)){db=seed();put(KEY,db);saveLibrary()}
  // v19.9.86: Keep saved cassette edits authoritative; recover missing entries
  // from the user's supplied cassette backup without replacing existing IDs/names.
@@ -1243,17 +1257,23 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
   }
   if(added)put(KEY,db);
  }
- recoverBackupCassettes();
+ // Do not silently restore bundled backup cassettes over the user catalog.
  function findCassette(kind,item){
-  if(!item?.cassetteId)return null;
-  const byId=db[kind].find(x=>x.id===item.cassetteId);
-  if(byId)return byId;
-  // Legacy machine exports can carry different cassette IDs. Only accept a unique exact-name match.
-  const matches=db[kind].filter(x=>x.name===item.name||(x.aliases||[]).includes(item.name));
-  return matches.length===1?matches[0]:null;
+   if(!item?.cassetteId)return null;
+   // IDs are the only reliable link. Never silently relink by a stale machine name.
+   return db[kind].find(x=>x.id===item.cassetteId)||null;
  }
-
- function resolve(m){if(!m)return m;const result=clone(m);for(const kind of ['weapons','skills'])result[kind]=(m[kind]||[]).map(item=>{if(!item.cassetteId)return clone(item);const c=findCassette(kind,item);if(!c)return {...clone(item),cassetteMissing:true};return window.hexmapSimpleResolveSkill?window.hexmapSimpleResolveSkill({...clone(c.data),name:item.name||c.name,notes:kind==='skills'?(c.data.displayText||c.data.notes||''):c.data.notes,cassetteId:c.id,originalCassetteId:item.cassetteId,cassetteRelinked:c.id!==item.cassetteId},kind):{...clone(c.data),name:item.name||c.name,notes:kind==='skills'?(c.data.displayText||c.data.notes||''):c.data.notes,cassetteId:c.id,originalCassetteId:item.cassetteId,cassetteRelinked:c.id!==item.cassetteId}});return result}
+ function resolve(m){
+   if(!m)return m;
+   const result=clone(m);
+   for(const kind of ['weapons','skills'])result[kind]=(m[kind]||[]).map(item=>{
+     const c=findCassette(kind,item);
+     if(!c)return {...clone(item),cassetteMissing:true};
+     const canonical={...clone(c.data),name:c.name,notes:kind==='skills'?(c.data.displayText||c.data.notes||''):c.data.notes,cassetteId:c.id};
+     return window.hexmapSimpleResolveSkill?window.hexmapSimpleResolveSkill(canonical,kind):canonical;
+   });
+   return result;
+ }
  window.resolveCassettes=resolve;
  function persist(){
   try{
@@ -1536,6 +1556,33 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
   #map { max-height: 520px !important; }
 }
 </style>
+<script>
+/* Ver 2.1.3: combined machine + authoritative cassette backup. */
+(function(){
+ const MACHINE='hexmap-machine-library-v18', CASSETTE='hexmap-cassettes-v2';
+ const parse=(key)=>{const raw=localStorage.getItem(key);if(!raw)throw Error(key+' の保存データがありません');return JSON.parse(raw)};
+ const download=(obj,name)=>{const url=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000)};
+ const validMachines=x=>Array.isArray(x)&&x.every(m=>m&&typeof m.id==='string'&&typeof m.name==='string'&&Array.isArray(m.weapons)&&Array.isArray(m.skills));
+ const validCassettes=x=>x&&Array.isArray(x.weapons)&&Array.isArray(x.skills)&&['weapons','skills'].every(k=>x[k].every(c=>c&&typeof c.id==='string'&&typeof c.name==='string'));
+ const panel=document.createElement('div');panel.className='panel';panel.id='combinedBackupPanel';
+ panel.innerHTML='<h3>📦 機体＋カセット 一括バックアップ</h3><p class="muted">武装・スキルのカセットが正本です。機体はそのIDを参照します。2種類を1つのJSONで保存・復元できます。</p>';
+ const save=document.createElement('button');save.type='button';save.textContent='💾 すべてを1つのJSONに保存';
+ const load=document.createElement('label');load.textContent='📂 一括JSONを読み込む';load.style.cssText='display:inline-block;border:1px solid #aab4c0;border-radius:7px;padding:9px;margin:6px;cursor:pointer';
+ const input=document.createElement('input');input.type='file';input.accept='.json,application/json';input.hidden=true;load.appendChild(input);
+ const msg=document.createElement('p');msg.className='muted';panel.append(save,load,msg);
+ const register=document.getElementById('registerTab');register.insertBefore(panel,register.firstChild);
+ save.onclick=()=>{try{const machines=parse(MACHINE),cassettes=parse(CASSETTE);if(!validMachines(machines)||!validCassettes(cassettes))throw Error('保存データの形式が不正です');download({format:'hexmap-combined-v1',exportedAt:new Date().toISOString(),cassettes,machines},'hexmap-all-data.json');msg.textContent='機体'+machines.length+'機・武装'+cassettes.weapons.length+'件・スキル'+cassettes.skills.length+'件を保存しました';}catch(e){alert('一括保存失敗：'+e.message)}};
+ input.onchange=async()=>{try{const file=input.files?.[0];if(!file)return;const obj=JSON.parse(await file.text());if(obj.format!=='hexmap-combined-v1'||!validMachines(obj.machines)||!validCassettes(obj.cassettes))throw Error('一括バックアップ形式ではありません');
+ const cIds={weapons:new Set(obj.cassettes.weapons.map(x=>x.id)),skills:new Set(obj.cassettes.skills.map(x=>x.id))};let missing=0;for(const m of obj.machines)for(const kind of ['weapons','skills'])for(const item of m[kind])if(!cIds[kind].has(item.cassetteId))missing++;
+ if(!confirm('機体'+obj.machines.length+'機・武装'+obj.cassettes.weapons.length+'件・スキル'+obj.cassettes.skills.length+'件を復元します。\n現在の機体・カセットを置き換えます。\n未解決のカセット参照 '+missing+'件は変更せず残します。続けますか？'))return;
+ // Restore atomically as far as localStorage allows. Roll back both keys on failure.
+ const beforeM=localStorage.getItem(MACHINE),beforeC=localStorage.getItem(CASSETTE);
+ try{localStorage.setItem(CASSETTE,JSON.stringify(obj.cassettes));localStorage.setItem(MACHINE,JSON.stringify(obj.machines));if(localStorage.getItem(CASSETTE)!==JSON.stringify(obj.cassettes)||localStorage.getItem(MACHINE)!==JSON.stringify(obj.machines))throw Error('保存結果が一致しません')}
+ catch(e){if(beforeM===null)localStorage.removeItem(MACHINE);else localStorage.setItem(MACHINE,beforeM);if(beforeC===null)localStorage.removeItem(CASSETTE);else localStorage.setItem(CASSETTE,beforeC);throw e}
+ alert('一括復元しました。画面を更新して反映します。未解決の参照：'+missing+'件');location.reload();
+ }catch(e){alert('一括読込失敗：'+e.message)}finally{input.value=''}};
+})();
+</script>
 <script id="official-sync-v21">
 /* Ver 2.1: official one-way sync. Edit local files or use ?editor=1 to prevent replacement while curating. */
 (function(){
@@ -1577,15 +1624,18 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
       const note=document.createElement('div');note.textContent='参照先のない項目は保持しますが、カセット由来の性能は利用できない場合があります。';panel.appendChild(note);
     };
     warnMissing();
-    const nextC=JSON.stringify(c.data),nextM=JSON.stringify(m.machines);
-    const oldC=localStorage.getItem(KEY_C),oldM=localStorage.getItem(KEY_M);
-    if(oldC===nextC&&oldM===nextM){show(missing.length?'⚠️ 公式データは最新版（参照不一致 '+missing.length+'件）':'✅ 公式データは最新版');return}
-    // Avoid a partial update if localStorage fails. Keep old data on failure.
-    try{localStorage.setItem(KEY_C,nextC);localStorage.setItem(KEY_M,nextM);
-      if(localStorage.getItem(KEY_C)!==nextC||localStorage.getItem(KEY_M)!==nextM)throw Error('保存内容の照合失敗');
-    }catch(e){try{oldC===null?localStorage.removeItem(KEY_C):localStorage.setItem(KEY_C,oldC);oldM===null?localStorage.removeItem(KEY_M):localStorage.setItem(KEY_M,oldM)}catch(_){}throw e}
-    state.textContent=missing.length?'⚠️ 公式データ更新完了（参照不一致 '+missing.length+'件）。再読み込みします…':'✅ 公式データを更新しました。画面を再読み込みします…';
-    location.reload();
+    // Local edits and manual JSON imports are authoritative. Official files only seed absent storage.
+    const targets=[[KEY_C,c.data],[KEY_M,m.machines]];
+    let seeded=0;
+    for(const [key,data] of targets){
+      if(localStorage.getItem(key)!==null)continue;
+      const value=JSON.stringify(data);
+      localStorage.setItem(key,value);
+      if(localStorage.getItem(key)!==value)throw Error('公式データの初回保存に失敗');
+      seeded++;
+    }
+    if(seeded){state.textContent='✅ 未登録の公式データを初期登録しました。再読み込みします…';location.reload();return;}
+    show(missing.length?'⚠️ 端末の保存データを維持（公式参照不一致 '+missing.length+'件）':'✅ 端末の保存データを維持');
   }).catch(err=>{console.warn('[official sync]',err);show('⚠️ 公式データを取得できません。端末のデータを使用します')});
 })();
 </script>
