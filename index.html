@@ -95,7 +95,7 @@
   #battleTab #mapwrap { max-height: 270px; }
   #battleTab #map { max-height: 256px; }
 }
-</style><main><div class="tabs"><button class="active" id="tabBattle">⚔️ ヘクスマップ</button><button id="tabData">📋 機体データ</button><button id="tabRegister">🔧 機体登録</button></div><div id="dataTab" style="display:none"><h2>📋 アルファ・ブラボー 機体データ</h2><div id="unitDataCards"></div></div><div id="battleTab"><h2>汎用ヘクスマップ Ver.2.1.1 修正テスト｜公式データ同期</h2><div id="mapwrap"><svg aria-label="15列11行のヘクスマップ" id="map" viewbox="0 0 700 465"></svg></div><button id="phaseChange" type="button"><span class="phase-num" id="phaseA">0</span><span>フェイズチェンジ</span><span class="phase-num" id="phaseB">0</span></button><section aria-label="ユニット状態" class="panel"><div class="unitstats"><div class="unitcard chosen" id="cardA"><button id="unitA" type="button">🔴 アルファ</button><div class="unitloc" id="locA"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignA" placeholder="🔎 機体名を検索" type="search"/><select id="assignA" style="width:100%"></select><button id="setA" type="button">この機体をセット</button></details><div class="muted" id="machineA"></div><div class="transform-control" id="transformA"></div><div class="numbers"><label>HP<input id="hpA" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enA" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteA" placeholder="状態・装備など" rows="3"></textarea></label></details></div><div class="unitcard" id="cardB"><button id="unitB" type="button">🔵 ブラボー</button><div class="unitloc" id="locB"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignB" placeholder="🔎 機体名を検索" type="search"/><select id="assignB" style="width:100%"></select><button id="setB" type="button">この機体をセット</button></details><div class="muted" id="machineB"></div><div class="transform-control" id="transformB"></div><div class="numbers"><label>HP<input id="hpB" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enB" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteB" placeholder="状態・装備など" rows="3"></textarea></label></details></div></div></section><details class="panel compact-toggle" id="optionGear"><summary id="optionGearTitle">オプション兵装 ♟️🛡️🪖</summary>
+</style><main><div class="tabs"><button class="active" id="tabBattle">⚔️ ヘクスマップ</button><button id="tabData">📋 機体データ</button><button id="tabRegister">🔧 機体登録</button></div><div id="dataTab" style="display:none"><h2>📋 アルファ・ブラボー 機体データ</h2><div id="unitDataCards"></div></div><div id="battleTab"><h2>汎用ヘクスマップ Ver.2.1.1｜公式データ同期 修正版</h2><div id="mapwrap"><svg aria-label="15列11行のヘクスマップ" id="map" viewbox="0 0 700 465"></svg></div><button id="phaseChange" type="button"><span class="phase-num" id="phaseA">0</span><span>フェイズチェンジ</span><span class="phase-num" id="phaseB">0</span></button><section aria-label="ユニット状態" class="panel"><div class="unitstats"><div class="unitcard chosen" id="cardA"><button id="unitA" type="button">🔴 アルファ</button><div class="unitloc" id="locA"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignA" placeholder="🔎 機体名を検索" type="search"/><select id="assignA" style="width:100%"></select><button id="setA" type="button">この機体をセット</button></details><div class="muted" id="machineA"></div><div class="transform-control" id="transformA"></div><div class="numbers"><label>HP<input id="hpA" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enA" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteA" placeholder="状態・装備など" rows="3"></textarea></label></details></div><div class="unitcard" id="cardB"><button id="unitB" type="button">🔵 ブラボー</button><div class="unitloc" id="locB"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignB" placeholder="🔎 機体名を検索" type="search"/><select id="assignB" style="width:100%"></select><button id="setB" type="button">この機体をセット</button></details><div class="muted" id="machineB"></div><div class="transform-control" id="transformB"></div><div class="numbers"><label>HP<input id="hpB" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enB" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteB" placeholder="状態・装備など" rows="3"></textarea></label></details></div></div></section><details class="panel compact-toggle" id="optionGear"><summary id="optionGearTitle">オプション兵装 ♟️🛡️🪖</summary>
 <div id="gearAccordion" class="gear-accordion">
 <div class="gear-choice-row"><b>♟️ トークン</b><button type="button" data-gear-kind="token" data-gear-side="0">🔴 アルファ</button><button type="button" data-gear-kind="token" data-gear-side="1">🔵 ブラボー</button></div>
 <div class="gear-choice-row"><b>🛡️ シールド</b><button type="button" data-gear-kind="shield" data-gear-side="0">🔴 アルファ</button><button type="button" data-gear-kind="shield" data-gear-side="1">🔵 ブラボー</button></div>
@@ -1556,15 +1556,35 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
     if(c?.format!=='hexmap-cassettes-backup-v1'||!Array.isArray(c.data?.weapons)||!Array.isArray(c.data?.skills)||!c.data.weapons.every(validId)||!c.data.skills.every(validId))throw Error('カセット形式不一致');
     if(m?.format!=='hexmap-machines-v18'||!Array.isArray(m.machines)||!m.machines.every(validId))throw Error('機体形式不一致');
     const ids={weapons:new Set(c.data.weapons.map(x=>x.id)),skills:new Set(c.data.skills.map(x=>x.id))};
-    for(const machine of m.machines)for(const kind of ['weapons','skills'])for(const item of machine[kind]||[])if(!ids[kind].has(item.cassetteId))throw Error('カセット参照不一致：'+machine.name+'/'+item.name);
+    // Missing references are non-fatal: preserve the machine and cassette JSON unchanged.
+    const missing=[];
+    for(const machine of m.machines)for(const kind of ['weapons','skills'])for(const item of machine[kind]||[]){
+      if(!ids[kind].has(item.cassetteId))missing.push({machine:machine.name,kind,name:item.name||'名称未設定',cassetteId:item.cassetteId||''});
+    }
+    const warnMissing=()=>{
+      if(!missing.length)return;
+      let panel=document.getElementById('officialSyncWarnings');
+      if(!panel){
+        panel=document.createElement('details');panel.id='officialSyncWarnings';
+        panel.style.cssText='position:fixed;left:8px;bottom:8px;z-index:9998;max-width:min(440px,90vw);max-height:45vh;overflow:auto;background:#fff8e1;color:#513700;border:2px solid #d99b16;border-radius:9px;padding:8px;font:13px system-ui,sans-serif;box-shadow:0 2px 8px #0004';
+        document.body.appendChild(panel);
+      }
+      panel.replaceChildren();
+      const summary=document.createElement('summary');summary.textContent='⚠️ カセット参照不一致 '+missing.length+'件（タップで詳細）';summary.style.cssText='font-weight:bold;cursor:pointer';panel.appendChild(summary);
+      const list=document.createElement('ul');list.style.cssText='padding-left:20px;margin:8px 0';
+      for(const x of missing){const li=document.createElement('li');li.textContent=x.machine+'／'+x.name+'（'+(x.kind==='skills'?'スキル':'武装')+'・ID: '+x.cassetteId+'）';list.appendChild(li)}
+      panel.appendChild(list);
+      const note=document.createElement('div');note.textContent='参照先のない項目は保持しますが、カセット由来の性能は利用できない場合があります。';panel.appendChild(note);
+    };
+    warnMissing();
     const nextC=JSON.stringify(c.data),nextM=JSON.stringify(m.machines);
     const oldC=localStorage.getItem(KEY_C),oldM=localStorage.getItem(KEY_M);
-    if(oldC===nextC&&oldM===nextM){show('✅ 公式データは最新版');return}
+    if(oldC===nextC&&oldM===nextM){show(missing.length?'⚠️ 公式データは最新版（参照不一致 '+missing.length+'件）':'✅ 公式データは最新版');return}
     // Avoid a partial update if localStorage fails. Keep old data on failure.
     try{localStorage.setItem(KEY_C,nextC);localStorage.setItem(KEY_M,nextM);
       if(localStorage.getItem(KEY_C)!==nextC||localStorage.getItem(KEY_M)!==nextM)throw Error('保存内容の照合失敗');
     }catch(e){try{oldC===null?localStorage.removeItem(KEY_C):localStorage.setItem(KEY_C,oldC);oldM===null?localStorage.removeItem(KEY_M):localStorage.setItem(KEY_M,oldM)}catch(_){}throw e}
-    state.textContent='✅ 公式データを更新しました。画面を再読み込みします…';
+    state.textContent=missing.length?'⚠️ 公式データ更新完了（参照不一致 '+missing.length+'件）。再読み込みします…':'✅ 公式データを更新しました。画面を再読み込みします…';
     location.reload();
   }).catch(err=>{console.warn('[official sync]',err);show('⚠️ 公式データを取得できません。端末のデータを使用します')});
 })();
