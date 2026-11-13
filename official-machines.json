@@ -1,0 +1,2499 @@
+{
+  "format": "hexmap-machines-v18",
+  "machines": [
+    {
+      "id": "custom-1794229639108-946932",
+      "name": "ガンダムアストレアTYPE-Teacher",
+      "pilot": "TESTER AI",
+      "hp": 100,
+      "en": 250,
+      "ap": 3,
+      "forms": [],
+      "stats": {
+        "格闘": 1,
+        "射撃": 1,
+        "回避": 1,
+        "感覚": 1,
+        "物理装甲": 3,
+        "光学装甲": 3
+      },
+      "weapons": [
+        {
+          "name": "GNビームライフル",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 2,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            2
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 2
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=光学",
+          "cassetteId": "WP-mwdh4wjg-kn57agm"
+        },
+        {
+          "name": "プロトGNソード",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 5
+            }
+          ],
+          "damage": "4D6+18",
+          "passLow": false,
+          "notes": "属性=物理",
+          "cassetteId": "WP-mwdh4wjg-m42gumm"
+        },
+        {
+          "name": "GNビームダガー（格闘）",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 10,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "2D10+5",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=速攻（●）。",
+          "cassetteId": "WP-mwdh4wjg-b61jiod"
+        },
+        {
+          "name": "GNビームダガー（投擲）",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 2,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "2D10+5",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=速攻（●）。\n特殊ルール=命中判定には格闘ステータスを参照する。\n特殊ルール=防御側は格闘または回避ステータスを参照する。",
+          "cassetteId": "WP-mwdh4wjg-rb3up4i"
+        }
+      ],
+      "shields": [
+        {
+          "name": "GNシールド",
+          "physical": 20,
+          "optical": 20,
+          "penalty": 0,
+          "notes": "特殊防御=シールドを破棄し、自機を任意の隣接する1マスへ移動することで、相手の攻撃を自動回避できる。"
+        }
+      ],
+      "equipment": [],
+      "skills": [
+        {
+          "name": "トランザムシステム（後期型）",
+          "kind": "ブーストスキル",
+          "notes": "消費AP=記載なし\n毎ターン消費EN=40\n発動条件=発動宣言後、発動終了宣言まで継続する。\n効果=発動中、機体の格闘・射撃・回避・感覚をそれぞれ+3する。\n使用制限=発動終了宣言後、1ターン経過まで再使用不可。\n",
+          "boost": {
+            "stat": "格闘",
+            "stats": [
+              "格闘",
+              "射撃",
+              "回避",
+              "感覚"
+            ],
+            "amount": 3,
+            "rangeWeapon": "",
+            "rangePlus": 0
+          },
+          "effects": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-aui6phv"
+        },
+        {
+          "name": "Attitude Control System（姿勢制御システム）",
+          "kind": "パイロットスキル",
+          "notes": "消費AP=記載なし\n使用制限=1試合に3回のみ。\n発動条件=自身の回避行動後。相手のダメージ判定後でも宣言できる。\n効果=自機が受けるダメージ1つに対して、物理装甲と光学装甲の修正総計を3倍にする。",
+          "effects": [
+            {
+              "target": "physical",
+              "value": "3",
+              "op": "mul",
+              "timing": "each",
+              "scope": "all",
+              "weapon": ""
+            },
+            {
+              "target": "optical",
+              "value": "3",
+              "op": "mul",
+              "timing": "each",
+              "scope": "all",
+              "weapon": ""
+            }
+          ],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-3uoro8g"
+        }
+      ],
+      "tokens": [],
+      "source": "【機体】\n機体名=ガンダムアストレアTYPE-Teacher\nパイロット=TESTER AI\n行動タイプ=起動\nHP=70\nEN=250\nAP=3\n格闘=1\n射撃=1\n回避=1\n感覚=1\n物理装甲=3\n光学装甲=3\n備考=機体ステータス：格闘1・射撃1・回避1・感覚1・物理装甲3・光学装甲3。パイロットステータス：格闘1・射撃1・回避1・感覚1・AP2+1。\n備考=前進1、全速前進3、平行移動1、後退1、回避専念+4。\n備考=通常攻撃、ロックオン、前進、全速前進、後退、平行移動、60度回転、180度回転が可能。\n備考=自身のラウンド中、一度だけAPを消費せず60度回転できる。\n\n【武装】\n名前=GNビームライフル\n攻撃種別=射撃\n属性=光学\n射程タイプ=前\n最小射程=2\n最大射程=4\n通常命中=1\nロックオン命中=2\nダメージ=3D10+5\n消費EN=20\n\n【武装】\n名前=プロトGNソード\n攻撃種別=格闘\n属性=物理\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=2\nロックオン命中=5\nダメージ=4D6+18\n消費EN=15\n\n【武装】\n名前=GNビームダガー（格闘）\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=2\nロックオン命中=4\nダメージ=2D10+5\n消費EN=10\n特殊ルール=速攻（●）。\n\n【武装】\n名前=GNビームダガー（投擲）\n攻撃種別=格闘\n属性=光学\n射程タイプ=前\n最小射程=2\n最大射程=4\n通常命中=2\nロックオン命中=4\nダメージ=2D10+5\n消費EN=20\n特殊ルール=速攻（●）。\n特殊ルール=命中判定には格闘ステータスを参照する。\n特殊ルール=防御側は格闘または回避ステータスを参照する。\n\n【シールド】\n名前=GNシールド\n物理HP=20\n光学HP=20\n回避ペナルティ=0\n特殊防御=シールドを破棄し、自機を任意の隣接する1マスへ移動することで、相手の攻撃を自動回避できる。\n\n【ブーストスキル】\n名前=トランザムシステム（後期型）\n消費AP=記載なし\n格闘補正=3\n射撃補正=3\n回避補正=3\n感覚補正=3\n毎ターン消費EN=40\n発動条件=発動宣言後、発動終了宣言まで継続する。\n効果=発動中、機体の格闘・射撃・回避・感覚をそれぞれ+3する。\n使用制限=発動終了宣言後、1ターン経過まで再使用不可。\n\n【パイロットスキル】\n名前=Attitude Control System（姿勢制御システム）\n消費AP=記載なし\n使用制限=1試合に3回のみ。\n発動条件=自身の回避行動後。相手のダメージ判定後でも宣言できる。\n効果=自機が受けるダメージ1つに対して、物理装甲と光学装甲の修正総計を3倍にする。\n"
+    },
+    {
+      "id": "builtin-wizard",
+      "name": "ガンダムカクタス・ウィザード",
+      "pilot": "トモヤ（ビルドファイターズ第3期）",
+      "hp": 100,
+      "en": 250,
+      "ap": 3,
+      "forms": [],
+      "stats": {
+        "格闘": 0,
+        "射撃": 6,
+        "回避": 5,
+        "感覚": 0,
+        "物理装甲": 0,
+        "光学装甲": 3
+      },
+      "weapons": [
+        {
+          "name": "ダブルバレル・ロングレンジライフル",
+          "type": "射撃",
+          "attribute": "物理/光学",
+          "shape": "front",
+          "min": 3,
+          "max": 7,
+          "en": 25,
+          "ammo": 3,
+          "normal": [],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": null,
+              "lock": 5
+            }
+          ],
+          "damage": "4D10+15",
+          "passLow": false,
+          "notes": "物理／光学選択。通常攻撃不可。実弾3・ビーム3発。安全射撃3射まで。連続ラウンド射撃禁止。4射目以降は破損判定。",
+          "cassetteId": "WP-mwdh4wjg-nt0lf4a"
+        },
+        {
+          "name": "ミドルレンジ・リボルバーカノン",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 2,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "10D4",
+          "passLow": false,
+          "notes": "物理",
+          "cassetteId": "WP-mwdh4wjg-zp4tjya"
+        },
+        {
+          "name": "ショルダーブルーム",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 1,
+          "en": 30,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "6D8+10",
+          "passLow": false,
+          "notes": "光学",
+          "cassetteId": "WP-mwdh4wjg-e64wgur"
+        },
+        {
+          "name": "ショートビームカービン",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 4,
+          "en": 10,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "3D8+5",
+          "passLow": false,
+          "notes": "光学。速攻：1ラウンド1回AP消費0",
+          "cassetteId": "WP-mwdh4wjg-19gar97"
+        }
+      ],
+      "shields": [],
+      "equipment": [],
+      "skills": [
+        {
+          "name": "ランディング・ギア",
+          "kind": "パイロットスキル",
+          "notes": "スキル発動後、1度だけ追加で2マス移動できる。",
+          "cassetteId": "SK-mwdh4wjh-il0emls"
+        },
+        {
+          "name": "狩人の眼光",
+          "kind": "パイロットスキル",
+          "notes": "相手の回避結果を確認後に発動可能\n相手の回避ダイスの出目を－2する。",
+          "cassetteId": "SK-official-recovered-001"
+        },
+        {
+          "name": "紙一重",
+          "kind": "パイロットスキル",
+          "notes": "回避失敗時にHP消費で不足分を補う。ファンブルのときは発動不可。",
+          "cassetteId": "SK-mwdh4wjh-5ldedly"
+        },
+        {
+          "name": "精密スコープ展開",
+          "kind": "ブーストスキル",
+          "notes": "射撃＋3、感覚＋2、ライフル射程＋2。移動不可、ライフル以外使用不可。回避でライフル破棄。",
+          "boost": {
+            "stat": "射撃",
+            "stats": [
+              "射撃"
+            ],
+            "amount": 3,
+            "rangeWeapon": "ダブルバレル・ロングレンジライフル",
+            "rangePlus": 2
+          },
+          "cassetteId": "SK-official-recovered-002"
+        }
+      ],
+      "tokens": [],
+      "source": "【試作版収録データ】ガンダムカクタス・ウィザード。原文全文は機体登録画面から貼り付けて保存できます。"
+    },
+    {
+      "id": "custom-1794230933384-351570",
+      "name": "ꓜꓮꓗꓴ-ꓡꓡ（ザクツーエル）",
+      "pilot": "トモヤ（GQ）",
+      "hp": 100,
+      "en": 350,
+      "ap": 3,
+      "forms": [],
+      "stats": {
+        "格闘": 4,
+        "射撃": 4,
+        "回避": 2,
+        "感覚": 2,
+        "物理装甲": 1,
+        "光学装甲": 1
+      },
+      "weapons": [
+        {
+          "name": "火炎放射",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 3,
+          "en": 35,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "4D10+5",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=格闘または射撃のステータスを選択して命中判定できる。",
+          "cassetteId": "WP-mwdh4wjg-fzsl9bk"
+        },
+        {
+          "name": "斧",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 10,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "2D6+15",
+          "passLow": false,
+          "notes": "属性=物理",
+          "cassetteId": "WP-mwdh4wjg-upxtycn"
+        },
+        {
+          "name": "2連ビームスピア",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 2,
+          "en": 18,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "2D10+8",
+          "passLow": false,
+          "notes": "属性=光学",
+          "cassetteId": "WP-mwdh4wjg-2rl8i2w"
+        },
+        {
+          "name": "可変ビームライフル",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 2,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            2
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 2
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=光学",
+          "cassetteId": "WP-mwdh4wjg-dqkeqoo"
+        },
+        {
+          "name": "大型ミサイル",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 4,
+          "max": 6,
+          "en": 30,
+          "ammo": 3,
+          "normal": [
+            1
+          ],
+          "lock": [
+            2
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 2
+            }
+          ],
+          "damage": "2D6+10",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=弾数3発。",
+          "cassetteId": "WP-mwdh4wjg-rq9s49s"
+        },
+        {
+          "name": "海ヘビワイヤー",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "all",
+          "min": 1,
+          "max": 3,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "3D6+8",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=命中判定は感覚ステータスを参照する。",
+          "cassetteId": "WP-mwdh4wjg-1b15io5"
+        },
+        {
+          "name": "ファイアーストーム",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 2,
+          "max": 7,
+          "en": 100,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "4D10+5D6+15",
+          "passLow": false,
+          "notes": "属性=光学",
+          "cassetteId": "WP-mwdh4wjg-2cfus64"
+        }
+      ],
+      "shields": [],
+      "equipment": [],
+      "skills": [
+        {
+          "name": "車検通過用リミッター解除",
+          "kind": "ブーストスキル",
+          "notes": "消費AP=記載なし\n発動条件=EN50を消費して発動する。\n毎ターン消費EN=50\n効果=発動中、格闘・射撃・回避・感覚がそれぞれ+2。\n効果=移動後、移動した方向へ追加で1マス進む。この追加移動は強制。\n使用制限=終了宣言したターンを含め3ターンの間、再使用不可。\n射撃補正=2\n回避補正=2\n感覚補正=2",
+          "boost": {
+            "stat": "格闘",
+            "stats": [
+              "格闘",
+              "射撃",
+              "回避",
+              "感覚"
+            ],
+            "amount": 2,
+            "rangeWeapon": "",
+            "rangePlus": 0
+          },
+          "cassetteId": "SK-mwdh4wjh-pgdph5l"
+        },
+        {
+          "name": "オーバードブースト（突貫）",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n使用タイミング=自身のラウンド中\n使用制限=ラウンド3回\n効果=自身の行動ラウンド中に1回または2回、追加で前進できる。",
+          "cassetteId": "SK-official-recovered-003"
+        },
+        {
+          "name": "反応型違法改造装甲（脅威の装甲）",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n使用タイミング=自身の回避行動後\n使用制限=ラウンド1回\n効果=自身が受けるダメージ1つに対して、物理装甲と光学装甲の修正総計を3倍にする。\n効果=相手がダメージ判定を行った後でも宣言可能。",
+          "cassetteId": "SK-official-recovered-004"
+        }
+      ],
+      "tokens": [],
+      "source": "【機体】\n機体名=ꓜꓮꓗꓴ-ꓡꓡ（ザクツーエル）\nパイロット=トモヤ（GQ）\nベース機体=軍警ザク\n行動タイプ=起動\nHP=100\nEN=350\nAP=3\n格闘=4\n射撃=4\n回避=2\n感覚=2\n物理装甲=1\n光学装甲=1\n備考=イズマ・コロニーの悪徳インフラ業者の代表。工場長に改造させたMSでクランバトルに参加する。\n備考=前進1、全速前進3、平行移動1、後退1、回避専念+4。\n備考=自身のラウンド中、一度だけAPを消費せず60度回転できる。\n備考=基本EN250。ガスボンベ装備により最大EN+100、合計350。\n\n【武装】\n名前=火炎放射\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=3\n通常命中=2\nロックオン命中=4\nダメージ=4D10+5\n消費EN=35\n特殊ルール=格闘または射撃のステータスを選択して命中判定できる。\n\n【武装】\n名前=斧\n攻撃種別=格闘\n属性=物理\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=3\nロックオン命中=5\nダメージ=2D6+15\n消費EN=10\n\n【武装】\n名前=2連ビームスピア\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=2\n通常命中=3\nロックオン命中=5\nダメージ=2D10+8\n消費EN=18\n\n【武装】\n名前=可変ビームライフル\n攻撃種別=射撃\n属性=光学\n射程タイプ=前\n最小射程=2\n最大射程=4\n通常命中=1\nロックオン命中=2\nダメージ=3D10+5\n消費EN=20\n\n【武装】\n名前=大型ミサイル\n攻撃種別=射撃\n属性=物理\n射程タイプ=扇\n最小射程=4\n最大射程=6\n通常命中=1\nロックオン命中=2\nダメージ=2D6+10\n消費EN=30\n特殊ルール=弾数3発。\n\n【武装】\n名前=海ヘビワイヤー\n攻撃種別=感覚\n属性=物理\n射程タイプ=全\n最小射程=1\n最大射程=3\n通常命中=2\nロックオン命中=4\nダメージ=3D6+8\n消費EN=20\n特殊ルール=命中判定は感覚ステータスを参照する。\n\n【武装】\n名前=ファイアーストーム\n攻撃種別=射撃\n属性=光学\n射程タイプ=扇\n最小射程=2\n最大射程=7\n通常命中=3\nロックオン命中=5\nダメージ=4D10+5D6+15\n消費EN=100\n\n【ブーストスキル】\n名前=車検通過用リミッター解除\n消費AP=記載なし\n格闘補正=2\n射撃補正=2\n回避補正=2\n感覚補正=2\n発動条件=EN50を消費して発動する。\n毎ターン消費EN=50\n効果=発動中、格闘・射撃・回避・感覚がそれぞれ+2。\n効果=移動後、移動した方向へ追加で1マス進む。この追加移動は強制。\n使用制限=終了宣言したターンを含め3ターンの間、再使用不可。\n\n【パイロットスキル】\n名前=オーバードブースト（突貫）\n分類=モーメントスキル\n使用タイミング=自身のラウンド中\n使用制限=ラウンド3回\n効果=自身の行動ラウンド中に1回または2回、追加で前進できる。\n\n【パイロットスキル】\n名前=反応型違法改造装甲（脅威の装甲）\n分類=モーメントスキル\n使用タイミング=自身の回避行動後\n使用制限=ラウンド1回\n効果=自身が受けるダメージ1つに対して、物理装甲と光学装甲の修正総計を3倍にする。\n効果=相手がダメージ判定を行った後でも宣言可能。\n\n【機体設定】\n説明=ガスボンベ装備によりEN最大値+100。基本EN250から350になる。\n説明=本機への攻撃成功時、攻撃側は任意でアイデアロール「ガスボンベを攻撃」を宣言できる。\n説明=判定は2D10。正面18以上、斜め前13以上、斜め後10以上、背面7以上で成功。\n説明=成功した場合、次ターン以降ガス漏れ状態となり、ターン開始時に2D6のENを失う。\n説明=クリティカル（20）の場合、本機のHPを0にする。\n説明=ファンブル（2）の場合、ガスボンベ攻撃は失敗する。"
+    },
+    {
+      "id": "custom-1794232809988-663888",
+      "name": "グレイテストサザビー",
+      "pilot": "バーラ",
+      "hp": 100,
+      "en": 400,
+      "ap": 3,
+      "forms": [],
+      "stats": {
+        "格闘": 1,
+        "射撃": 1,
+        "回避": 3,
+        "感覚": 5,
+        "物理装甲": 2,
+        "光学装甲": 2
+      },
+      "weapons": [
+        {
+          "name": "ファンネル(弱)",
+          "type": "感覚",
+          "attribute": "光学",
+          "shape": "all",
+          "min": 3,
+          "max": 8,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            0
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 0
+            }
+          ],
+          "damage": "2D10",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": true,
+          "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-368dzqf"
+        },
+        {
+          "name": "ファンネル(強)",
+          "type": "感覚",
+          "attribute": "光学",
+          "shape": "all",
+          "min": 3,
+          "max": 8,
+          "en": 50,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            0
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 0
+            }
+          ],
+          "damage": "5D10",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": true,
+          "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。",
+          "conditions": [],
+          "cassetteId": "WP-mwe68wdd-2s97o4n"
+        },
+        {
+          "name": "ファンネル(必殺)",
+          "type": "感覚",
+          "attribute": "光学",
+          "shape": "all",
+          "min": 3,
+          "max": 8,
+          "en": 100,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            0
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 0
+            }
+          ],
+          "damage": "10D10",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": true,
+          "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。\n使用後は次の自ラウンド終了時まで、名前にファンネルとつく武装は使用不可。",
+          "conditions": [],
+          "cassetteId": "WP-mwe6cxfi-weurf6m"
+        },
+        {
+          "name": "ビームライフル",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            2
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 2
+            }
+          ],
+          "damage": "3D10+5",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=光学",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-6cg26pr"
+        },
+        {
+          "name": "ビームショットガン",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 3,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "2D10",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=光学",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-8ii4hsc"
+        },
+        {
+          "name": "胸部マシンキャノン",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 1,
+          "max": 2,
+          "en": 5,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            0
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 0
+            }
+          ],
+          "damage": "1D6",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-5vb1d72"
+        },
+        {
+          "name": "シールドグレネード",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "front",
+          "min": 1,
+          "max": 3,
+          "en": 10,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "1D4+1D8+1D10",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=速攻可能武器。大型シールドとの装備連動は要確認。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-3rn7k7s"
+        },
+        {
+          "name": "腹部拡散メガ粒子砲",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 4,
+          "en": 50,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            2
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 2
+            }
+          ],
+          "damage": "4D12",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=光学",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-v4lnfae"
+        },
+        {
+          "name": "ビームトマホーク",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 5
+            }
+          ],
+          "damage": "2D10+12",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=光学",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-ozkf4wp"
+        },
+        {
+          "name": "トマホーク投擲",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 4,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 4
+            }
+          ],
+          "damage": "2D8+8",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=速攻可能武器。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-7x7ofce"
+        },
+        {
+          "name": "ビームサーベル",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "2D10+10",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=光学",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-ld9pius"
+        },
+        {
+          "name": "ヴァルヴァロ：口部メガ粒子砲",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 3,
+          "max": 6,
+          "en": 50,
+          "ammo": null,
+          "normal": [
+            -2
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": -2,
+              "lock": 3
+            }
+          ],
+          "damage": "3D12+10",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=ヴァルヴァロユニット専用武装。本体とEN共有。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-hulw56n"
+        },
+        {
+          "name": "ヴァルヴァロ：マシンキャノン",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 1,
+          "max": 2,
+          "en": 5,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            0
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 0
+            }
+          ],
+          "damage": "1D6",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。\n特殊ルール=ヴァルヴァロユニット専用武装。本体とEN共有。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-hy1kmd1"
+        },
+        {
+          "name": "ヴァルヴァロ：クローアーム",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 10,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 3
+            }
+          ],
+          "damage": "2D6+10",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=速攻可能武器。ヴァルヴァロユニット専用武装。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-9mflc5b"
+        },
+        {
+          "name": "ヴァルヴァロ：ビームサーベル",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "2D10+10",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=ヴァルヴァロユニット専用武装。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-2qj1v0s"
+        },
+        {
+          "name": "ヴァルヴァロ：有線クローアーム",
+          "type": "感覚",
+          "attribute": "物理",
+          "shape": "all",
+          "min": 1,
+          "max": 3,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "3D6+8",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": true,
+          "notes": "属性=物理\n特殊ルール=ヴァルヴァロユニット専用武装。サイコミュによる有線操作。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-1l5c9pu"
+        },
+        {
+          "name": "ヴァルヴァロ：プラズマリーダー",
+          "type": "感覚",
+          "attribute": "光学",
+          "shape": "all",
+          "min": 1,
+          "max": 5,
+          "en": 50,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            0
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 0
+            }
+          ],
+          "damage": "2D6",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=ロックオン時の命中補正は原文未指定。仮に0。\n特殊ルール=命中時、相手を足止め状態にする。足止め中は移動不可。相手はAP1消費で解除できる。\n特殊ルール=ヴァルヴァロユニット専用武装。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-dj3wiyf"
+        }
+      ],
+      "shields": [
+        {
+          "name": "大型シールド",
+          "physical": 25,
+          "optical": 25,
+          "penalty": -2,
+          "maxUses": 3,
+          "largeShield": true,
+          "notes": "特殊防御=大型シールドの耐久値25。シールド破壊時に回避-2を解除する。\n特殊防御=物理HPと光学HPは登録形式上それぞれ25としている。原文は共通耐久25のため、実際の耐久管理は手動で行う。"
+        }
+      ],
+      "equipment": [],
+      "skills": [
+        {
+          "name": "NT的直感",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n使用タイミング=回避時\n効果=回避判定に回避値ではなく感覚値を使用できる。",
+          "effects": [],
+          "conditions": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-nvewzop"
+        },
+        {
+          "name": "近接射撃",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n効果=感覚武器の射程を1～2に変更する。",
+          "effects": [],
+          "conditions": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-2gk3p2a"
+        },
+        {
+          "name": "サイコフレーム",
+          "kind": "ブーストスキル",
+          "notes": "効果=パッシブで感覚+2。\n効果=追加効果としてEN20を消費し、射程+1。",
+          "boost": {
+            "stat": "感覚",
+            "stats": [
+              "感覚"
+            ],
+            "amount": 2,
+            "rangeWeapon": "",
+            "rangePlus": 1
+          },
+          "effects": [],
+          "conditions": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-wcgdm65"
+        },
+        {
+          "name": "精密スコープ",
+          "kind": "ブーストスキル",
+          "notes": "効果=発動中、射撃+3、感覚+2、射程+1。\n使用制限=発動中は移動不可、回避行動不可。\n使用制限=ダメージを受けるか解除宣言するまで継続。\n使用制限=解除後、2ラウンド目の自分の行動終了時まで再使用不可。\n感覚補正=2",
+          "boost": {
+            "stat": "射撃",
+            "stats": [
+              "射撃",
+              "感覚"
+            ],
+            "amount": 3,
+            "rangeWeapon": "",
+            "rangePlus": 1
+          },
+          "effects": [],
+          "conditions": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-xhk0wrk"
+        }
+      ],
+      "tokens": [],
+      "source": "\n【機体】\n機体名=グレイテストサザビー\nパイロット=バーラ\nベース機体=HGUCサザビー\n行動タイプ=未指定\nHP=70\nEN=400\nAP=3\n格闘=1\n射撃=1\n回避=3\n感覚=5\n物理装甲=2\n光学装甲=2\n備考=パイロット：バーラ、35歳、A型、INFP型。ジオン系MSとサイコミュ機体を好む。\n備考=SDCSナイチンゲールのバインダーを装備。ファンネル10基。\n備考=ヴァルヴァロユニットを背部に搭載。分離・遠隔支援・脱出可能。HPとENは本体と共有。\n備考=プロペラントタンク2本。1本につきEN75。装備中は回避-1。\n備考=使用ENが150を超えた時点でタンクを切り離し、回避-1を解除する。\n備考=大型シールド装備中は回避-2。破壊時に解除。\n備考=回避3は装備ペナルティ適用前。両装備中は回避0。\n備考=感覚5にはサイコフレーム+2を含む。重複加算しない。\n備考=行動タイプと移動距離は未指定。\n\n【武装】\n名前=強化ファンネル\n攻撃種別=感覚\n属性=光学\n射程タイプ=全\n最小射程=3\n最大射程=8\n通常命中=不可\nロックオン命中=0\nダメージ=1D10\n消費EN=10\n特殊ルール=ロックオン攻撃のみ。搭載数10基。攻撃回数1～3。\n特殊ルール=1基につきEN10、ダメージ1D10。10基すべて使用時はEN100。\n\n【武装】\n名前=ビームライフル\n攻撃種別=射撃\n属性=光学\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=2\nダメージ=3D10+5\n消費EN=20\n\n【武装】\n名前=ビームショットガン\n攻撃種別=射撃\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=3\n通常命中=2\nロックオン命中=4\nダメージ=2D10\n消費EN=20\n\n【武装】\n名前=胸部マシンキャノン\n攻撃種別=射撃\n属性=物理\n射程タイプ=扇\n最小射程=1\n最大射程=2\n通常命中=0\nロックオン命中=不可\nダメージ=1D6\n消費EN=5\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。\n\n【武装】\n名前=シールドグレネード\n攻撃種別=射撃\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=3\n通常命中=2\nロックオン命中=4\nダメージ=1D4+1D8+1D10\n消費EN=10\n特殊ルール=速攻可能武器。大型シールドとの装備連動は要確認。\n\n【武装】\n名前=腹部拡散メガ粒子砲\n攻撃種別=射撃\n属性=光学\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=0\nロックオン命中=2\nダメージ=4D12\n消費EN=50\n\n【武装】\n名前=ビームトマホーク\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=2\nロックオン命中=5\nダメージ=2D10+12\n消費EN=15\n\n【武装】\n名前=トマホーク投擲\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=4\n通常命中=3\nロックオン命中=4\nダメージ=2D8+8\n消費EN=15\n特殊ルール=速攻可能武器。\n\n【武装】\n名前=ビームサーベル\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=3\nロックオン命中=5\nダメージ=2D10+10\n消費EN=15\n\n【武装】\n名前=ヴァルヴァロ：口部メガ粒子砲\n攻撃種別=射撃\n属性=光学\n射程タイプ=前\n最小射程=3\n最大射程=6\n通常命中=-2\nロックオン命中=3\nダメージ=3D12+10\n消費EN=50\n特殊ルール=ヴァルヴァロユニット専用武装。本体とEN共有。\n\n【武装】\n名前=ヴァルヴァロ：マシンキャノン\n攻撃種別=射撃\n属性=物理\n射程タイプ=扇\n最小射程=1\n最大射程=2\n通常命中=0\nロックオン命中=不可\nダメージ=1D6\n消費EN=5\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。\n特殊ルール=ヴァルヴァロユニット専用武装。本体とEN共有。\n\n【武装】\n名前=ヴァルヴァロ：クローアーム\n攻撃種別=格闘\n属性=物理\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=1\nロックオン命中=3\nダメージ=2D6+10\n消費EN=10\n特殊ルール=速攻可能武器。ヴァルヴァロユニット専用武装。\n\n【武装】\n名前=ヴァルヴァロ：ビームサーベル\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=3\nロックオン命中=5\nダメージ=2D10+10\n消費EN=15\n特殊ルール=ヴァルヴァロユニット専用武装。\n\n【武装】\n名前=ヴァルヴァロ：有線クローアーム\n攻撃種別=感覚\n属性=物理\n射程タイプ=全\n最小射程=1\n最大射程=3\n通常命中=2\nロックオン命中=4\nダメージ=3D6+8\n消費EN=20\n特殊ルール=ヴァルヴァロユニット専用武装。サイコミュによる有線操作。\n\n【武装】\n名前=ヴァルヴァロ：プラズマリーダー\n攻撃種別=感覚\n属性=光学\n射程タイプ=全\n最小射程=1\n最大射程=5\n通常命中=不可\nロックオン命中=0\nダメージ=2D6\n消費EN=50\n特殊ルール=ロックオン時の命中補正は原文未指定。仮に0。\n特殊ルール=命中時、相手を足止め状態にする。足止め中は移動不可。相手はAP1消費で解除できる。\n特殊ルール=ヴァルヴァロユニット専用武装。\n\n【シールド】\n名前=大型シールド\n物理HP=25\n光学HP=25\n回避ペナルティ=-2\n特殊防御=大型シールドの耐久値25。シールド破壊時に回避-2を解除する。\n特殊防御=物理HPと光学HPは登録形式上それぞれ25としている。原文は共通耐久25のため、実際の耐久管理は手動で行う。\n\n【パイロットスキル】\n名前=NT的直感\n分類=モーメントスキル\n使用タイミング=回避時\n効果=回避判定に回避値ではなく感覚値を使用できる。\n\n【パイロットスキル】\n名前=近接射撃\n分類=モーメントスキル\n効果=感覚武器の射程を1～2に変更する。\n\n【ブーストスキル】\n名前=サイコフレーム\n消費EN=20（追加効果使用時）\n感覚補正=2\n効果=パッシブで感覚+2。登録感覚5には反映済みのため重複加算しない。\n効果=追加効果としてEN20を消費し、射程+1。\n特殊ルール=射程+1の継続時間は原文未指定。\n\n【ブーストスキル】\n名前=精密スコープ\n射撃補正=3\n感覚補正=2\n効果=発動中、射撃+3、感覚+2、射程+1。\n使用制限=発動中は移動不可、回避行動不可。\n使用制限=ダメージを受けるか解除宣言するまで継続。\n使用制限=解除後、2ラウンド目の自分の行動終了時まで再使用不可。\n\n【機体設定】\n説明=プロペラントタンク2本。1本につきEN75。装備中は回避-1。\n説明=使用ENが150を超えた時点でタンクを切り離し、回避ペナルティを解除する。\n説明=ヴァルヴァロユニットは分離・遠隔支援・脱出可能。固有ステータスは現時点で未実装。HPとENを本体と共有。\n説明=大型シールドは耐久25、装備中の回避ペナルティ-2。破壊時に解除。\n説明=強化ファンネル10基。攻撃回数1～3、ロックオンのみ。1基につきEN10、ダメージ1D10。\n  "
+    },
+    {
+      "id": "custom-1794233323160-430032",
+      "name": "リボーンズガンダムレグナント",
+      "pilot": "ルイス・ハレヴィ",
+      "hp": 100,
+      "en": 250,
+      "ap": 3,
+      "forms": [
+        {
+          "name": "MA形態",
+          "actionType": "高速",
+          "forward": 2,
+          "full": 5,
+          "strafe": 1,
+          "backward": 0,
+          "freeTurn": 180,
+          "ap": 3,
+          "notes": "",
+          "stats": {
+            "格闘": 2,
+            "射撃": 7,
+            "回避": 5,
+            "感覚": 0,
+            "物理装甲": 0,
+            "光学装甲": 0
+          }
+        },
+        {
+          "name": "MS形態",
+          "actionType": "起動",
+          "forward": 1,
+          "full": 3,
+          "strafe": 1,
+          "backward": 1,
+          "freeTurn": 60,
+          "ap": 3,
+          "notes": "",
+          "stats": {
+            "格闘": 6,
+            "射撃": 4,
+            "回避": 4,
+            "感覚": 0,
+            "物理装甲": 0,
+            "光学装甲": 0
+          }
+        }
+      ],
+      "stats": {
+        "格闘": 2,
+        "射撃": 7,
+        "回避": 5,
+        "感覚": 0,
+        "物理装甲": 0,
+        "光学装甲": 0
+      },
+      "weapons": [
+        {
+          "name": "GNビームサーベル",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "2D10+10",
+          "passLow": false,
+          "notes": "属性=光学",
+          "cassetteId": "WP-mwdh4wjg-t56vhjc"
+        },
+        {
+          "name": "GN小型クロー",
+          "type": "格闘",
+          "attribute": "物理/光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 2,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 3
+            }
+          ],
+          "damage": "2D6+10",
+          "passLow": false,
+          "notes": "属性=物理/光学\n特殊ルール=速攻可能武器。",
+          "cassetteId": "WP-mwdh4wjg-nrl7vaa"
+        },
+        {
+          "name": "GN大型クロー",
+          "type": "格闘",
+          "attribute": "物理/光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 2,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 5
+            }
+          ],
+          "damage": "4D6+18",
+          "passLow": false,
+          "notes": "属性=物理/光学",
+          "cassetteId": "WP-mwdh4wjg-dvpgx2n"
+        },
+        {
+          "name": "GNビームライフル",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 2,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            2
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 2
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=光学",
+          "cassetteId": "WP-mwdh4wjg-kn57agm"
+        },
+        {
+          "name": "GNバスターキャノン",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "line",
+          "min": 3,
+          "max": 6,
+          "en": 50,
+          "ammo": null,
+          "normal": [
+            -2
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": -2,
+              "lock": 3
+            }
+          ],
+          "damage": "3D12+10",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=マルチロック対応。",
+          "cassetteId": "WP-mwdh4wjg-ylzen2h"
+        },
+        {
+          "name": "GNピストル",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 2,
+          "en": 10,
+          "ammo": null,
+          "normal": [
+            0,
+            1
+          ],
+          "lock": [
+            -1,
+            0,
+            1
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": -1
+            },
+            {
+              "normal": 1,
+              "lock": 0
+            },
+            {
+              "normal": null,
+              "lock": 1
+            }
+          ],
+          "damage": "2D10",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=速射可能武器。",
+          "cassetteId": "WP-mwdh4wjg-u4j28er"
+        },
+        {
+          "name": "GNミサイルコンテナ",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 3,
+          "max": 5,
+          "en": 40,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            1,
+            1,
+            2
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 1
+            },
+            {
+              "normal": null,
+              "lock": 1
+            },
+            {
+              "normal": null,
+              "lock": 2
+            }
+          ],
+          "damage": "6D6+10",
+          "passLow": true,
+          "notes": "属性=物理\n特殊ルール=最大7体マルチロック可能。",
+          "cassetteId": "WP-mwdh4wjg-v4lyeyt"
+        },
+        {
+          "name": "ライザーソード",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "line",
+          "min": 1,
+          "max": 6,
+          "en": 100,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 5
+            }
+          ],
+          "damage": "5D10+20",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=ロックオンのみ使用可能。マルチロック可能。",
+          "cassetteId": "WP-mwdh4wjg-itr0l5m"
+        }
+      ],
+      "shields": [
+        {
+          "name": "大型GNシールド",
+          "physical": 25,
+          "optical": 25,
+          "penalty": -2,
+          "notes": "特殊防御=使用回数3回。シールドHPが0になり超過ダメージを受ける場合、シールドを投棄することで超過ダメージを0にする。"
+        }
+      ],
+      "equipment": [],
+      "skills": [
+        {
+          "name": "プレッシャー",
+          "kind": "パイロットスキル",
+          "notes": "発動条件=相手の回避判定後。\n効果=相手の回避判定結果に-2のペナルティ。",
+          "cassetteId": "SK-mwdh4wjh-q5u95b5"
+        },
+        {
+          "name": "GNステルスフィールド",
+          "kind": "ブーストスキル",
+          "notes": "発動条件=EN20～100を消費して発動。\n効果=自分と相手の命中判定結果に-3のペナルティ。\n効果=自分のターン終了時まで継続。\n効果=発動中に自身がダメージを受ける場合、消費ENに応じてダメージを軽減する。\n効果=軽減率は消費EN÷100。例：EN20消費時、48×0.2=9.6、端数切り捨てで9軽減し、39ダメージ。",
+          "cassetteId": "SK-mwdh4wjh-gi1thyb"
+        },
+        {
+          "name": "プラフスキー（GN）吸入ファン",
+          "kind": "ブーストスキル",
+          "notes": "効果=ENを100回復する。\n使用制限=発動ターンは移動不可。",
+          "cassetteId": "SK-mwdh4wjh-4lu7pt6"
+        },
+        {
+          "name": "トランザム",
+          "kind": "ブーストスキル",
+          "notes": "効果=次の自分のターン開始まで全ステータス+3。\n効果=ダメージダイス+1個。\n効果=高機動スキル獲得。移動距離+2。\n効果=フェイント軌道（量子化）により回避結果をリセットできる。\n効果=効果終了後、全ステータス-2のペナルティ。\n射撃補正=3\n回避補正=3\n感覚補正=3\n物理装甲補正=3\n光学装甲補正=3",
+          "boost": {
+            "stat": "格闘",
+            "stats": [
+              "格闘",
+              "射撃",
+              "回避",
+              "感覚",
+              "物理装甲",
+              "光学装甲"
+            ],
+            "amount": 3,
+            "rangeWeapon": "",
+            "rangePlus": 0
+          },
+          "cassetteId": "SK-mwdh4wjh-35a6o7j"
+        }
+      ],
+      "tokens": [],
+      "source": "【機体】\n機体名=リボーンズガンダムレグナント\nパイロット=ルイス・ハレヴィ\n行動タイプ=起動\nHP=0\nEN=0\nAP=3\n格闘=6\n射撃=4\n回避=4\n感覚=0\n物理装甲=0\n光学装甲=0\n備考=HP・EN・感覚・物理装甲・光学装甲は未指定。仮に0を設定。要確認。\n備考=変形2（起動形態）：格闘6、射撃4、回避4、AP3。前進1、全速前進3、平行移動1、後退1。60度・180度回転可能。\n備考=変形2：自身のラウンド中に1度だけ行動消費なしで60度回転可能。\n備考=変形1（高速形態）：格闘2、射撃7、回避5、AP3。前進2、全速前進5、平行移動1。180度回転可能。\n備考=変形1：自身のラウンド中に1度だけ行動消費なしで180度回転可能。\n備考=変形切替は手動管理。\n\n【武装】\n名前=GNビームサーベル\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=3\nロックオン命中=5\nダメージ=2D10+10\n消費EN=15\n\n【武装】\n名前=GN小型クロー\n攻撃種別=格闘\n属性=物理/光学\n射程タイプ=扇\n最小射程=1\n最大射程=2\n通常命中=1\nロックオン命中=3\nダメージ=2D6+10\n消費EN=15\n特殊ルール=速攻可能武器。\n\n【武装】\n名前=GN大型クロー\n攻撃種別=格闘\n属性=物理/光学\n射程タイプ=扇\n最小射程=1\n最大射程=2\n通常命中=2\nロックオン命中=5\nダメージ=4D6+18\n消費EN=20\n\n【武装】\n名前=GNビームライフル\n攻撃種別=射撃\n属性=光学\n射程タイプ=前\n最小射程=2\n最大射程=4\n通常命中=1\nロックオン命中=2\nダメージ=3D10+5\n消費EN=20\n\n【武装】\n名前=GNバスターキャノン\n攻撃種別=射撃\n属性=光学\n射程タイプ=線\n最小射程=3\n最大射程=6\n通常命中=-2\nロックオン命中=3\nダメージ=3D12+10\n消費EN=50\n特殊ルール=マルチロック対応。\n\n【武装】\n名前=GNピストル\n攻撃種別=射撃\n属性=光学\n射程タイプ=前\n最小射程=1\n最大射程=2\n通常命中=0/1\nロックオン命中=-1/0/1\nダメージ=2D10\n消費EN=10\n特殊ルール=速射可能武器。\n\n【武装】\n名前=GNミサイルコンテナ\n攻撃種別=射撃\n属性=物理\n射程タイプ=扇\n最小射程=3\n最大射程=5\n通常命中=1\nロックオン命中=1/1/2\nダメージ=6D6+10\n消費EN=40\n特殊ルール=最大7体マルチロック可能。\n\n【武装】\n名前=ライザーソード\n攻撃種別=格闘\n属性=光学\n射程タイプ=線\n最小射程=1\n最大射程=6\n通常命中=不可\nロックオン命中=5\nダメージ=5D10+20\n消費EN=100\n特殊ルール=ロックオンのみ使用可能。マルチロック可能。\n\n【シールド】\n名前=大型GNシールド\n物理HP=25\n光学HP=25\n回避ペナルティ=-2\n特殊防御=使用回数3回。シールドHPが0になり超過ダメージを受ける場合、シールドを投棄することで超過ダメージを0にする。\n\n【パイロットスキル】\n名前=プレッシャー\n発動条件=相手の回避判定後。\n効果=相手の回避判定結果に-2のペナルティ。\n\n【ブーストスキル】\n名前=GNステルスフィールド\n消費EN=20～100（発動時に選択）\n発動条件=EN20～100を消費して発動。\n効果=自分と相手の命中判定結果に-3のペナルティ。\n効果=自分のターン終了時まで継続。\n効果=発動中に自身がダメージを受ける場合、消費ENに応じてダメージを軽減する。\n効果=軽減率は消費EN÷100。例：EN20消費時、48×0.2=9.6、端数切り捨てで9軽減し、39ダメージ。\n\n【ブーストスキル】\n名前=プラフスキー（GN）吸入ファン\n効果=ENを100回復する。\n使用制限=発動ターンは移動不可。\n\n【ブーストスキル】\n名前=トランザム\n消費EN=80\n格闘補正=3\n射撃補正=3\n回避補正=3\n感覚補正=3\n物理装甲補正=3\n光学装甲補正=3\n効果=次の自分のターン開始まで全ステータス+3。\n効果=ダメージダイス+1個。\n効果=高機動スキル獲得。移動距離+2。\n効果=フェイント軌道（量子化）により回避結果をリセットできる。\n効果=効果終了後、全ステータス-2のペナルティ。\n【変形1】\n形態名=高速形態\n行動タイプ=高速\n前進=2\n全速前進=5\n平行移動=1\n後退=0\n無料旋回=180\nAP=3\n格闘=2\n射撃=7\n回避=5\n\n【変形2】\n形態名=起動形態\n行動タイプ=起動\n前進=1\n全速前進=3\n平行移動=1\n後退=1\n無料旋回=60\nAP=3\n格闘=6\n射撃=4\n回避=4"
+    },
+    {
+      "id": "custom-1794234387062-311107",
+      "name": "ガンダムカクタス",
+      "pilot": "トモヤ（BF）",
+      "hp": 100,
+      "en": 250,
+      "ap": 3,
+      "forms": [],
+      "stats": {
+        "格闘": 6,
+        "射撃": 0,
+        "回避": 1,
+        "感覚": 1,
+        "物理装甲": 4,
+        "光学装甲": 2
+      },
+      "weapons": [
+        {
+          "name": "スパイクナックル",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 1,
+          "en": 10,
+          "ammo": null,
+          "normal": [
+            3,
+            3
+          ],
+          "lock": [
+            5,
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            },
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "1D10+5",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=1D10+5の攻撃を2回行う。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-zbsx67d"
+        },
+        {
+          "name": "スパイクニースマッシュ",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 2,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "3D6+10",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=射程1ではダメージ+5。",
+          "conditions": [
+            {
+              "name": "隼の一撃",
+              "note": "ターゲットが隣接ヘクスに存在",
+              "target": "damage",
+              "op": "add",
+              "value": "5"
+            }
+          ],
+          "cassetteId": "WP-mwdh4wjg-2ru21vb"
+        },
+        {
+          "name": "ショルダーブルーム",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "line",
+          "min": 1,
+          "max": 2,
+          "en": 30,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 3
+            }
+          ],
+          "damage": "5D10+10",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=正面1マス目と2マス目を攻撃。\n特殊ルール=射程1ではダメージ+10。\n特殊ルール=使用時ABCポンチョ耐久-1。命中の有無を問わない。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-29sz09o"
+        },
+        {
+          "name": "スパイクシュート",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 3,
+          "en": 18,
+          "ammo": null,
+          "normal": [
+            2
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 4
+            }
+          ],
+          "damage": "3D10+6",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=射程2～3では防御側が格闘・射撃・回避を選択可能。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-cegcqx6"
+        },
+        {
+          "name": "スパイクチャージ",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "line",
+          "min": 1,
+          "max": 4,
+          "en": 30,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 3
+            }
+          ],
+          "damage": "3D6+10",
+          "passLow": false,
+          "notes": "属性=光学\n消費AP=2\n特殊ルール=正面直線4マスを突進。経路上の敵が対象。\n特殊ルール=敵がいない場合は使用不可。空撃ち不可。\n特殊ルール=必ず4マス突進。途中停止・旋回不可。\n特殊ルール=経路上の敵全員に個別判定。外れても継続。\n特殊ルール=途中の敵は通過するが位置は変わらない。\n特殊ルール=4マス目に敵がいる場合は攻撃判定後3マス目で停止。\n特殊ルール=突進移動は手動管理。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-od5cz19"
+        },
+        {
+          "name": "ファイナル・ブルーム",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 1,
+          "en": 120,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            2
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 2
+            }
+          ],
+          "damage": "14D10+20",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=ブルーミングフォーム中のみ使用可能。\n特殊ルール=残り攻撃回数3：14D10+20。\n特殊ルール=残り攻撃回数2：12D10+20。\n特殊ルール=残り攻撃回数1：10D10+20。\n特殊ルール=使用後フォーム終了。命中・失敗を問わない。\n特殊ルール=通常武装の追加1D10は適用しない。",
+          "conditions": [],
+          "cassetteId": "WP-mwdh4wjg-1uio8zr"
+        }
+      ],
+      "shields": [],
+      "equipment": [
+        {
+          "name": "ABCポンチョ",
+          "durability": 3,
+          "initial": "",
+          "notes": "効果=ビーム射撃に対する特殊防御。装甲値なし。\n防御判定=ビーム射撃命中時に1D10。\nファンブル条件=出目が4-現在耐久値以下。\n通常ビーム防御=出目8～10で完全防御。それ以外は50％軽減、最大15。\n貫通ビーム防御=完全防御不可。50％軽減、最大15。\n特殊ルール=ショルダーブルーム使用時は耐久-1。\n特殊ルール=ブルーミングフォーム発動時にポンチョ消失。\n特殊ルール=AP0で任意投棄可能。"
+        }
+      ],
+      "skills": [
+        {
+          "name": "ブルーミングフォーム",
+          "kind": "ブーストスキル",
+          "notes": "消費AP=0\n毎ターン消費EN=30\n発動条件=自ラウンド中いつでも発動可能。\n効果=物理装甲+2、光学装甲+2。\n効果=通常武装ダメージ+1D10。\n効果=攻撃宣言可能回数3回。宣言1回につき残り-1。外れても消費。\n効果=複数対象への同時攻撃でも宣言回数は1回。\n効果=発動時にABCポンチョ消失。\n維持条件=次回以降の自ラウンド開始時にEN30消費。\n終了条件=攻撃宣言3回、維持EN不足、任意解除、水中落下、ファイナル・ブルーム使用。\n使用制限=終了後、次の自ラウンド終了時まで再発動不可。\n特殊ルール=ファイナル・ブルームには追加1D10を適用しない。\n",
+          "boost": {
+            "stat": "物理装甲",
+            "stats": [
+              "物理装甲",
+              "光学装甲"
+            ],
+            "amount": 2,
+            "rangeWeapon": "",
+            "rangePlus": 0
+          },
+          "effects": [],
+          "conditions": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-fr0vqnk"
+        },
+        {
+          "name": "切り払い（拳）",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n原型スキル=近接回避\n使用制限=1ラウンド1回\n発動条件=射撃攻撃に対する回避判定に失敗したとき。\n効果=格闘値で回避判定をやり直す。",
+          "effects": [],
+          "conditions": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-3nbclhq"
+        },
+        {
+          "name": "ワンナイトブルーム",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n原型スキル=脅威の装甲\n使用制限=1ラウンド1回\n発動条件=回避判定後、ダメージを受ける際。相手のダメージロール後でも宣言可能。\n効果=その攻撃に対する物理装甲と光学装甲の補正値の合計を3倍として扱う。\n特殊ルール=持続型ブルーミングフォームとは別効果。",
+          "effects": [],
+          "conditions": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-official-recovered-005"
+        },
+        {
+          "name": "空中投下要請",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n使用制限=1試合1回\n発動条件=自ラウンド中、ABCポンチョ未装着。\n効果=新品のABCポンチョを補給・装着。耐久3。\n使用制限=使用ラウンドは移動不可。既に移動していた場合は使用不可。\n使用制限=ポンチョ装着中は使用不可。",
+          "effects": [],
+          "conditions": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-3tiijji"
+        }
+      ],
+      "tokens": [],
+      "source": "\n【機体】\n機体名=ガンダムカクタス\nパイロット=トモヤ（BF）\n行動タイプ=起動\nHP=100\nEN=250\nAP=3\n格闘=6\n射撃=0\n回避=1\n感覚=1\n物理装甲=4\n光学装甲=2\n備考=重装甲近接格闘型ガンプラ。全身のスパイクはビーム兵器。\n備考=前進1、全速前進3、平行移動1、後退1、回避専念+4。\n備考=1ラウンド中1回、AP消費なしで60度回頭可能。\n備考=ABCポンチョ初期装着済み、耐久3。シールドとは別管理。\n備考=ブルーミングフォーム初期OFF。\n備考=基本性能の光学装甲2を採用。フォーム時4。原文の3→5とは不一致。\n\n【武装】\n名前=スパイクナックル\n攻撃種別=格闘\n属性=光学\n射程タイプ=前\n最小射程=1\n最大射程=1\n通常命中=3\nロックオン命中=5\nダメージ=1D10+5\n消費EN=10\n特殊ルール=1D10+5の攻撃を2回行う。\n\n【武装】\n名前=スパイクニースマッシュ\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=2\n通常命中=2\nロックオン命中=4\nダメージ=3D6+10\n消費EN=15\n特殊ルール=射程1ではダメージ+5。\n\n【武装】\n名前=ショルダーブルーム\n攻撃種別=格闘\n属性=光学\n射程タイプ=線\n最小射程=1\n最大射程=2\n通常命中=1\nロックオン命中=3\nダメージ=5D10+10\n消費EN=30\n特殊ルール=正面1マス目と2マス目を攻撃。\n特殊ルール=射程1ではダメージ+10。\n特殊ルール=使用時ABCポンチョ耐久-1。命中の有無を問わない。\n\n【武装】\n名前=スパイクシュート\n攻撃種別=格闘\n属性=光学\n射程タイプ=前\n最小射程=1\n最大射程=3\n通常命中=2\nロックオン命中=4\nダメージ=3D10+6\n消費EN=18\n特殊ルール=射程2～3では防御側が格闘・射撃・回避を選択可能。\n\n【武装】\n名前=スパイクチャージ\n攻撃種別=格闘\n属性=光学\n射程タイプ=線\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=3\nダメージ=3D6+10\n消費AP=2\n消費EN=30\n特殊ルール=正面直線4マスを突進。経路上の敵が対象。\n特殊ルール=敵がいない場合は使用不可。空撃ち不可。\n特殊ルール=必ず4マス突進。途中停止・旋回不可。\n特殊ルール=経路上の敵全員に個別判定。外れても継続。\n特殊ルール=途中の敵は通過するが位置は変わらない。\n特殊ルール=4マス目に敵がいる場合は攻撃判定後3マス目で停止。\n特殊ルール=突進移動は手動管理。\n\n【武装】\n名前=ファイナル・ブルーム\n攻撃種別=格闘\n属性=光学\n射程タイプ=前\n最小射程=1\n最大射程=1\n通常命中=不可\nロックオン命中=2\nダメージ=14D10+20\n消費EN=120\n特殊ルール=ブルーミングフォーム中のみ使用可能。\n特殊ルール=残り攻撃回数3：14D10+20。\n特殊ルール=残り攻撃回数2：12D10+20。\n特殊ルール=残り攻撃回数1：10D10+20。\n特殊ルール=使用後フォーム終了。命中・失敗を問わない。\n特殊ルール=通常武装の追加1D10は適用しない。\n\n\n【ブーストスキル】\n名前=ブルーミングフォーム\n消費AP=0\n消費EN=50\n毎ターン消費EN=30\n物理装甲補正=2\n光学装甲補正=2\n発動条件=自ラウンド中いつでも発動可能。\n効果=物理装甲+2、光学装甲+2。\n効果=通常武装ダメージ+1D10。\n効果=攻撃宣言可能回数3回。宣言1回につき残り-1。外れても消費。\n効果=複数対象への同時攻撃でも宣言回数は1回。\n効果=発動時にABCポンチョ消失。\n維持条件=次回以降の自ラウンド開始時にEN30消費。\n終了条件=攻撃宣言3回、維持EN不足、任意解除、水中落下、ファイナル・ブルーム使用。\n使用制限=終了後、次の自ラウンド終了時まで再発動不可。\n特殊ルール=ファイナル・ブルームには追加1D10を適用しない。\n\n【パイロットスキル】\n名前=切り払い（拳）\n分類=モーメントスキル\n原型スキル=近接回避\n使用制限=1ラウンド1回\n発動条件=射撃攻撃に対する回避判定に失敗したとき。\n効果=格闘値で回避判定をやり直す。\n\n【パイロットスキル】\n名前=ワンナイトブルーム\n分類=モーメントスキル\n原型スキル=脅威の装甲\n使用制限=1ラウンド1回\n消費EN=5\n発動条件=回避判定後、ダメージを受ける際。相手のダメージロール後でも宣言可能。\n効果=その攻撃に対する物理装甲と光学装甲の補正値の合計を3倍として扱う。\n特殊ルール=持続型ブルーミングフォームとは別効果。\n\n【パイロットスキル】\n名前=空中投下要請\n分類=モーメントスキル\n使用制限=1試合1回\n発動条件=自ラウンド中、ABCポンチョ未装着。\n効果=新品のABCポンチョを補給・装着。耐久3。\n使用制限=使用ラウンドは移動不可。既に移動していた場合は使用不可。\n使用制限=ポンチョ装着中は使用不可。\n  【特殊装備】\n名前=ABCポンチョ\n初期状態=装着中\n初期耐久=3\n最大耐久=3\n回避ペナルティ=0\n効果=ビーム射撃に対する特殊防御。装甲値なし。\n防御判定=ビーム射撃命中時に1D10。\nファンブル条件=出目が4-現在耐久値以下。\n通常ビーム防御=出目8～10で完全防御。それ以外は50％軽減、最大15。\n貫通ビーム防御=完全防御不可。50％軽減、最大15。\n特殊ルール=ショルダーブルーム使用時は耐久-1。\n特殊ルール=ブルーミングフォーム発動時にポンチョ消失。\n特殊ルール=AP0で任意投棄可能。"
+    },
+    {
+      "id": "custom-1794237621848-630777",
+      "name": "ソードインパルスspec−ⅱ",
+      "pilot": "未設定",
+      "hp": 100,
+      "en": 250,
+      "ap": 3,
+      "forms": [],
+      "stats": {
+        "格闘": 5,
+        "射撃": 3,
+        "回避": 4,
+        "感覚": 0,
+        "物理装甲": 1,
+        "光学装甲": 1
+      },
+      "weapons": [
+        {
+          "name": "ビームライフル",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 2,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            2
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 2
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=光学",
+          "cassetteId": "WP-mwdh4wjg-6cg26pr"
+        },
+        {
+          "name": "フラッシュエッジ",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 4,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            4
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 4
+            }
+          ],
+          "damage": "2D8+8",
+          "passLow": false,
+          "notes": "属性=光学\n特殊ルール=ロックオン補正は原文「+1/+4」。使い分け条件未指定。\n特殊ルール=⚫︎印あり。速攻。",
+          "cassetteId": "WP-mwdh4wjg-p6vpr4o"
+        },
+        {
+          "name": "エクスカリバー",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 25,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "3D10+10",
+          "passLow": false,
+          "notes": "属性=光学",
+          "cassetteId": "WP-mwdh4wjg-018cxgk"
+        },
+        {
+          "name": "バルカン",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "front",
+          "min": 1,
+          "max": 2,
+          "en": 5,
+          "ammo": null,
+          "normal": [
+            0
+          ],
+          "lock": [
+            0
+          ],
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 0
+            }
+          ],
+          "damage": "1D6",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=命中した対象にそのターン中、回避判定-1を付与する。重複可能。\n特殊ルール=⚫︎印あり。速攻。",
+          "cassetteId": "WP-mwdh4wjg-g95yiqr"
+        }
+      ],
+      "shields": [],
+      "equipment": [],
+      "skills": [
+        {
+          "name": "ソードシルエット",
+          "kind": "ブーストスキル",
+          "notes": "効果=エクスカリバーの射程+1。\n特殊ルール=継続時間は原文未指定。",
+          "boost": {
+            "stat": "",
+            "stats": [],
+            "amount": 0,
+            "rangeWeapon": "エクスカリバー",
+            "rangePlus": 1
+          },
+          "cassetteId": "SK-mwdh4wjh-e4kx2r9"
+        },
+        {
+          "name": "VPS装甲",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n発動条件=自機がダメージを受ける際。相手のダメージ判定後でも宣言可能。\n効果=受けるダメージ1つに対し、物理装甲と光学装甲の修正値の合計を3倍にする。\n特殊ルール=使用回数とEN消費は原文未指定。",
+          "cassetteId": "SK-official-recovered-006"
+        },
+        {
+          "name": "SEED",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n発動条件=HPが30未満のとき。\n効果=ターン終了時まで全パラメータ+3、AP+1。\n特殊ルール=全パラメータの対象範囲と使用回数は原文未指定。",
+          "boost": {
+            "stat": "格闘",
+            "stats": [
+              "格闘",
+              "射撃",
+              "回避",
+              "感覚",
+              "物理装甲",
+              "光学装甲"
+            ],
+            "amount": 3,
+            "rangeWeapon": "",
+            "rangePlus": 0
+          },
+          "cassetteId": "SK-mwdh4wjh-iifsf8j"
+        }
+      ],
+      "tokens": [],
+      "source": "\n【機体】\n機体名=未設定\nパイロット=未設定\n行動タイプ=未指定\nHP=100\nEN=250\nAP=3\n格闘=5\n射撃=3\n回避=4\n感覚=0\n物理装甲=1\n光学装甲=1\n\n【武装】\n名前=ビームライフル\n攻撃種別=射撃\n属性=光学\n射程タイプ=前\n最小射程=2\n最大射程=4\n通常命中=1\nロックオン命中=2\nダメージ=3D10+5\n消費EN=20\n\n【武装】\n名前=フラッシュエッジ\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=4\n通常命中=3\nロックオン命中=4\nダメージ=2D8+8\n消費EN=15\n特殊ルール=ロックオン補正は原文「+1/+4」。使い分け条件未指定。\n特殊ルール=⚫︎印あり。意味未指定。\n\n【武装】\n名前=エクスカリバー\n攻撃種別=格闘\n属性=光学\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=3\nロックオン命中=5\nダメージ=3D10+10\n消費EN=25\n\n【武装】\n名前=バルカン\n攻撃種別=射撃\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=2\n通常命中=0\nロックオン命中=不可\nダメージ=1D6\n消費EN=5\n特殊ルール=命中した対象にそのターン中、回避判定-1を付与する。重複可能。\n特殊ルール=⚫︎印あり。意味未指定。\n\n【ブーストスキル】\n名前=ソードシルエット\n消費EN=20\n効果=エクスカリバーの射程+1。\n特殊ルール=継続時間は原文未指定。\n\n【パイロットスキル】\n名前=VPS装甲\n分類=モーメントスキル\n発動条件=自機がダメージを受ける際。相手のダメージ判定後でも宣言可能。\n効果=受けるダメージ1つに対し、物理装甲と光学装甲の修正値の合計を3倍にする。\n特殊ルール=使用回数とEN消費は原文未指定。\n\n【パイロットスキル】\n名前=SEED\n分類=モーメントスキル\n発動条件=HPが30未満のとき。\n効果=ターン終了時まで全パラメータ+3、AP+1。\n特殊ルール=全パラメータの対象範囲と使用回数は原文未指定。\n  "
+    },
+    {
+      "id": "custom-1794240837317-422299",
+      "name": "ザクII（フェンリル隊仕様）",
+      "pilot": "未指定",
+      "hp": 100,
+      "en": 250,
+      "ap": 5,
+      "forms": [],
+      "stats": {
+        "格闘": 4,
+        "射撃": 4,
+        "回避": 4,
+        "感覚": 0,
+        "物理装甲": 0,
+        "光学装甲": 0
+      },
+      "weapons": [
+        {
+          "name": "ザクマシンガン",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 2,
+          "max": 4,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            1,
+            2
+          ],
+          "lock": [
+            0,
+            1,
+            2
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 0
+            },
+            {
+              "normal": 2,
+              "lock": 1
+            },
+            {
+              "normal": null,
+              "lock": 2
+            }
+          ],
+          "damage": "2D6+5",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=命中補正は段階別。通常+1/+2、ロックオン±0/+1/+2。",
+          "cassetteId": "WP-mwdh4wjg-riq64uw"
+        },
+        {
+          "name": "ヒートホーク",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 15,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "2D8+12",
+          "passLow": false,
+          "notes": "属性=物理",
+          "cassetteId": "WP-mwdh4wjg-4jxnyqf"
+        }
+      ],
+      "shields": [],
+      "equipment": [],
+      "skills": [
+        {
+          "name": "高性能センサー",
+          "kind": "ブーストスキル",
+          "notes": "効果=戦闘時、このユニットの回避判定総計+1。\n発動条件=回避判定ダイスを振る前に宣言。\nコスト=EN20\n特殊ルール=クールタイム無し",
+          "cassetteId": "SK-mwdh4wjh-78gipsa"
+        },
+        {
+          "name": "隠密",
+          "kind": "パイロットスキル",
+          "notes": "効果=戦闘時、このユニットの回避判定総計+1。\n発動条件=回避判定ダイスを振る前に宣言。",
+          "cassetteId": "SK-mwdh4wjh-92ba2gq"
+        },
+        {
+          "name": "闇夜のフェンリル隊",
+          "kind": "ブーストスキル",
+          "notes": "効果=任意の場所にザクIIトークンを2機召喚する。\n効果=本体のラウンド中に各トークンは独立AP2で行動する。\n効果=召喚したラウンドから行動可能。本体とトークンの行動順は自由。\n解除条件=撃破または3ラウンド経過でトークン消滅。",
+          "cassetteId": "SK-mwdh4wjh-kzz9bsm"
+        }
+      ],
+      "tokens": [
+        {
+          "name": "ザクIIトークン",
+          "count": 2,
+          "duration": 3,
+          "hp": 15,
+          "en": 100,
+          "ap": 2,
+          "immediate": true,
+          "stats": {
+            "格闘": 3,
+            "射撃": 3,
+            "回避": 3,
+            "感覚": 0,
+            "物理装甲": 0,
+            "光学装甲": 0
+          },
+          "notes": "【トークン武装】\nザクマシンガン：射撃／扇／射程2〜4／通常命中+1/+2／ロックオン±0/+1/+2／2D6+5／物理／EN15\nヒートホーク：格闘／扇／射程1／通常命中+3／ロックオン+5／2D8+12／物理／EN15\n【トークンスキル】\nなし",
+          "weapons": [
+            {
+              "name": "ザクマシンガン(トークン)",
+              "type": "射撃",
+              "attribute": "物理",
+              "shape": "fan",
+              "min": 2,
+              "max": 4,
+              "en": 15,
+              "ammo": null,
+              "normal": [
+                1,
+                2
+              ],
+              "lock": [
+                0,
+                1,
+                2
+              ],
+              "shots": [
+                {
+                  "normal": 1,
+                  "lock": 0
+                },
+                {
+                  "normal": 2,
+                  "lock": 1
+                },
+                {
+                  "normal": null,
+                  "lock": 2
+                }
+              ],
+              "damage": "2D6+5",
+              "passLow": false,
+              "notes": "ザクマシンガン：射撃／扇／射程2〜4／通常命中+1/+2／ロックオン±0/+1/+2／2D6+5／物理／EN15"
+            },
+            {
+              "name": "ヒートホーク(トークン)",
+              "type": "格闘",
+              "attribute": "物理",
+              "shape": "fan",
+              "min": 1,
+              "max": 1,
+              "en": 15,
+              "ammo": null,
+              "normal": [
+                3
+              ],
+              "lock": [
+                5
+              ],
+              "shots": [
+                {
+                  "normal": 3,
+                  "lock": 5
+                }
+              ],
+              "damage": "2D8+12",
+              "passLow": false,
+              "notes": "ヒートホーク：格闘／扇／射程1／通常命中+3／ロックオン+5／2D8+12／物理／EN15"
+            }
+          ]
+        }
+      ],
+      "source": "【機体】\n機体名=ザクII（フェンリル隊仕様）\nパイロット=未指定\n行動タイプ=起動\nHP=100\nEN=250\nAP=5\n格闘=4\n射撃=4\n回避=4\n感覚=0\n物理装甲=0\n光学装甲=0\n\n【武装】\n名前=ザクマシンガン\n攻撃種別=射撃\n属性=物理\n射程タイプ=扇\n最小射程=2\n最大射程=4\n通常命中=1/2\nロックオン命中=0/1/2\nダメージ=2D6+5\n消費EN=15\n特殊ルール=命中補正は段階別。通常+1/+2、ロックオン±0/+1/+2。\n\n【武装】\n名前=ヒートホーク\n攻撃種別=格闘\n属性=物理\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=3\nロックオン命中=5\nダメージ=2D8+12\n消費EN=15\n\n【ブーストスキル】\n名前=高性能センサー\n消費EN=30\n効果=戦闘時、このユニットの回避判定総計+1。\n発動条件=回避判定ダイスを振る前に宣言。\n\n【パイロットスキル】\n名前=隠密\n効果=戦闘時、このユニットの回避判定総計+1。\n発動条件=回避判定ダイスを振る前に宣言。\n\n【パイロットスキル】\n名前=闇夜のフェンリル隊\n効果=任意の場所にザクIIトークンを2機召喚する。\n効果=本体のラウンド中に各トークンは独立AP2で行動する。\n効果=召喚したラウンドから行動可能。本体とトークンの行動順は自由。\n解除条件=撃破または3ラウンド経過でトークン消滅。\n\n【召喚トークン】\n名前=ザクIIトークン\n召喚数=2\n持続ラウンド=3\n召喚直後行動=可能\nHP=15\nEN=100\nAP=2\n格闘=3\n射撃=3\n回避=3\n感覚=0\n物理装甲=0\n光学装甲=0\n【トークン武装】\nザクマシンガン：射撃／扇／射程2〜4／通常命中+1/+2／ロックオン±0/+1/+2／2D6+5／物理／EN15\nヒートホーク：格闘／扇／射程1／通常命中+3／ロックオン+5／2D8+12／物理／EN15\n【トークンスキル】\nなし\n"
+    },
+    {
+      "id": "custom-1794241044469-514035",
+      "name": "ホーリーナイトガンダムアグリアス",
+      "pilot": "未指定",
+      "hp": 100,
+      "en": 250,
+      "ap": 3,
+      "forms": [],
+      "stats": {
+        "格闘": 6,
+        "射撃": 0,
+        "回避": 6,
+        "感覚": 0,
+        "物理装甲": 1,
+        "光学装甲": 1
+      },
+      "weapons": [
+        {
+          "name": "さんごの剣",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 10,
+          "ammo": null,
+          "normal": [
+            3
+          ],
+          "lock": [
+            5
+          ],
+          "shots": [
+            {
+              "normal": 3,
+              "lock": 5
+            }
+          ],
+          "damage": "2D6+15",
+          "passLow": false,
+          "notes": "属性=物理",
+          "cassetteId": "WP-mwdh4wjg-jjsmgyu"
+        },
+        {
+          "name": "不動無明剣",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "front",
+          "min": 1,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 3
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、対象に「足止め」を付与する。",
+          "cassetteId": "WP-mwdh4wjg-ohb9sl0"
+        },
+        {
+          "name": "無双稲妻突き",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "front",
+          "min": 1,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 3
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、次の相手ターン中、パイロットスキル使用不可。",
+          "cassetteId": "WP-mwdh4wjg-j10xld7"
+        },
+        {
+          "name": "聖光爆裂破",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "front",
+          "min": 1,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 3
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、次の相手ターン中、ブーストスキル使用不可。",
+          "cassetteId": "WP-mwdh4wjg-is52zkm"
+        },
+        {
+          "name": "北斗骨砕打",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "front",
+          "min": 1,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 3
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、ダメージ+5。",
+          "cassetteId": "WP-mwdh4wjg-qtyqtgc"
+        },
+        {
+          "name": "乱命割殺打",
+          "type": "格闘",
+          "attribute": "物理",
+          "shape": "front",
+          "min": 1,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            3
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 3
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、相手の武装1つを指定。次の相手ターン中、その武装は使用不可。",
+          "cassetteId": "WP-mwdh4wjg-ozze8k0"
+        }
+      ],
+      "shields": [],
+      "equipment": [],
+      "skills": [
+        {
+          "name": "聖剣技",
+          "kind": "ブーストスキル",
+          "notes": "効果=※印の武装に対し、相手は格闘値の代わりに回避値で回避判定してもよい。\n特殊ルール=密接状態（射程1）では格闘値で回避判定しなければならない。\n特殊ルール=対象武装は不動無明剣、無双稲妻突き、聖光爆裂破、北斗骨砕打、乱命割殺打。\n特殊ルール=常時発動可",
+          "effects": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-vnzx164"
+        },
+        {
+          "name": "集中",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n発動条件=自身のターン中、攻撃命中判定前。\n効果=自身の攻撃命中判定+2。",
+          "effects": [
+            {
+              "target": "hit",
+              "value": "2",
+              "op": "add",
+              "timing": "each",
+              "scope": "all",
+              "weapon": ""
+            }
+          ],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-wnv33a6"
+        },
+        {
+          "name": "突貫",
+          "kind": "パイロットスキル",
+          "notes": "分類=モーメントスキル\n効果=自身の移動を1〜2マス多く移動してもよい。\n効果=発動時、自身の「足止め」を解除する。",
+          "effects": [],
+          "mode": {
+            "enabled": false,
+            "start": 0,
+            "upkeep": 0,
+            "recoilStats": {},
+            "recoilEffects": []
+          },
+          "hpLink": {
+            "enabled": false,
+            "min": 1,
+            "max": 0,
+            "allowZero": false,
+            "effects": []
+          },
+          "cassetteId": "SK-mwdh4wjh-rx0gpfe"
+        }
+      ],
+      "tokens": [],
+      "source": "\n【機体】\n機体名=ホーリーナイトガンダムアグリアス\nパイロット=未指定\n行動タイプ=起動\nHP=100\nEN=250\nAP=3\n格闘=6\n射撃=0\n回避=6\n感覚=0\n物理装甲=1\n光学装甲=1\n\n【武装】\n名前=さんごの剣\n攻撃種別=格闘\n属性=物理\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=3\nロックオン命中=5\nダメージ=2D6+15\n消費EN=10\n\n【武装】\n名前=不動無明剣\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、対象に「足止め」を付与する。\n\n【武装】\n名前=無双稲妻突き\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、次の相手ターン中、モーメントスキル使用不可。\n\n【武装】\n名前=聖光爆裂破\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、次の相手ターン中、ブーストスキル使用不可。\n\n【武装】\n名前=北斗骨砕打\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、ダメージ+5。\n\n【武装】\n名前=乱命割殺打\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、相手の武装1つを指定。次の相手ターン中、その武装は使用不可。\n\n【ブーストスキル】\n名前=聖剣技\n消費EN=0\n効果=※印の武装に対し、相手は格闘値の代わりに回避値で回避判定してもよい。\n特殊ルール=密接状態（射程1）では格闘値で回避判定しなければならない。\n特殊ルール=対象武装は不動無明剣、無双稲妻突き、聖光爆裂破、北斗骨砕打、乱命割殺打。\n特殊ルール=消費ENは未指定。0は仮登録値。\n\n【パイロットスキル】\n名前=集中\n分類=モーメントスキル\n発動条件=自身のターン中、攻撃命中判定前。\n効果=自身の攻撃命中判定+2。\n\n【パイロットスキル】\n名前=突貫\n分類=モーメントスキル\n効果=自身の移動を1〜2マス多く移動してもよい。\n効果=発動時、自身の「足止め」を解除する。\n  "
+    }
+  ]
+}
