@@ -1557,7 +1557,7 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
 }
 </style>
 <script>
-/* Ver 2.1.3: combined machine + authoritative cassette backup. */
+/* Ver 2.1.4: combined machine + authoritative cassette backup. */
 (function(){
  const MACHINE='hexmap-machine-library-v18', CASSETTE='hexmap-cassettes-v2';
  const parse=(key)=>{const raw=localStorage.getItem(key);if(!raw)throw Error(key+' の保存データがありません');return JSON.parse(raw)};
@@ -1583,60 +1583,47 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
  }catch(e){alert('一括読込失敗：'+e.message)}finally{input.value=''}};
 })();
 </script>
-<script id="official-sync-v21">
-/* Ver 2.1: official one-way sync. Edit local files or use ?editor=1 to prevent replacement while curating. */
-(function(){
-  const editor=new URLSearchParams(location.search).get('editor')==='1';
-  if(editor||!/^https?:$/.test(location.protocol))return;
-  const FILES=['official-cassettes.json','official-machines.json'];
-  const KEY_C='hexmap-cassettes-v2',KEY_M='hexmap-machine-library-v18';
-  const state=document.createElement('div');
-  state.id='officialSyncStatus';state.style.cssText='position:fixed;right:8px;bottom:8px;z-index:9999;padding:7px 11px;border-radius:9px;background:#152538;color:#fff;font:12px sans-serif;box-shadow:0 2px 8px #0005;max-width:75vw';
-  state.textContent='📡 公式データを確認中…';document.body.appendChild(state);
-  const show=(message)=>{state.textContent=message;setTimeout(()=>state.remove(),6000)};
-  const validId=x=>x&&typeof x.id==='string'&&x.id.length>0;
-  Promise.all(FILES.map(async file=>{
-    const r=await fetch(new URL(file,location.href),{cache:'no-store'});
-    if(!r.ok)throw Error(file+' HTTP '+r.status);
-    return r.json();
-  })).then(([c,m])=>{
-    if(c?.format!=='hexmap-cassettes-backup-v1'||!Array.isArray(c.data?.weapons)||!Array.isArray(c.data?.skills)||!c.data.weapons.every(validId)||!c.data.skills.every(validId))throw Error('カセット形式不一致');
-    if(m?.format!=='hexmap-machines-v18'||!Array.isArray(m.machines)||!m.machines.every(validId))throw Error('機体形式不一致');
-    const ids={weapons:new Set(c.data.weapons.map(x=>x.id)),skills:new Set(c.data.skills.map(x=>x.id))};
-    // Missing references are non-fatal: preserve the machine and cassette JSON unchanged.
-    const missing=[];
-    for(const machine of m.machines)for(const kind of ['weapons','skills'])for(const item of machine[kind]||[]){
-      if(!ids[kind].has(item.cassetteId))missing.push({machine:machine.name,kind,name:item.name||'名称未設定',cassetteId:item.cassetteId||''});
-    }
-    const warnMissing=()=>{
-      if(!missing.length)return;
-      let panel=document.getElementById('officialSyncWarnings');
-      if(!panel){
-        panel=document.createElement('details');panel.id='officialSyncWarnings';
-        panel.style.cssText='position:fixed;left:8px;bottom:8px;z-index:9998;max-width:min(440px,90vw);max-height:45vh;overflow:auto;background:#fff8e1;color:#513700;border:2px solid #d99b16;border-radius:9px;padding:8px;font:13px system-ui,sans-serif;box-shadow:0 2px 8px #0004';
-        document.body.appendChild(panel);
-      }
-      panel.replaceChildren();
-      const summary=document.createElement('summary');summary.textContent='⚠️ カセット参照不一致 '+missing.length+'件（タップで詳細）';summary.style.cssText='font-weight:bold;cursor:pointer';panel.appendChild(summary);
-      const list=document.createElement('ul');list.style.cssText='padding-left:20px;margin:8px 0';
-      for(const x of missing){const li=document.createElement('li');li.textContent=x.machine+'／'+x.name+'（'+(x.kind==='skills'?'スキル':'武装')+'・ID: '+x.cassetteId+'）';list.appendChild(li)}
-      panel.appendChild(list);
-      const note=document.createElement('div');note.textContent='参照先のない項目は保持しますが、カセット由来の性能は利用できない場合があります。';panel.appendChild(note);
-    };
-    warnMissing();
-    // Local edits and manual JSON imports are authoritative. Official files only seed absent storage.
-    const targets=[[KEY_C,c.data],[KEY_M,m.machines]];
-    let seeded=0;
-    for(const [key,data] of targets){
-      if(localStorage.getItem(key)!==null)continue;
-      const value=JSON.stringify(data);
-      localStorage.setItem(key,value);
-      if(localStorage.getItem(key)!==value)throw Error('公式データの初回保存に失敗');
-      seeded++;
-    }
-    if(seeded){state.textContent='✅ 未登録の公式データを初期登録しました。再読み込みします…';location.reload();return;}
-    show(missing.length?'⚠️ 端末の保存データを維持（公式参照不一致 '+missing.length+'件）':'✅ 端末の保存データを維持');
-  }).catch(err=>{console.warn('[official sync]',err);show('⚠️ 公式データを取得できません。端末のデータを使用します')});
+<script id="combined-auto-sync-v214">
+/* GitHub Pages: bundled JSON is authoritative on every launch.
+   Existing local data is replaced only after full validation and successful fetch.
+   The cassette library is written first; machine references remain unchanged. */
+(async function(){
+ if(!/^https?:$/.test(location.protocol))return;
+ const FILE='hexmap-all-data.json';
+ const KEY_C='hexmap-cassettes-v2',KEY_M='hexmap-machine-library-v18';
+ const state=document.createElement('div');state.id='officialSyncStatus';
+ state.style.cssText='position:fixed;right:8px;bottom:8px;z-index:9999;padding:7px 11px;border-radius:9px;background:#152538;color:white;font:12px sans-serif;max-width:80vw';
+ state.textContent='📦 一括JSONを読み込み中…';document.body.appendChild(state);
+ const finish=(message)=>{state.textContent=message;setTimeout(()=>state.remove(),6500)};
+ const valid=(obj)=>obj&&obj.format==='hexmap-combined-v1'&&Array.isArray(obj.machines)&&
+   obj.machines.every(m=>m&&typeof m.id==='string'&&typeof m.name==='string'&&Array.isArray(m.weapons)&&Array.isArray(m.skills))&&
+   obj.cassettes&&['weapons','skills'].every(k=>Array.isArray(obj.cassettes[k])&&obj.cassettes[k].every(c=>c&&typeof c.id==='string'&&typeof c.name==='string'));
+ try{
+  const response=await fetch(new URL(FILE,location.href),{cache:'no-store'});
+  if(!response.ok)throw Error(FILE+' HTTP '+response.status);
+  const obj=await response.json();
+  if(!valid(obj))throw Error('一括JSONの形式が不正です');
+  const c=JSON.stringify(obj.cassettes),m=JSON.stringify(obj.machines);
+  const marker='hexmap-combined-auto-last-reload';
+  // A reload may initialize UI/storage with derived values. Avoid infinite reloads
+  // for the same source payload, but always restore the authoritative source.
+  const fingerprint=JSON.stringify([c,m]);
+  const alreadyReloaded=sessionStorage.getItem(marker)===fingerprint;
+  const changed=localStorage.getItem(KEY_C)!==c||localStorage.getItem(KEY_M)!==m;
+  if(changed){
+   const beforeC=localStorage.getItem(KEY_C),beforeM=localStorage.getItem(KEY_M);
+   try{
+    localStorage.setItem(KEY_C,c);localStorage.setItem(KEY_M,m);
+    if(localStorage.getItem(KEY_C)!==c||localStorage.getItem(KEY_M)!==m)throw Error('保存後の検証に失敗');
+   }catch(e){
+    if(beforeC===null)localStorage.removeItem(KEY_C);else localStorage.setItem(KEY_C,beforeC);
+    if(beforeM===null)localStorage.removeItem(KEY_M);else localStorage.setItem(KEY_M,beforeM);
+    throw e;
+   }
+   if(!alreadyReloaded){sessionStorage.setItem(marker,fingerprint);state.textContent='✅ 一括JSONを優先して反映。画面を更新します…';location.reload();return;}
+   finish('✅ 一括JSONを優先して読み込みました');
+  }else{finish('✅ 一括JSONは最新版です');}
+ }catch(err){console.warn('[combined auto sync]',err);finish('⚠️ 一括JSONの自動読込失敗：端末のデータを維持');}
 })();
 </script>
 </html>
