@@ -1,6 +1,6 @@
 {
   "format": "hexmap-cassettes-backup-v1",
-  "exportedAt": "2026-11-13T07:08:00.905Z",
+  "exportedAt": "2026-11-13T10:05:23.345Z",
   "data": {
     "weapons": [
       {
@@ -81,10 +81,10 @@
       },
       {
         "id": "WP-mwdh4wjg-e64wgur",
-        "name": "ショルダーブルーム",
+        "name": "ショルダーブルーム(ウィザード)",
         "aliases": [],
         "data": {
-          "name": "ショルダーブルーム",
+          "name": "ショルダーブルーム(ウィザード)",
           "type": "格闘",
           "attribute": "光学",
           "shape": "front",
@@ -106,7 +106,10 @@
           ],
           "damage": "6D8+10",
           "passLow": false,
-          "notes": "光学"
+          "notes": "光学",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -115,6 +118,13 @@
             "notes": "光学",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "ショルダーブルーム",
+            "notes": "光学",
+            "source": "",
+            "date": "2026-11-13T09:58:48.658Z"
           }
         ]
       },
@@ -595,16 +605,16 @@
       },
       {
         "id": "WP-mwdh4wjg-368dzqf",
-        "name": "ファンネル(弱)",
+        "name": "強化ファンネル",
         "aliases": [],
         "data": {
-          "name": "ファンネル(弱)",
+          "name": "強化ファンネル",
           "type": "感覚",
           "attribute": "光学",
           "shape": "all",
           "min": 3,
           "max": 8,
-          "en": 20,
+          "en": 10,
           "ammo": null,
           "normal": [
             0
@@ -618,12 +628,9 @@
               "lock": 0
             }
           ],
-          "damage": "2D10",
+          "damage": "1D10",
           "passLow": true,
-          "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。",
-          "fixedDamageBonus": 0,
-          "extraDamageDice": "",
-          "conditions": []
+          "notes": "属性=光学\n特殊ルール=ロックオン攻撃のみ。搭載数10基。攻撃回数1～3。\n特殊ルール=1基につきEN10、ダメージ1D10。10基すべて使用時はEN100。"
         },
         "sources": [
           {
@@ -632,20 +639,45 @@
             "notes": "属性=光学\n特殊ルール=ロックオン攻撃のみ。搭載数10基。攻撃回数1～3。\n特殊ルール=1基につきEN10、ダメージ1D10。10基すべて使用時はEN100。",
             "source": "",
             "date": "移行時"
-          },
+          }
+        ]
+      },
+      {
+        "id": "WP-mwdh4wjg-3rcsvra",
+        "name": "ビームライフル",
+        "aliases": [],
+        "data": {
+          "name": "ビームライフル",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 4,
+          "en": 20,
+          "ammo": null,
+          "normal": [
+            1
+          ],
+          "lock": [
+            2
+          ],
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 2
+            }
+          ],
+          "damage": "3D10+5",
+          "passLow": false,
+          "notes": "属性=光学"
+        },
+        "sources": [
           {
-            "machine": "編集前の記録",
-            "name": "強化ファンネル",
-            "notes": "属性=光学\n特殊ルール=ロックオン攻撃のみ。搭載数10基。攻撃回数1～3。\n特殊ルール=1基につきEN10、ダメージ1D10。10基すべて使用時はEN100。",
+            "machine": "グレイテストサザビー",
+            "name": "ビームライフル",
+            "notes": "属性=光学",
             "source": "",
-            "date": "2026-11-12T23:20:34.324Z"
-          },
-          {
-            "machine": "編集前の記録",
-            "name": "ファンネル(弱)",
-            "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。",
-            "source": "",
-            "date": "2026-11-13T00:27:44.713Z"
+            "date": "移行時"
           }
         ]
       },
@@ -1522,18 +1554,7 @@
           ],
           "damage": "3D6+10",
           "passLow": false,
-          "notes": "属性=光学\n特殊ルール=射程1ではダメージ+5。",
-          "fixedDamageBonus": 0,
-          "extraDamageDice": "",
-          "conditions": [
-            {
-              "name": "ファルコンストライク",
-              "note": "隣接時にダメージ+5",
-              "target": "damage",
-              "op": "add",
-              "value": "5"
-            }
-          ]
+          "notes": "属性=光学\n特殊ルール=射程1ではダメージ+5。"
         },
         "sources": [
           {
@@ -1542,13 +1563,6 @@
             "notes": "属性=光学\n特殊ルール=射程1ではダメージ+5。",
             "source": "",
             "date": "移行時"
-          },
-          {
-            "machine": "編集前の記録",
-            "name": "スパイクニースマッシュ",
-            "notes": "属性=光学\n特殊ルール=射程1ではダメージ+5。",
-            "source": "",
-            "date": "2026-11-13T06:19:53.831Z"
           }
         ]
       },
@@ -2191,11 +2205,7 @@
               "normal": 0,
               "lock": 0
             }
-          ],
-          "passLow": true,
-          "fixedDamageBonus": 0,
-          "extraDamageDice": "",
-          "conditions": []
+          ]
         },
         "sources": [
           {
@@ -2204,13 +2214,6 @@
             "notes": "",
             "source": "",
             "date": "2026-11-12T23:22:20.647Z"
-          },
-          {
-            "machine": "編集前の記録",
-            "name": "ファンネル(強)",
-            "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。",
-            "source": "",
-            "date": "2026-11-13T00:27:51.200Z"
           }
         ]
       },
@@ -2240,11 +2243,7 @@
               "normal": 0,
               "lock": 0
             }
-          ],
-          "passLow": true,
-          "fixedDamageBonus": 0,
-          "extraDamageDice": "",
-          "conditions": []
+          ]
         },
         "sources": [
           {
@@ -2253,13 +2252,6 @@
             "notes": "",
             "source": "",
             "date": "2026-11-12T23:27:05.828Z"
-          },
-          {
-            "machine": "編集前の記録",
-            "name": "ファンネル(必殺)",
-            "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。\n使用後は次の自ラウンド終了時まで、名前にファンネルとつく武装は使用不可。",
-            "source": "",
-            "date": "2026-11-13T00:27:32.856Z"
           }
         ]
       }
@@ -2414,19 +2406,7 @@
           "mode": {
             "start": 0,
             "upkeep": 0,
-            "enabled": true,
-            "recoilEnabled": false,
-            "recoilStats": {},
-            "recoilMulti": {
-              "stats": [],
-              "value": "-2"
-            },
-            "recoilEffects": [],
-            "recoilEnd": {
-              "round": 1,
-              "boundary": "start"
-            },
-            "notes": ""
+            "enabled": true
           },
           "simpleEffects": [
             {
@@ -2484,14 +2464,7 @@
             "hit",
             "damage",
             "final"
-          ],
-          "duration": {
-            "enabled": true,
-            "timed": false,
-            "manual": true,
-            "round": 1,
-            "boundary": "start"
-          }
+          ]
         },
         "sources": [
           {
@@ -3177,19 +3150,7 @@
           "mode": {
             "start": 0,
             "upkeep": 0,
-            "enabled": true,
-            "recoilStats": {},
-            "recoilEffects": [],
-            "recoilEnd": {
-              "round": 1,
-              "boundary": "start"
-            },
-            "notes": "",
-            "recoilMulti": {
-              "stats": [],
-              "value": "-2"
-            },
-            "recoilEnabled": false
+            "enabled": false
           },
           "simpleEffects": [
             {
@@ -3233,7 +3194,7 @@
             }
           ],
           "simpleCost": {
-            "timing": "on",
+            "timing": "none",
             "en": 20,
             "ap": 0,
             "cooldown": 0,
@@ -3247,14 +3208,7 @@
             "hit",
             "damage",
             "final"
-          ],
-          "duration": {
-            "enabled": true,
-            "timed": true,
-            "manual": false,
-            "round": 1,
-            "boundary": "start"
-          }
+          ]
         },
         "sources": [
           {
@@ -3371,33 +3325,7 @@
           "mode": {
             "start": 0,
             "upkeep": 0,
-            "enabled": true,
-            "recoilStats": {
-              "格闘": "−2",
-              "射撃": "−2",
-              "回避": "−2",
-              "感覚": "−2",
-              "物理装甲": "-2",
-              "光学装甲": "-2"
-            },
-            "recoilEffects": [],
-            "notes": "",
-            "recoilEnd": {
-              "round": 1,
-              "boundary": "start"
-            },
-            "recoilEnabled": true,
-            "recoilMulti": {
-              "stats": [
-                "格闘",
-                "射撃",
-                "回避",
-                "感覚",
-                "物理装甲",
-                "光学装甲"
-              ],
-              "value": "-2"
-            }
+            "enabled": true
           },
           "simpleEffects": [
             {
@@ -3422,13 +3350,12 @@
             }
           ],
           "simpleCost": {
-            "timing": "on",
+            "timing": "none",
             "en": 80,
             "ap": 0,
             "cooldown": 1,
             "uses": 0,
             "oncePerRound": false,
-            "upkeepChoice": false,
             "upkeepEn": 0,
             "upkeepAp": 0
           },
@@ -3437,14 +3364,7 @@
             "hit",
             "damage",
             "final"
-          ],
-          "duration": {
-            "enabled": true,
-            "timed": true,
-            "manual": false,
-            "round": 2,
-            "boundary": "start"
-          }
+          ]
         },
         "sources": [
           {
@@ -3768,19 +3688,7 @@
           "mode": {
             "start": 0,
             "upkeep": 0,
-            "enabled": true,
-            "recoilEnabled": false,
-            "recoilStats": {},
-            "recoilMulti": {
-              "stats": [],
-              "value": "-2"
-            },
-            "recoilEffects": [],
-            "recoilEnd": {
-              "round": 1,
-              "boundary": "start"
-            },
-            "notes": ""
+            "enabled": false
           },
           "simpleEffects": [
             {
@@ -3824,7 +3732,6 @@
             "cooldown": 1,
             "uses": 0,
             "oncePerRound": true,
-            "upkeepChoice": false,
             "upkeepEn": 0,
             "upkeepAp": 0
           },
@@ -3833,14 +3740,7 @@
             "hit",
             "damage",
             "final"
-          ],
-          "duration": {
-            "enabled": true,
-            "timed": true,
-            "manual": false,
-            "round": 1,
-            "boundary": "start"
-          }
+          ]
         },
         "sources": [
           {
@@ -4415,145 +4315,6 @@
             "notes": "分類=モーメントスキル\n原型スキル=脅威の装甲\n使用制限=1ラウンド1回\n発動条件=回避判定後、ダメージを受ける際。相手のダメージロール後でも宣言可能。\n効果=その攻撃に対する物理装甲と光学装甲の補正値の合計を3倍として扱う。\n特殊ルール=持続型ブルーミングフォームとは別効果。",
             "source": "",
             "date": "移行時"
-          }
-        ]
-      },
-      {
-        "id": "SK-official-recovered-001",
-        "name": "狩人の眼光",
-        "aliases": [],
-        "data": {
-          "name": "狩人の眼光",
-          "kind": "パイロットスキル",
-          "notes": "相手の回避結果を確認後に発動可能\n相手の回避ダイスの出目を－2する。"
-        },
-        "sources": [
-          {
-            "machine": "ガンダムカクタス・ウィザード",
-            "name": "狩人の眼光",
-            "notes": "相手の回避結果を確認後に発動可能\n相手の回避ダイスの出目を－2する。",
-            "source": "",
-            "date": "公式データ補完"
-          }
-        ]
-      },
-      {
-        "id": "SK-official-recovered-002",
-        "name": "精密スコープ展開",
-        "aliases": [],
-        "data": {
-          "name": "精密スコープ展開",
-          "kind": "ブーストスキル",
-          "notes": "射撃＋3、感覚＋2、ライフル射程＋2。移動不可、ライフル以外使用不可。回避でライフル破棄。",
-          "boost": {
-            "stat": "射撃",
-            "stats": [
-              "射撃"
-            ],
-            "amount": 3,
-            "rangeWeapon": "ダブルバレル・ロングレンジライフル",
-            "rangePlus": 2
-          }
-        },
-        "sources": [
-          {
-            "machine": "ガンダムカクタス・ウィザード",
-            "name": "精密スコープ展開",
-            "notes": "射撃＋3、感覚＋2、ライフル射程＋2。移動不可、ライフル以外使用不可。回避でライフル破棄。",
-            "source": "",
-            "date": "公式データ補完"
-          }
-        ]
-      },
-      {
-        "id": "SK-official-recovered-003",
-        "name": "オーバードブースト（突貫）",
-        "aliases": [],
-        "data": {
-          "name": "オーバードブースト（突貫）",
-          "kind": "パイロットスキル",
-          "notes": "分類=モーメントスキル\n使用タイミング=自身のラウンド中\n使用制限=ラウンド3回\n効果=自身の行動ラウンド中に1回または2回、追加で前進できる。"
-        },
-        "sources": [
-          {
-            "machine": "ꓜꓮꓗꓴ-ꓡꓡ（ザクツーエル）",
-            "name": "オーバードブースト（突貫）",
-            "notes": "分類=モーメントスキル\n使用タイミング=自身のラウンド中\n使用制限=ラウンド3回\n効果=自身の行動ラウンド中に1回または2回、追加で前進できる。",
-            "source": "",
-            "date": "公式データ補完"
-          }
-        ]
-      },
-      {
-        "id": "SK-official-recovered-004",
-        "name": "反応型違法改造装甲（脅威の装甲）",
-        "aliases": [],
-        "data": {
-          "name": "反応型違法改造装甲（脅威の装甲）",
-          "kind": "パイロットスキル",
-          "notes": "分類=モーメントスキル\n使用タイミング=自身の回避行動後\n使用制限=ラウンド1回\n効果=自身が受けるダメージ1つに対して、物理装甲と光学装甲の修正総計を3倍にする。\n効果=相手がダメージ判定を行った後でも宣言可能。"
-        },
-        "sources": [
-          {
-            "machine": "ꓜꓮꓗꓴ-ꓡꓡ（ザクツーエル）",
-            "name": "反応型違法改造装甲（脅威の装甲）",
-            "notes": "分類=モーメントスキル\n使用タイミング=自身の回避行動後\n使用制限=ラウンド1回\n効果=自身が受けるダメージ1つに対して、物理装甲と光学装甲の修正総計を3倍にする。\n効果=相手がダメージ判定を行った後でも宣言可能。",
-            "source": "",
-            "date": "公式データ補完"
-          }
-        ]
-      },
-      {
-        "id": "SK-official-recovered-005",
-        "name": "ワンナイトブルーム",
-        "aliases": [],
-        "data": {
-          "name": "ワンナイトブルーム",
-          "kind": "パイロットスキル",
-          "notes": "分類=モーメントスキル\n原型スキル=脅威の装甲\n使用制限=1ラウンド1回\n発動条件=回避判定後、ダメージを受ける際。相手のダメージロール後でも宣言可能。\n効果=その攻撃に対する物理装甲と光学装甲の補正値の合計を3倍として扱う。\n特殊ルール=持続型ブルーミングフォームとは別効果。",
-          "effects": [],
-          "conditions": [],
-          "mode": {
-            "enabled": false,
-            "start": 0,
-            "upkeep": 0,
-            "recoilStats": {},
-            "recoilEffects": []
-          },
-          "hpLink": {
-            "enabled": false,
-            "min": 1,
-            "max": 0,
-            "allowZero": false,
-            "effects": []
-          }
-        },
-        "sources": [
-          {
-            "machine": "ガンダムカクタス",
-            "name": "ワンナイトブルーム",
-            "notes": "分類=モーメントスキル\n原型スキル=脅威の装甲\n使用制限=1ラウンド1回\n発動条件=回避判定後、ダメージを受ける際。相手のダメージロール後でも宣言可能。\n効果=その攻撃に対する物理装甲と光学装甲の補正値の合計を3倍として扱う。\n特殊ルール=持続型ブルーミングフォームとは別効果。",
-            "source": "",
-            "date": "公式データ補完"
-          }
-        ]
-      },
-      {
-        "id": "SK-official-recovered-006",
-        "name": "VPS装甲",
-        "aliases": [],
-        "data": {
-          "name": "VPS装甲",
-          "kind": "パイロットスキル",
-          "notes": "分類=モーメントスキル\n発動条件=自機がダメージを受ける際。相手のダメージ判定後でも宣言可能。\n効果=受けるダメージ1つに対し、物理装甲と光学装甲の修正値の合計を3倍にする。\n特殊ルール=使用回数とEN消費は原文未指定。"
-        },
-        "sources": [
-          {
-            "machine": "ソードインパルスspec−ⅱ",
-            "name": "VPS装甲",
-            "notes": "分類=モーメントスキル\n発動条件=自機がダメージを受ける際。相手のダメージ判定後でも宣言可能。\n効果=受けるダメージ1つに対し、物理装甲と光学装甲の修正値の合計を3倍にする。\n特殊ルール=使用回数とEN消費は原文未指定。",
-            "source": "",
-            "date": "公式データ補完"
           }
         ]
       }
