@@ -729,15 +729,15 @@ function cassetteEquipRow(kind,item={}){
  for(const [txt,fn] of [['↑',()=>row.previousElementSibling?.before(row)],['↓',()=>row.nextElementSibling?.after(row)],['取り外す',()=>{row.remove();}]]){const b=document.createElement('button');b.type='button';b.textContent=txt;b.onclick=fn;buttons.append(b)}
  row.append(title,layout,detail,buttons);host.append(row);
  function list(){try{return JSON.parse(localStorage.getItem('hexmap-cassettes-v2'))?.[kind]||[]}catch{return []}}
- function populate(){const arr=list();const old=sel.value||row.dataset.cassetteId||'';sel.replaceChildren();sel.add(new Option('カセットを選択してください',''));
+ function populate(){const arr=list();const old=sel.value||row.dataset.cassetteId||item.cassetteId||'';sel.replaceChildren();sel.add(new Option('カセットを選択してください',''));
   for(const c of arr)sel.add(new Option(c.name,c.id));
   let id=old;
-  if(!arr.some(c=>c.id===id)&&item.name){const matches=arr.filter(c=>c.name===item.name);if(matches.length===1)id=matches[0].id}
+  if(!id&&item.name&&!item.equipLabel){const matches=arr.filter(c=>c.name===item.name);if(matches.length===1)id=matches[0].id}
   if(id&&!arr.some(c=>c.id===id)){sel.add(new Option('⚠️ 未登録ID: '+id,id));}
   else if(!id&&item.name){sel.add(new Option('⚠️ 未対応: '+item.name,'__missing__'));id='__missing__'}
   sel.value=id||'';row.dataset.cassetteId=id||'';update();}
  function update(){row.dataset.cassetteId=sel.value;const c=list().find(x=>x.id===sel.value);if(c){detail.textContent=(c.data?.displayText||c.data?.notes||'説明文なし');if(!label.value)label.placeholder=c.name+'（そのまま）'}else detail.textContent='⚠️ カセット未選択・未登録。ライブラリで登録してから装備してください。'}
- sel.onchange=()=>{label.value='';update()};label.value=item.equipLabel||'';populate();
+ sel.onchange=()=>{label.value='';update()};label.value=typeof item.equipLabel==='string'?item.equipLabel:'';populate();
  return row;
 }
 function editorWeapon(w={},targetId='weaponEditor'){if(targetId!=='weaponEditor')return legacyTokenWeaponEditor(w,targetId);return cassetteEquipRow('weapons',w)}
@@ -835,14 +835,28 @@ function refreshEditList(){const q=($('searchEditMachine').value||'').trim().toL
 $('searchEditMachine').addEventListener('input',refreshEditList);
 $('editMachine').onchange=()=>{let m=library.find(x=>x.id===$('editMachine').value);showDraft(m||blank())};$('newMachine').onclick=()=>{showDraft(blank());refreshEditList()};$('addWeapon').onclick=()=>editorWeapon();$('addSkill').onclick=()=>editorSkill();$('addShield').onclick=()=>editorShield();$('addEquipment').onclick=()=>editorEquipment();
 function readShot(row,key){let s=row.querySelector(`[data-shot="${key}"]`).value.trim();return s&&!/^(不可|なし)$/i.test(s)&&Number.isFinite(Number(s))?Number(s):null}
-function readDraft(){let m=blank();m.id=editingId||'custom-'+Date.now()+'-'+Math.floor(Math.random()*1e6);m.name=$('regName').value.trim();m.pilot=$('regPilot').value.trim();for(let k of ['Hp','En','Ap'])m[k.toLowerCase()]=Number($('reg'+k).value)||0;for(let n of statNames)m.stats[n]=Number(document.querySelector(`[data-stat="${n}"]`).value)||0;m.source=$('regSource').value;m.tokens=readTokenEditor();m.forms=readForms();m.weapons=[...document.querySelectorAll('#weaponEditor .weapon-row')].map(row=>({cassetteId:row.dataset.cassetteId||'',equipLabel:row.querySelector('[data-equip-label]')?.value.trim()||'',name:row.querySelector('[data-equip-label]')?.value.trim()||row.querySelector('[data-equip-select]')?.selectedOptions[0]?.text||''})).filter(x=>x.cassetteId&&x.cassetteId!=='__missing__');m.shields=[...document.querySelectorAll('.shield-row')].map(box=>{const get=k=>box.querySelector(`[data-f="${k}"]`).value;return {name:get('name').trim(),physical:Math.max(0,Number(get('physical'))||0),optical:Math.max(0,Number(get('optical'))||0),penalty:Number(get('penalty'))||0,maxUses:Math.max(1,Math.floor(Number(get('maxUses'))||3)),largeShield:box.querySelector('[data-f="largeShield"]').checked,notes:get('notes')}}).filter(x=>x.name);m.equipment=[...document.querySelectorAll('.equipment-row')].map(box=>{let get=k=>box.querySelector(`[data-f="${k}"]`).value;return {name:get('name').trim(),durability:Math.max(0,Number(get('durability'))||0),initial:'装備中',notes:get('notes')}}).filter(x=>x.name);m.skills=[...document.querySelectorAll('#skillEditor .skill-row')].map(row=>({cassetteId:row.dataset.cassetteId||'',equipLabel:row.querySelector('[data-equip-label]')?.value.trim()||'',name:row.querySelector('[data-equip-label]')?.value.trim()||row.querySelector('[data-equip-select]')?.selectedOptions[0]?.text||''})).filter(x=>x.cassetteId&&x.cassetteId!=='__missing__');for(const [kind,selector] of [['weapons','#weaponEditor .weapon-row'],['skills','#skillEditor .skill-row']]){const rows=[...document.querySelectorAll(selector)];m[kind].forEach((item,i)=>{const ref=rows[i]?.dataset.cassetteId;if(ref)item.cassetteId=ref;if(rows[i]?._pendingCassette)item.pendingCassette=JSON.parse(JSON.stringify(rows[i]._pendingCassette))})}return m}
+/* Ver 2.2: Equipment labels are machine-owned metadata, never cassette master names.
+   One reader for both weapon and skill rows; never use display text as the saved label. */
+function readEquippedCassettes(kind){
+ const selector=kind==='weapons'?'#weaponEditor .weapon-row':'#skillEditor .skill-row';
+ return [...document.querySelectorAll(selector)].map(row=>{
+  const cassetteId=row.querySelector('[data-equip-select]')?.value||row.dataset.cassetteId||'';
+  const equipLabel=row.querySelector('[data-equip-label]')?.value.trim()||'';
+  const option=row.querySelector('[data-equip-select]')?.selectedOptions?.[0];
+  const name=equipLabel||option?.text||'';
+  const item={cassetteId,equipLabel,name};
+  if(row._pendingCassette)item.pendingCassette=JSON.parse(JSON.stringify(row._pendingCassette));
+  return item;
+ });
+}
+function readDraft(){let m=blank();m.id=editingId||'custom-'+Date.now()+'-'+Math.floor(Math.random()*1e6);m.name=$('regName').value.trim();m.pilot=$('regPilot').value.trim();for(let k of ['Hp','En','Ap'])m[k.toLowerCase()]=Number($('reg'+k).value)||0;for(let n of statNames)m.stats[n]=Number(document.querySelector(`[data-stat="${n}"]`).value)||0;m.source=$('regSource').value;m.tokens=readTokenEditor();m.forms=readForms();m.weapons=readEquippedCassettes('weapons');m.shields=[...document.querySelectorAll('.shield-row')].map(box=>{const get=k=>box.querySelector(`[data-f="${k}"]`).value;return {name:get('name').trim(),physical:Math.max(0,Number(get('physical'))||0),optical:Math.max(0,Number(get('optical'))||0),penalty:Number(get('penalty'))||0,maxUses:Math.max(1,Math.floor(Number(get('maxUses'))||3)),largeShield:box.querySelector('[data-f="largeShield"]').checked,notes:get('notes')}}).filter(x=>x.name);m.equipment=[...document.querySelectorAll('.equipment-row')].map(box=>{let get=k=>box.querySelector(`[data-f="${k}"]`).value;return {name:get('name').trim(),durability:Math.max(0,Number(get('durability'))||0),initial:'装備中',notes:get('notes')}}).filter(x=>x.name);m.skills=readEquippedCassettes('skills');return m}
 $('saveMachine').onclick=()=>{let m=readDraft();
   const previous=library.find(x=>x.id===m.id);
   if(previous){for(const kind of ['weapons','skills']){
     const rows=[...document.querySelectorAll(kind==='weapons'?'#weaponEditor .weapon-row':'#skillEditor .skill-row')];
     const preserved=[];
     rows.forEach((row,i)=>{
-      if(row.dataset.cassetteId&&row.dataset.cassetteId!=='__missing__')return;
+      if(row.querySelector('[data-equip-select]')?.value&&row.querySelector('[data-equip-select]')?.value!=='__missing__')return;
       const old=(previous[kind]||[])[i];
       if(old)preserved.push({index:i,item:JSON.parse(JSON.stringify(old))});
     });
@@ -1269,7 +1283,7 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
    for(const kind of ['weapons','skills'])result[kind]=(m[kind]||[]).map(item=>{
      const c=findCassette(kind,item);
      if(!c)return {...clone(item),cassetteMissing:true};
-     const equipLabel=typeof item.equipLabel==='string'?item.equipLabel.trim():'';
+     const equipLabel=typeof item.equipLabel==='string'?item.equipLabel.trim():((item.cassetteId===c.id&&item.name&&item.name!==c.name)?item.name.trim():'');
      const canonical={...clone(c.data),name:equipLabel||c.name,equipLabel,notes:kind==='skills'?(c.data.displayText||c.data.notes||''):c.data.notes,cassetteId:c.id};
      const resolved=window.hexmapSimpleResolveSkill?window.hexmapSimpleResolveSkill(canonical,kind):canonical;
      return {...resolved,name:equipLabel||c.name,equipLabel,cassetteId:c.id};
@@ -1559,7 +1573,7 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
 }
 </style>
 <script>
-/* Ver 2.1.4: combined machine + authoritative cassette backup. */
+/* Ver 2.2: combined machine + authoritative cassette backup. */
 (function(){
  const MACHINE='hexmap-machine-library-v18', CASSETTE='hexmap-cassettes-v2';
  const parse=(key)=>{const raw=localStorage.getItem(key);if(!raw)throw Error(key+' の保存データがありません');return JSON.parse(raw)};
@@ -1573,7 +1587,7 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
  const input=document.createElement('input');input.type='file';input.accept='.json,application/json';input.hidden=true;load.appendChild(input);
  const msg=document.createElement('p');msg.className='muted';panel.append(save,load,msg);
  const register=document.getElementById('registerTab');register.insertBefore(panel,register.firstChild);
- save.onclick=()=>{try{const machines=parse(MACHINE),cassettes=parse(CASSETTE);if(!validMachines(machines)||!validCassettes(cassettes))throw Error('保存データの形式が不正です');download({format:'hexmap-combined-v1',exportedAt:new Date().toISOString(),cassettes,machines},'hexmap-all-data.json');msg.textContent='機体'+machines.length+'機・武装'+cassettes.weapons.length+'件・スキル'+cassettes.skills.length+'件を保存しました';}catch(e){alert('一括保存失敗：'+e.message)}};
+ save.onclick=()=>{try{const machines=parse(MACHINE),cassettes=parse(CASSETTE);if(!validMachines(machines)||!validCassettes(cassettes))throw Error('保存データの形式が不正です');download({format:'hexmap-combined-v1',schemaVersion:2,exportedAt:new Date().toISOString(),cassettes,machines},'hexmap-all-data.json');msg.textContent='機体'+machines.length+'機・武装'+cassettes.weapons.length+'件・スキル'+cassettes.skills.length+'件を保存しました';}catch(e){alert('一括保存失敗：'+e.message)}};
  input.onchange=async()=>{try{const file=input.files?.[0];if(!file)return;const obj=JSON.parse(await file.text());if(obj.format!=='hexmap-combined-v1'||!validMachines(obj.machines)||!validCassettes(obj.cassettes))throw Error('一括バックアップ形式ではありません');
  const cIds={weapons:new Set(obj.cassettes.weapons.map(x=>x.id)),skills:new Set(obj.cassettes.skills.map(x=>x.id))};let missing=0;for(const m of obj.machines)for(const kind of ['weapons','skills'])for(const item of m[kind])if(!cIds[kind].has(item.cassetteId))missing++;
  if(!confirm('機体'+obj.machines.length+'機・武装'+obj.cassettes.weapons.length+'件・スキル'+obj.cassettes.skills.length+'件を復元します。\n現在の機体・カセットを置き換えます。\n未解決のカセット参照 '+missing+'件は変更せず残します。続けますか？'))return;
@@ -1609,7 +1623,7 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
   const marker='hexmap-combined-auto-last-reload';
   // A reload may initialize UI/storage with derived values. Avoid infinite reloads
   // for the same source payload, but always restore the authoritative source.
-  const fingerprint=JSON.stringify([c,m]);
+  const fingerprint=String([c,m].join('|').split('').reduce((h,ch)=>Math.imul(h^ch.charCodeAt(0),16777619)>>>0,2166136261));
   const alreadyReloaded=sessionStorage.getItem(marker)===fingerprint;
   const changed=localStorage.getItem(KEY_C)!==c||localStorage.getItem(KEY_M)!==m;
   if(changed){
