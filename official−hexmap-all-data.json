@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-14T13:55:43.432Z",
+  "exportedAt": "2026-11-14T14:36:48.435Z",
   "cassettes": {
     "weapons": [
       {
@@ -2764,74 +2764,55 @@
         ]
       },
       {
-        "id": "WP-mwc3z7n9-iuk1m9c",
-        "name": "⚠️ 未登録ID: WP-mwc3z7n9-iuk1m9c",
+        "id": "WP-mwgi8sys-f7l7qu8",
+        "name": "エクスカリバー(乱舞)",
         "aliases": [],
         "data": {
-          "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwc3z7n9-iuk1m9c"
+          "name": "エクスカリバー(乱舞)",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 1,
+          "max": 1,
+          "en": 30,
+          "normal": [
+            2,
+            3
+          ],
+          "lock": [
+            2,
+            3,
+            4
+          ],
+          "damage": "2D10+10",
+          "notes": "",
+          "ammo": null,
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 2
+            },
+            {
+              "normal": 3,
+              "lock": 3
+            },
+            {
+              "normal": null,
+              "lock": 4
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
-            "machine": "ガンダムアストレアTYPE-Teacher",
-            "name": "⚠️ 未登録ID: WP-mwc3z7n9-iuk1m9c",
+            "machine": "編集前の記録",
+            "name": "",
             "notes": "",
             "source": "",
-            "date": "機体登録時"
-          }
-        ]
-      },
-      {
-        "id": "WP-mwc3z7n9-x9wjouy",
-        "name": "⚠️ 未登録ID: WP-mwc3z7n9-x9wjouy",
-        "aliases": [],
-        "data": {
-          "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwc3z7n9-x9wjouy"
-        },
-        "sources": [
-          {
-            "machine": "ガンダムアストレアTYPE-Teacher",
-            "name": "⚠️ 未登録ID: WP-mwc3z7n9-x9wjouy",
-            "notes": "",
-            "source": "",
-            "date": "機体登録時"
-          }
-        ]
-      },
-      {
-        "id": "WP-mwc3z7n9-ik5eohs",
-        "name": "⚠️ 未登録ID: WP-mwc3z7n9-ik5eohs",
-        "aliases": [],
-        "data": {
-          "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwc3z7n9-ik5eohs"
-        },
-        "sources": [
-          {
-            "machine": "ガンダムアストレアTYPE-Teacher",
-            "name": "⚠️ 未登録ID: WP-mwc3z7n9-ik5eohs",
-            "notes": "",
-            "source": "",
-            "date": "機体登録時"
-          }
-        ]
-      },
-      {
-        "id": "WP-mwc3z7n9-zesciqz",
-        "name": "⚠️ 未登録ID: WP-mwc3z7n9-zesciqz",
-        "aliases": [],
-        "data": {
-          "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwc3z7n9-zesciqz"
-        },
-        "sources": [
-          {
-            "machine": "ガンダムアストレアTYPE-Teacher",
-            "name": "⚠️ 未登録ID: WP-mwc3z7n9-zesciqz",
-            "notes": "",
-            "source": "",
-            "date": "機体登録時"
+            "date": "2026-11-14T14:33:32.887Z"
           }
         ]
       }
@@ -6002,24 +5983,24 @@
       },
       "weapons": [
         {
-          "cassetteId": "WP-mwc3z7n9-iuk1m9c",
+          "cassetteId": "WP-mwdh4wjg-kn57agm",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwc3z7n9-iuk1m9c"
+          "name": "GNビームライフル"
         },
         {
-          "cassetteId": "WP-mwc3z7n9-x9wjouy",
+          "cassetteId": "WP-mwdh4wjg-m42gumm",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwc3z7n9-x9wjouy"
+          "name": "プロトGNソード"
         },
         {
-          "cassetteId": "WP-mwc3z7n9-ik5eohs",
+          "cassetteId": "WP-mwdh4wjg-b61jiod",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwc3z7n9-ik5eohs"
+          "name": "●GNビームダガー（格闘）"
         },
         {
-          "cassetteId": "WP-mwc3z7n9-zesciqz",
+          "cassetteId": "WP-mwdh4wjg-rb3up4i",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwc3z7n9-zesciqz"
+          "name": "●GNビームダガー（投擲）"
         }
       ],
       "shields": [
@@ -7020,19 +7001,28 @@
       "weapons": [
         {
           "cassetteId": "WP-mwdh4wjg-6cg26pr",
+          "equipLabel": "",
           "name": "ビームライフル"
         },
         {
           "cassetteId": "WP-mwdh4wjg-p6vpr4o",
+          "equipLabel": "",
           "name": "フラッシュエッジ"
         },
         {
+          "cassetteId": "WP-mwdh4wjg-g95yiqr",
+          "equipLabel": "",
+          "name": "●バルカン"
+        },
+        {
           "cassetteId": "WP-mwdh4wjg-018cxgk",
+          "equipLabel": "",
           "name": "エクスカリバー"
         },
         {
-          "cassetteId": "WP-mwdh4wjg-g95yiqr",
-          "name": "バルカン"
+          "cassetteId": "WP-mwgi8sys-f7l7qu8",
+          "equipLabel": "",
+          "name": "エクスカリバー(乱舞)"
         }
       ],
       "shields": [],
@@ -7040,14 +7030,17 @@
       "skills": [
         {
           "cassetteId": "SK-mwdh4wjh-e4kx2r9",
+          "equipLabel": "",
           "name": "ソードシルエット"
         },
         {
           "cassetteId": "SK-mwdhqhba-33hogdf",
+          "equipLabel": "VPS装甲",
           "name": "VPS装甲"
         },
         {
           "cassetteId": "SK-mwdh4wjh-iifsf8j",
+          "equipLabel": "",
           "name": "SEED"
         }
       ],
