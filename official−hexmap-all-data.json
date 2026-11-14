@@ -1,6 +1,7 @@
 {
   "format": "hexmap-combined-v1",
-  "exportedAt": "2026-11-13T16:13:18.816Z",
+  "schemaVersion": 2,
+  "exportedAt": "2026-11-14T00:05:21.268Z",
   "cassettes": {
     "weapons": [
       {
@@ -1861,18 +1862,19 @@
           "normal": [
             0
           ],
-          "lock": [
-            0
-          ],
+          "lock": [],
           "shots": [
             {
               "normal": 0,
-              "lock": 0
+              "lock": null
             }
           ],
           "damage": "1D6",
           "passLow": false,
-          "notes": "属性=物理\n特殊ルール=命中した対象にそのターン中、回避判定-1を付与する。重複可能。\n特殊ルール=⚫︎印あり。速攻。"
+          "notes": "属性=物理\n特殊ルール=命中した対象にそのターン中、回避判定-1を付与する。重複可能。\n特殊ルール=⚫︎印あり。速攻。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -1881,6 +1883,13 @@
             "notes": "属性=物理\n特殊ルール=命中した対象にそのターン中、回避判定-1を付与する。重複可能。\n特殊ルール=⚫︎印あり。速攻。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "バルカン",
+            "notes": "属性=物理\n特殊ルール=命中した対象にそのターン中、回避判定-1を付与する。重複可能。\n特殊ルール=⚫︎印あり。速攻。",
+            "source": "",
+            "date": "2026-11-13T23:47:30.589Z"
           }
         ]
       },
@@ -2280,6 +2289,207 @@
             "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。\n使用後は次の自ラウンド終了時まで、名前にファンネルとつく武装は使用不可。",
             "source": "",
             "date": "2026-11-13T00:27:32.856Z"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwfl91zp-f2xvq7b",
+        "name": "ビームナギナタ",
+        "aliases": [],
+        "data": {
+          "name": "ビームナギナタ",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 20,
+          "normal": [
+            2,
+            3
+          ],
+          "lock": [
+            2,
+            3,
+            4
+          ],
+          "damage": "2D10+8",
+          "notes": "",
+          "ammo": null,
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 2
+            },
+            {
+              "normal": 3,
+              "lock": 3
+            },
+            {
+              "normal": null,
+              "lock": 4
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-13T23:10:18.152Z"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwfmfr9d-lr1kpyx",
+        "name": "ガトリング",
+        "aliases": [],
+        "data": {
+          "name": "ガトリング",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "fan",
+          "min": 3,
+          "max": 4,
+          "en": 15,
+          "normal": [
+            1,
+            2
+          ],
+          "lock": [
+            0,
+            1,
+            2
+          ],
+          "damage": "2D6+5",
+          "notes": "",
+          "ammo": null,
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 0
+            },
+            {
+              "normal": 2,
+              "lock": 1
+            },
+            {
+              "normal": null,
+              "lock": 2
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-13T23:43:28.156Z"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwfmiyuv-woribkn",
+        "name": "ビームキャノン",
+        "aliases": [],
+        "data": {
+          "name": "ビームキャノン",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 2,
+          "max": 4,
+          "en": 35,
+          "normal": [
+            2
+          ],
+          "lock": [
+            3
+          ],
+          "damage": "4D10+5",
+          "notes": "",
+          "ammo": null,
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 3
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-13T23:46:44.675Z"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwfmnf6a-lvz7v2s",
+        "name": "小型ミサイル",
+        "aliases": [],
+        "data": {
+          "name": "小型ミサイル",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "front",
+          "min": 2,
+          "max": 4,
+          "en": 25,
+          "normal": [
+            1,
+            2
+          ],
+          "lock": [
+            1,
+            1,
+            2
+          ],
+          "damage": "2D6+6",
+          "notes": "",
+          "ammo": null,
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 1
+            },
+            {
+              "normal": 2,
+              "lock": 1
+            },
+            {
+              "normal": null,
+              "lock": 2
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-13T23:49:10.696Z"
           }
         ]
       }
@@ -4505,6 +4715,370 @@
             "date": "移行時"
           }
         ]
+      },
+      {
+        "id": "SK-mwflh7lm-qgonbnu",
+        "name": "高機動パック",
+        "aliases": [],
+        "data": {
+          "name": "高機動パック",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "消費EN=20。\n1マス移動する。\n発動時「足止め」を解除。",
+          "skillCategory": "移動",
+          "activationType": "active",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 20,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-13T23:16:35.312Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwflkv0b-q4jtzr9",
+        "name": "ダメージ制御",
+        "aliases": [],
+        "data": {
+          "name": "ダメージ制御",
+          "kind": "パイロットスキル",
+          "notes": "",
+          "displayText": "このスキルを持った機体のHPが0になったとき。\n相手の勝利条件を無視して、戦闘を続ける事ができる。\nこの時、この機体のHPは15になる。\nスキル使用時に1D6を振り、奇数なら格闘武装、偶数なら射撃武装を喪失する。",
+          "skillCategory": "その他",
+          "activationType": "passive",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 1,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-13T23:21:21.772Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwflpl1w-fagyf9r",
+        "name": "フェイント機動",
+        "aliases": [],
+        "data": {
+          "name": "フェイント機動",
+          "kind": "パイロットスキル",
+          "notes": "",
+          "displayText": "自身の回避行動後に発動。\n相手の攻撃判定を1回振り直させることができる。\nこのスキルは相手がダメージ判定を行う前でなければ使えない。",
+          "skillCategory": "防御系",
+          "activationType": "reaction",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 1,
+            "uses": 0,
+            "oncePerRound": true,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-13T23:22:50.531Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwflr83z-wlsxefy",
+        "name": "瞬撃",
+        "aliases": [],
+        "data": {
+          "name": "瞬撃",
+          "kind": "パイロットスキル",
+          "notes": "",
+          "displayText": "武装1つに速攻(●)を付与。\n速攻の武装は1ラウンド中に1回AP消費無しで使用可能。",
+          "skillCategory": "攻撃系",
+          "activationType": "active",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 1,
+            "uses": 0,
+            "oncePerRound": true,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-13T23:24:26.011Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwfmsjdh-83nhzsr",
+        "name": "バイオセンサー",
+        "aliases": [],
+        "data": {
+          "name": "バイオセンサー",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "消費EN=80。\n次の自ラウンド開始時まで、\n感覚+2。\n格闘、射撃、回避にそれぞれ+1。\n攻撃命中判定ダイスに+１。\n1度だけ相手の回避判定ダイスの結果から−2できる。\n効果終了後は2ラウンド後の自ラウンド終了時まで再使用不可。",
+          "skillCategory": "能力上昇",
+          "activationType": "active",
+          "duration": {
+            "enabled": true,
+            "timed": true,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": true,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [
+            {
+              "kind": "modify",
+              "targetSide": "self",
+              "target": "感覚",
+              "multiTargets": [
+                "格闘",
+                "射撃",
+                "回避"
+              ],
+              "op": "add",
+              "value": 1,
+              "check": "evade",
+              "stat": "感覚",
+              "weapon": "all",
+              "weaponName": "",
+              "range": 1
+            },
+            {
+              "kind": "modify",
+              "targetSide": "self",
+              "target": "感覚",
+              "multiTargets": [],
+              "op": "add",
+              "value": 2,
+              "check": "evade",
+              "stat": "感覚",
+              "weapon": "all",
+              "weaponName": "",
+              "range": 1
+            },
+            {
+              "kind": "modify",
+              "targetSide": "self",
+              "target": "hit",
+              "multiTargets": [],
+              "op": "add",
+              "value": 1,
+              "check": "evade",
+              "stat": "感覚",
+              "weapon": "all",
+              "weaponName": "",
+              "range": 1
+            }
+          ],
+          "simpleCost": {
+            "timing": "on",
+            "en": 80,
+            "ap": 0,
+            "cooldown": 2,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T00:00:21.656Z"
+          }
+        ]
       }
     ]
   },
@@ -6162,6 +6736,131 @@
       ],
       "tokens": [],
       "source": "\n【機体】\n機体名=ホーリーナイトガンダムアグリアス\nパイロット=未指定\n行動タイプ=起動\nHP=100\nEN=250\nAP=3\n格闘=6\n射撃=0\n回避=6\n感覚=0\n物理装甲=1\n光学装甲=1\n\n【武装】\n名前=さんごの剣\n攻撃種別=格闘\n属性=物理\n射程タイプ=扇\n最小射程=1\n最大射程=1\n通常命中=3\nロックオン命中=5\nダメージ=2D6+15\n消費EN=10\n\n【武装】\n名前=不動無明剣\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、対象に「足止め」を付与する。\n\n【武装】\n名前=無双稲妻突き\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、次の相手ターン中、モーメントスキル使用不可。\n\n【武装】\n名前=聖光爆裂破\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、次の相手ターン中、ブーストスキル使用不可。\n\n【武装】\n名前=北斗骨砕打\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、ダメージ+5。\n\n【武装】\n名前=乱命割殺打\n攻撃種別=格闘\n属性=物理\n射程タイプ=前\n最小射程=1\n最大射程=4\n通常命中=1\nロックオン命中=不可\nダメージ=3D10+5\n消費EN=20\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、相手の武装1つを指定。次の相手ターン中、その武装は使用不可。\n\n【ブーストスキル】\n名前=聖剣技\n消費EN=0\n効果=※印の武装に対し、相手は格闘値の代わりに回避値で回避判定してもよい。\n特殊ルール=密接状態（射程1）では格闘値で回避判定しなければならない。\n特殊ルール=対象武装は不動無明剣、無双稲妻突き、聖光爆裂破、北斗骨砕打、乱命割殺打。\n特殊ルール=消費ENは未指定。0は仮登録値。\n\n【パイロットスキル】\n名前=集中\n分類=モーメントスキル\n発動条件=自身のターン中、攻撃命中判定前。\n効果=自身の攻撃命中判定+2。\n\n【パイロットスキル】\n名前=突貫\n分類=モーメントスキル\n効果=自身の移動を1〜2マス多く移動してもよい。\n効果=発動時、自身の「足止め」を解除する。\n  "
+    },
+    {
+      "id": "custom-1794611545417-317577",
+      "name": "ジョニー・ライデン専用高機動型ゲルググ",
+      "pilot": "ジョニー・ライデン",
+      "hp": 100,
+      "en": 250,
+      "ap": 3,
+      "forms": [],
+      "stats": {
+        "格闘": 4,
+        "射撃": 4,
+        "回避": 6,
+        "感覚": 0,
+        "物理装甲": 0,
+        "光学装甲": 0
+      },
+      "weapons": [
+        {
+          "cassetteId": "WP-mwdh4wjg-6cg26pr",
+          "equipLabel": "",
+          "name": "ビームライフル"
+        },
+        {
+          "cassetteId": "WP-mwdh4wjg-ld9pius",
+          "equipLabel": "",
+          "name": "ビームサーベル"
+        },
+        {
+          "cassetteId": "WP-mwfl91zp-f2xvq7b",
+          "equipLabel": "",
+          "name": "ビームナギナタ"
+        }
+      ],
+      "shields": [],
+      "equipment": [],
+      "skills": [
+        {
+          "cassetteId": "SK-mwflh7lm-qgonbnu",
+          "equipLabel": "",
+          "name": "高機動パック"
+        },
+        {
+          "cassetteId": "SK-mwflpl1w-fagyf9r",
+          "equipLabel": "",
+          "name": "フェイント機動"
+        },
+        {
+          "cassetteId": "SK-mwflkv0b-q4jtzr9",
+          "equipLabel": "",
+          "name": "ダメージ制御"
+        },
+        {
+          "cassetteId": "SK-mwflr83z-wlsxefy",
+          "equipLabel": "",
+          "name": "瞬撃"
+        }
+      ],
+      "tokens": [],
+      "source": ""
+    },
+    {
+      "id": "custom-1794614463999-648853",
+      "name": "イングリッド0専用ヘビーガンダム",
+      "pilot": "イングリッド0",
+      "hp": 100,
+      "en": 250,
+      "ap": 3,
+      "forms": [],
+      "stats": {
+        "格闘": 3,
+        "射撃": 5,
+        "回避": 4,
+        "感覚": 0,
+        "物理装甲": 1,
+        "光学装甲": 1
+      },
+      "weapons": [
+        {
+          "cassetteId": "WP-mwdh4wjg-ld9pius",
+          "equipLabel": "",
+          "name": "ビームサーベル"
+        },
+        {
+          "cassetteId": "WP-mwfmfr9d-lr1kpyx",
+          "equipLabel": "",
+          "name": "ガトリング"
+        },
+        {
+          "cassetteId": "WP-mwfmiyuv-woribkn",
+          "equipLabel": "",
+          "name": "ビームキャノン"
+        },
+        {
+          "cassetteId": "WP-mwfmnf6a-lvz7v2s",
+          "equipLabel": "",
+          "name": "小型ミサイル"
+        },
+        {
+          "cassetteId": "WP-mwdh4wjg-g95yiqr",
+          "equipLabel": "",
+          "name": "バルカン"
+        }
+      ],
+      "shields": [],
+      "equipment": [],
+      "skills": [
+        {
+          "cassetteId": "SK-mwfmsjdh-83nhzsr",
+          "equipLabel": "",
+          "name": "バイオセンサー"
+        },
+        {
+          "cassetteId": "SK-mwdhqhba-33hogdf",
+          "equipLabel": "",
+          "name": "驚異の装甲"
+        },
+        {
+          "cassetteId": "SK-mwdh4wjh-5ldedly",
+          "equipLabel": "",
+          "name": "紙一重"
+        }
+      ],
+      "tokens": [],
+      "source": ""
     }
   ]
 }
