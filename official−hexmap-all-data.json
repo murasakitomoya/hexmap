@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-14T05:35:05.836Z",
+  "exportedAt": "2026-11-14T11:38:41.955Z",
   "cassettes": {
     "weapons": [
       {
@@ -255,10 +255,10 @@
       },
       {
         "id": "WP-mwdh4wjg-b61jiod",
-        "name": "GNビームダガー（格闘）",
+        "name": "●GNビームダガー（格闘）",
         "aliases": [],
         "data": {
-          "name": "GNビームダガー（格闘）",
+          "name": "●GNビームダガー（格闘）",
           "type": "格闘",
           "attribute": "光学",
           "shape": "fan",
@@ -280,7 +280,10 @@
           ],
           "damage": "2D10+5",
           "passLow": false,
-          "notes": "属性=光学\n特殊ルール=速攻（●）。"
+          "notes": "属性=光学\n特殊ルール=速攻（●）。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -289,15 +292,22 @@
             "notes": "属性=光学\n特殊ルール=速攻（●）。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "GNビームダガー（格闘）",
+            "notes": "属性=光学\n特殊ルール=速攻（●）。",
+            "source": "",
+            "date": "2026-11-14T11:01:47.602Z"
           }
         ]
       },
       {
         "id": "WP-mwdh4wjg-rb3up4i",
-        "name": "GNビームダガー（投擲）",
+        "name": "●GNビームダガー（投擲）",
         "aliases": [],
         "data": {
-          "name": "GNビームダガー（投擲）",
+          "name": "●GNビームダガー（投擲）",
           "type": "格闘",
           "attribute": "光学",
           "shape": "front",
@@ -319,7 +329,10 @@
           ],
           "damage": "2D10+5",
           "passLow": false,
-          "notes": "属性=光学\n特殊ルール=速攻（●）。\n特殊ルール=命中判定には格闘ステータスを参照する。\n特殊ルール=防御側は格闘または回避ステータスを参照する。"
+          "notes": "属性=光学\n特殊ルール=速攻（●）。\n特殊ルール=命中判定には格闘ステータスを参照する。\n特殊ルール=防御側は格闘または回避ステータスを参照する。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -328,6 +341,13 @@
             "notes": "属性=光学\n特殊ルール=速攻（●）。\n特殊ルール=命中判定には格闘ステータスを参照する。\n特殊ルール=防御側は格闘または回避ステータスを参照する。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "GNビームダガー（投擲）",
+            "notes": "属性=光学\n特殊ルール=速攻（●）。\n特殊ルール=命中判定には格闘ステータスを参照する。\n特殊ルール=防御側は格闘または回避ステータスを参照する。",
+            "source": "",
+            "date": "2026-11-14T11:01:41.227Z"
           }
         ]
       },
@@ -1361,7 +1381,10 @@
           ],
           "damage": "2D10",
           "passLow": false,
-          "notes": "属性=光学\n特殊ルール=速射可能武器。"
+          "notes": "属性=光学\n特殊ルール=速射可能武器。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -1370,6 +1393,13 @@
             "notes": "属性=光学\n特殊ルール=速射可能武器。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "GNピストル",
+            "notes": "属性=光学\n特殊ルール=速射可能武器。",
+            "source": "",
+            "date": "2026-11-14T11:02:41.189Z"
           }
         ]
       },
@@ -1848,10 +1878,10 @@
       },
       {
         "id": "WP-mwdh4wjg-g95yiqr",
-        "name": "バルカン",
+        "name": "●バルカン",
         "aliases": [],
         "data": {
-          "name": "バルカン",
+          "name": "●バルカン",
           "type": "射撃",
           "attribute": "物理",
           "shape": "front",
@@ -2490,6 +2520,246 @@
             "notes": "",
             "source": "",
             "date": "2026-11-13T23:49:10.696Z"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwgastyw-o9bmp05",
+        "name": "ビームライフル(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "ビームライフル(XiC)",
+          "type": "射撃",
+          "attribute": "光学",
+          "shape": "front",
+          "min": 2,
+          "max": 4,
+          "en": 40,
+          "normal": [
+            2
+          ],
+          "lock": [
+            3
+          ],
+          "damage": "2D10+10",
+          "notes": "",
+          "ammo": null,
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 3
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:05:23.603Z"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwgauocp-lozh0ce",
+        "name": "ビームサーベル(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "ビームサーベル(XiC)",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "fan",
+          "min": 1,
+          "max": 1,
+          "en": 30,
+          "normal": [
+            2,
+            3
+          ],
+          "lock": [
+            3,
+            4
+          ],
+          "damage": "2D10+10",
+          "notes": "",
+          "ammo": null,
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 3
+            },
+            {
+              "normal": 3,
+              "lock": 4
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:08:39.267Z"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwgaz0ke-2djta1n",
+        "name": "●ビームサーベル(XiC)(納刀状態)",
+        "aliases": [],
+        "data": {
+          "name": "●ビームサーベル(XiC)(納刀状態)",
+          "type": "格闘",
+          "attribute": "光学",
+          "shape": "all",
+          "min": 1,
+          "max": 1,
+          "en": 20,
+          "normal": [
+            2
+          ],
+          "lock": [
+            3
+          ],
+          "damage": "2D10+10",
+          "notes": "●=速攻。\n使用後、好きな方向に回頭可能。",
+          "ammo": null,
+          "shots": [
+            {
+              "normal": 2,
+              "lock": 3
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:11:58.744Z"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwgb35pu-7vg3626",
+        "name": "●頭部バルカン(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "●頭部バルカン(XiC)",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "front",
+          "min": 2,
+          "max": 4,
+          "en": 0,
+          "normal": [
+            0,
+            1,
+            2
+          ],
+          "lock": [
+            1,
+            2,
+            3
+          ],
+          "damage": "1D4+2",
+          "notes": "1回命中ごとに対象に1ラウンド中回避最終修正-1を与える。",
+          "ammo": 3,
+          "shots": [
+            {
+              "normal": 0,
+              "lock": 1
+            },
+            {
+              "normal": 1,
+              "lock": 2
+            },
+            {
+              "normal": 2,
+              "lock": 3
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:14:55.020Z"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwgb7f9i-voubfyk",
+        "name": "自律思考型ミサイル(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "自律思考型ミサイル(XiC)",
+          "type": "射撃",
+          "attribute": "物理",
+          "shape": "all",
+          "min": 4,
+          "max": 6,
+          "en": 0,
+          "normal": [
+            1,
+            2,
+            3
+          ],
+          "lock": [
+            2,
+            3,
+            4
+          ],
+          "damage": "3D10+20",
+          "notes": "弾数制限:1プレイ中3発(自立思考型ミサイル(XiC)(フェイント射撃)と共有)\n命中成功まで最大3回の命中判定を行う\u000b命中成功した場合ダメージ判定は1回のみ行う",
+          "ammo": 3,
+          "shots": [
+            {
+              "normal": 1,
+              "lock": 2
+            },
+            {
+              "normal": 2,
+              "lock": 3
+            },
+            {
+              "normal": 3,
+              "lock": 4
+            }
+          ],
+          "passLow": false,
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:18:12.917Z"
           }
         ]
       }
@@ -5079,6 +5349,559 @@
             "date": "2026-11-14T00:00:21.656Z"
           }
         ]
+      },
+      {
+        "id": "SK-mwgbbxci-osxufhv",
+        "name": "ミノフスキー・フライト・ユニット(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "ミノフスキー・フライト・ユニット(XiC)",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "1移動につき1〜2マスの自由移動可能\n1全速前進につき3〜4マスの自由移動可能\n1ターン1回のみAP消費なしで180°まで回頭可能\n天井設定のないマップであれば障害物(L)、進入禁止エリアを直進可能(障害物上に留まるのは不可)",
+          "skillCategory": "移動",
+          "activationType": "passive",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:20:36.726Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwgbea5m-ah69k5p",
+        "name": "U.C.105の技術頂点",
+        "aliases": [],
+        "data": {
+          "name": "U.C.105の技術頂点",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "U.C.105より前の機体がベースの相手に対し、\n命中・回避判定最終修正+2\nU.C.106以降の機体がベースの相手に対し、\n命中・回避判定最終修正-2\n同年、アナザー作品の機体がベースの相手には一切の影響なし",
+          "skillCategory": "その他",
+          "activationType": "passive",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:21:36.167Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwgbgc71-swzwx5m",
+        "name": "AI専用機",
+        "aliases": [],
+        "data": {
+          "name": "AI専用機",
+          "kind": "パイロットスキル",
+          "notes": "",
+          "displayText": "いかなる状況においても感覚値が0から変動しない。\nアイデアロール使用不可。",
+          "skillCategory": "その他",
+          "activationType": "passive",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:23:04.362Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwgbhflp-htrv4cn",
+        "name": "演算最適化(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "演算最適化(XiC)",
+          "kind": "パイロットスキル",
+          "notes": "",
+          "displayText": "自ユニットから4マス目に存在する相手に対し、命中・回避判定最終修正+2",
+          "skillCategory": "能力上昇",
+          "activationType": "passive",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:23:58.354Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwgbiy11-2eos8mz",
+        "name": "オーバークロック(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "オーバークロック(XiC)",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "消費EN:20\n使用タイミング:命中・回避判定前\n命中・回避判定最終修正+3\n使用直後の命中・回避判定1回のみに有効",
+          "skillCategory": "能力上昇",
+          "activationType": "reaction",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [
+            {
+              "kind": "modify",
+              "targetSide": "self",
+              "target": "hit",
+              "multiTargets": [],
+              "op": "add",
+              "value": 3,
+              "check": "evade",
+              "stat": "感覚",
+              "weapon": "all",
+              "weaponName": "",
+              "range": 1
+            },
+            {
+              "kind": "modify",
+              "targetSide": "self",
+              "target": "evade",
+              "multiTargets": [],
+              "op": "add",
+              "value": 3,
+              "check": "evade",
+              "stat": "感覚",
+              "weapon": "all",
+              "weaponName": "",
+              "range": 1
+            }
+          ],
+          "simpleCost": {
+            "timing": "on",
+            "en": 20,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:27:04.073Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwgbmm43-pmc4q7f",
+        "name": "ビーム・バリア(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "ビーム・バリア(XiC)",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "消費EN:20\n使用タイミング:相手のダメージ判定後\n被ダメージ判定最終修正-5(物理・光学問わず)\n",
+          "skillCategory": "防御系",
+          "activationType": "reaction",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [
+            {
+              "kind": "modify",
+              "targetSide": "self",
+              "target": "damage",
+              "multiTargets": [],
+              "op": "sub",
+              "value": 5,
+              "check": "evade",
+              "stat": "感覚",
+              "weapon": "all",
+              "weaponName": "",
+              "range": 1
+            }
+          ],
+          "simpleCost": {
+            "timing": "on",
+            "en": 20,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:29:04.331Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwgbpr8q-llmfvrn",
+        "name": "サンド・バレル(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "サンド・バレル(XiC)",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "使用回数:1プレイ中3回\n使用タイミング:回避判定前\n回避判定を+1回行い、より高い結果を採用する\nミサイル、ロケットなどの弾体そのものが推進力を発生させて飛ぶ武器の場合は自動回避となる\nシールドが破棄されている場合使用不可",
+          "skillCategory": "防御系",
+          "activationType": "reaction",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 3,
+            "oncePerRound": true,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:31:25.979Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwgbs43c-lxmg5po",
+        "name": "予備ENパック(XiC)",
+        "aliases": [],
+        "data": {
+          "name": "予備ENパック(XiC)",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "使用回数:1プレイ中1回\n消費AP:1\nENを120回復する\n何らかの理由でビーム・ライフルを破棄している場合使用不可",
+          "skillCategory": "その他",
+          "activationType": "active",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-14T11:32:09.613Z"
+          }
+        ]
       }
     ]
   },
@@ -6880,29 +7703,29 @@
       },
       "weapons": [
         {
-          "cassetteId": "WP-mwfy5lff-qfyqxiv",
+          "cassetteId": "WP-mwgastyw-o9bmp05",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwfy5lff-qfyqxiv"
+          "name": "ビームライフル(XiC)"
         },
         {
-          "cassetteId": "WP-mwfy7ep2-olway35",
+          "cassetteId": "WP-mwgauocp-lozh0ce",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwfy7ep2-olway35"
+          "name": "ビームサーベル(XiC)"
         },
         {
-          "cassetteId": "WP-mwfyb8hv-f3ktmui",
+          "cassetteId": "WP-mwgaz0ke-2djta1n",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwfyb8hv-f3ktmui"
+          "name": "●ビームサーベル(XiC)(納刀状態)"
         },
         {
-          "cassetteId": "WP-mwfyewag-m55ili6",
+          "cassetteId": "WP-mwgb35pu-7vg3626",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwfyewag-m55ili6"
+          "name": "●頭部バルカン(XiC)"
         },
         {
-          "cassetteId": "WP-mwfynumy-2v3av9j",
+          "cassetteId": "WP-mwgb7f9i-voubfyk",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: WP-mwfynumy-2v3av9j"
+          "name": "自律思考型ミサイル(XiC)"
         }
       ],
       "shields": [
@@ -6926,44 +7749,44 @@
       ],
       "skills": [
         {
-          "cassetteId": "SK-mwfsdtru-bjftslw",
+          "cassetteId": "SK-mwgbbxci-osxufhv",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: SK-mwfsdtru-bjftslw"
+          "name": "ミノフスキー・フライト・ユニット(XiC)"
         },
         {
-          "cassetteId": "SK-mwfswg0k-muk91f7",
+          "cassetteId": "SK-mwgbea5m-ah69k5p",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: SK-mwfswg0k-muk91f7"
+          "name": "U.C.105の技術頂点"
         },
         {
-          "cassetteId": "SK-mwfofy3w-yb3h0sy",
+          "cassetteId": "SK-mwgbgc71-swzwx5m",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: SK-mwfofy3w-yb3h0sy"
+          "name": "AI専用機"
         },
         {
-          "cassetteId": "SK-mwfol10q-tgp3ape",
+          "cassetteId": "SK-mwgbhflp-htrv4cn",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: SK-mwfol10q-tgp3ape"
+          "name": "演算最適化(XiC)"
         },
         {
-          "cassetteId": "SK-mwfsyv77-60vn774",
+          "cassetteId": "SK-mwgbiy11-2eos8mz",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: SK-mwfsyv77-60vn774"
+          "name": "オーバークロック(XiC)"
         },
         {
-          "cassetteId": "SK-mwft7cmy-00rpv8p",
+          "cassetteId": "SK-mwgbmm43-pmc4q7f",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: SK-mwft7cmy-00rpv8p"
+          "name": "ビーム・バリア(XiC)"
         },
         {
-          "cassetteId": "SK-mwftbrnf-tvstq89",
+          "cassetteId": "SK-mwgbpr8q-llmfvrn",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: SK-mwftbrnf-tvstq89"
+          "name": "サンド・バレル(XiC)"
         },
         {
-          "cassetteId": "SK-mwfx63l6-3353cwb",
+          "cassetteId": "SK-mwgbs43c-lxmg5po",
           "equipLabel": "",
-          "name": "⚠️ 未登録ID: SK-mwfx63l6-3353cwb"
+          "name": "予備ENパック(XiC)"
         }
       ],
       "tokens": [],
