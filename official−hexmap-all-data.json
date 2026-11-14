@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-14T00:05:21.268Z",
+  "exportedAt": "2026-11-14T05:35:05.836Z",
   "cassettes": {
     "weapons": [
       {
@@ -6857,6 +6857,113 @@
           "cassetteId": "SK-mwdh4wjh-5ldedly",
           "equipLabel": "",
           "name": "紙一重"
+        }
+      ],
+      "tokens": [],
+      "source": ""
+    },
+    {
+      "id": "custom-1794615570673-870776",
+      "name": "クスィーガンダム“Chocomint”",
+      "pilot": "TESTER AI Ver.2.0",
+      "hp": 100,
+      "en": 250,
+      "ap": 4,
+      "forms": [],
+      "stats": {
+        "格闘": 3,
+        "射撃": 3,
+        "回避": 3,
+        "感覚": 0,
+        "物理装甲": 2,
+        "光学装甲": 2
+      },
+      "weapons": [
+        {
+          "cassetteId": "WP-mwfy5lff-qfyqxiv",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwfy5lff-qfyqxiv"
+        },
+        {
+          "cassetteId": "WP-mwfy7ep2-olway35",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwfy7ep2-olway35"
+        },
+        {
+          "cassetteId": "WP-mwfyb8hv-f3ktmui",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwfyb8hv-f3ktmui"
+        },
+        {
+          "cassetteId": "WP-mwfyewag-m55ili6",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwfyewag-m55ili6"
+        },
+        {
+          "cassetteId": "WP-mwfynumy-2v3av9j",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwfynumy-2v3av9j"
+        }
+      ],
+      "shields": [
+        {
+          "name": "シールド(XiC)",
+          "physical": 50,
+          "optical": 50,
+          "penalty": 0,
+          "maxUses": 3,
+          "largeShield": true,
+          "notes": ""
+        }
+      ],
+      "equipment": [
+        {
+          "name": "自立思考型ミサイル(XiC)(フェイント射撃)",
+          "durability": 0,
+          "initial": "装備中",
+          "notes": "カテゴリ:射撃武器\n攻撃範囲:全\n射程距離:1～3\nダメージ:50\n攻撃タイプ:物理\n弾数制限:1プレイ中3発(自立思考型ミサイル(XiC)と共有)\n使用から1ラウンド後の自ターン開始時、射程内に存在かつ射線の通る敵対ユニットに必中、50の固定ダメージを与える"
+        }
+      ],
+      "skills": [
+        {
+          "cassetteId": "SK-mwfsdtru-bjftslw",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: SK-mwfsdtru-bjftslw"
+        },
+        {
+          "cassetteId": "SK-mwfswg0k-muk91f7",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: SK-mwfswg0k-muk91f7"
+        },
+        {
+          "cassetteId": "SK-mwfofy3w-yb3h0sy",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: SK-mwfofy3w-yb3h0sy"
+        },
+        {
+          "cassetteId": "SK-mwfol10q-tgp3ape",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: SK-mwfol10q-tgp3ape"
+        },
+        {
+          "cassetteId": "SK-mwfsyv77-60vn774",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: SK-mwfsyv77-60vn774"
+        },
+        {
+          "cassetteId": "SK-mwft7cmy-00rpv8p",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: SK-mwft7cmy-00rpv8p"
+        },
+        {
+          "cassetteId": "SK-mwftbrnf-tvstq89",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: SK-mwftbrnf-tvstq89"
+        },
+        {
+          "cassetteId": "SK-mwfx63l6-3353cwb",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: SK-mwfx63l6-3353cwb"
         }
       ],
       "tokens": [],
