@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-14T11:38:41.955Z",
+  "exportedAt": "2026-11-14T13:55:43.432Z",
   "cassettes": {
     "weapons": [
       {
@@ -2762,6 +2762,78 @@
             "date": "2026-11-14T11:18:12.917Z"
           }
         ]
+      },
+      {
+        "id": "WP-mwc3z7n9-iuk1m9c",
+        "name": "⚠️ 未登録ID: WP-mwc3z7n9-iuk1m9c",
+        "aliases": [],
+        "data": {
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwc3z7n9-iuk1m9c"
+        },
+        "sources": [
+          {
+            "machine": "ガンダムアストレアTYPE-Teacher",
+            "name": "⚠️ 未登録ID: WP-mwc3z7n9-iuk1m9c",
+            "notes": "",
+            "source": "",
+            "date": "機体登録時"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwc3z7n9-x9wjouy",
+        "name": "⚠️ 未登録ID: WP-mwc3z7n9-x9wjouy",
+        "aliases": [],
+        "data": {
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwc3z7n9-x9wjouy"
+        },
+        "sources": [
+          {
+            "machine": "ガンダムアストレアTYPE-Teacher",
+            "name": "⚠️ 未登録ID: WP-mwc3z7n9-x9wjouy",
+            "notes": "",
+            "source": "",
+            "date": "機体登録時"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwc3z7n9-ik5eohs",
+        "name": "⚠️ 未登録ID: WP-mwc3z7n9-ik5eohs",
+        "aliases": [],
+        "data": {
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwc3z7n9-ik5eohs"
+        },
+        "sources": [
+          {
+            "machine": "ガンダムアストレアTYPE-Teacher",
+            "name": "⚠️ 未登録ID: WP-mwc3z7n9-ik5eohs",
+            "notes": "",
+            "source": "",
+            "date": "機体登録時"
+          }
+        ]
+      },
+      {
+        "id": "WP-mwc3z7n9-zesciqz",
+        "name": "⚠️ 未登録ID: WP-mwc3z7n9-zesciqz",
+        "aliases": [],
+        "data": {
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwc3z7n9-zesciqz"
+        },
+        "sources": [
+          {
+            "machine": "ガンダムアストレアTYPE-Teacher",
+            "name": "⚠️ 未登録ID: WP-mwc3z7n9-zesciqz",
+            "notes": "",
+            "source": "",
+            "date": "機体登録時"
+          }
+        ]
       }
     ],
     "skills": [
@@ -3317,10 +3389,10 @@
       },
       {
         "id": "SK-mwdh4wjh-2gk3p2a",
-        "name": "近接射撃",
+        "name": "クロースマニューバ",
         "aliases": [],
         "data": {
-          "name": "近接射撃",
+          "name": "クロースマニューバ",
           "kind": "パイロットスキル",
           "notes": "分類=モーメントスキル\n効果=感覚武器の射程を1～2に変更する。",
           "displayText": "感覚武器の射程を1～2に変更する。",
@@ -3334,23 +3406,21 @@
           "mode": {
             "start": 0,
             "upkeep": 0,
-            "enabled": false
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
           },
-          "simpleEffects": [
-            {
-              "kind": "manual",
-              "targetSide": "self",
-              "target": "両装甲",
-              "multiTargets": [],
-              "op": "mul",
-              "value": 3,
-              "check": "evade",
-              "stat": "感覚",
-              "weapon": "all",
-              "weaponName": "",
-              "range": 1
-            }
-          ],
+          "simpleEffects": [],
           "simpleCost": {
             "timing": "none",
             "en": 0,
@@ -3358,6 +3428,7 @@
             "cooldown": 1,
             "uses": 0,
             "oncePerRound": true,
+            "upkeepChoice": false,
             "upkeepEn": 0,
             "upkeepAp": 0
           },
@@ -3366,7 +3437,14 @@
             "hit",
             "damage",
             "final"
-          ]
+          ],
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          }
         },
         "sources": [
           {
@@ -5924,108 +6002,24 @@
       },
       "weapons": [
         {
-          "name": "GNビームライフル",
-          "type": "射撃",
-          "attribute": "光学",
-          "shape": "front",
-          "min": 2,
-          "max": 4,
-          "en": 20,
-          "ammo": null,
-          "normal": [
-            1
-          ],
-          "lock": [
-            2
-          ],
-          "shots": [
-            {
-              "normal": 1,
-              "lock": 2
-            }
-          ],
-          "damage": "3D10+5",
-          "passLow": false,
-          "notes": "属性=光学",
-          "cassetteId": "WP-mwc3z7n9-iuk1m9c"
+          "cassetteId": "WP-mwc3z7n9-iuk1m9c",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwc3z7n9-iuk1m9c"
         },
         {
-          "name": "プロトGNソード",
-          "type": "格闘",
-          "attribute": "物理",
-          "shape": "fan",
-          "min": 1,
-          "max": 1,
-          "en": 15,
-          "ammo": null,
-          "normal": [
-            2
-          ],
-          "lock": [
-            5
-          ],
-          "shots": [
-            {
-              "normal": 2,
-              "lock": 5
-            }
-          ],
-          "damage": "4D6+18",
-          "passLow": false,
-          "notes": "属性=物理",
-          "cassetteId": "WP-mwc3z7n9-x9wjouy"
+          "cassetteId": "WP-mwc3z7n9-x9wjouy",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwc3z7n9-x9wjouy"
         },
         {
-          "name": "GNビームダガー（格闘）",
-          "type": "格闘",
-          "attribute": "光学",
-          "shape": "fan",
-          "min": 1,
-          "max": 1,
-          "en": 10,
-          "ammo": null,
-          "normal": [
-            2
-          ],
-          "lock": [
-            4
-          ],
-          "shots": [
-            {
-              "normal": 2,
-              "lock": 4
-            }
-          ],
-          "damage": "2D10+5",
-          "passLow": false,
-          "notes": "属性=光学\n特殊ルール=速攻（●）。",
-          "cassetteId": "WP-mwc3z7n9-ik5eohs"
+          "cassetteId": "WP-mwc3z7n9-ik5eohs",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwc3z7n9-ik5eohs"
         },
         {
-          "name": "GNビームダガー（投擲）",
-          "type": "格闘",
-          "attribute": "光学",
-          "shape": "front",
-          "min": 2,
-          "max": 4,
-          "en": 20,
-          "ammo": null,
-          "normal": [
-            2
-          ],
-          "lock": [
-            4
-          ],
-          "shots": [
-            {
-              "normal": 2,
-              "lock": 4
-            }
-          ],
-          "damage": "2D10+5",
-          "passLow": false,
-          "notes": "属性=光学\n特殊ルール=速攻（●）。\n特殊ルール=命中判定には格闘ステータスを参照する。\n特殊ルール=防御側は格闘または回避ステータスを参照する。",
-          "cassetteId": "WP-mwc3z7n9-zesciqz"
+          "cassetteId": "WP-mwc3z7n9-zesciqz",
+          "equipLabel": "",
+          "name": "⚠️ 未登録ID: WP-mwc3z7n9-zesciqz"
         }
       ],
       "shields": [
@@ -6034,81 +6028,22 @@
           "physical": 20,
           "optical": 20,
           "penalty": 0,
+          "maxUses": 3,
+          "largeShield": false,
           "notes": "特殊防御=シールドを破棄し、自機を任意の隣接する1マスへ移動することで、相手の攻撃を自動回避できる。"
         }
       ],
       "equipment": [],
       "skills": [
         {
-          "name": "トランザムシステム（後期型）",
-          "kind": "ブーストスキル",
-          "notes": "消費AP=記載なし\n毎ターン消費EN=40\n発動条件=発動宣言後、発動終了宣言まで継続する。\n効果=発動中、機体の格闘・射撃・回避・感覚をそれぞれ+3する。\n使用制限=発動終了宣言後、1ターン経過まで再使用不可。\n",
-          "boost": {
-            "stat": "格闘",
-            "stats": [
-              "格闘",
-              "射撃",
-              "回避",
-              "感覚"
-            ],
-            "amount": 3,
-            "rangeWeapon": "",
-            "rangePlus": 0
-          },
-          "effects": [],
-          "mode": {
-            "enabled": false,
-            "start": 0,
-            "upkeep": 0,
-            "recoilStats": {},
-            "recoilEffects": []
-          },
-          "hpLink": {
-            "enabled": false,
-            "min": 1,
-            "max": 0,
-            "allowZero": false,
-            "effects": []
-          },
-          "cassetteId": "SK-mwc3z7na-y50609c"
+          "cassetteId": "SK-mwdh4wjh-aui6phv",
+          "equipLabel": "",
+          "name": "トランザムシステム（後期型）"
         },
         {
-          "name": "Attitude Control System（姿勢制御システム）",
-          "kind": "パイロットスキル",
-          "notes": "消費AP=記載なし\n使用制限=1試合に3回のみ。\n発動条件=自身の回避行動後。相手のダメージ判定後でも宣言できる。\n効果=自機が受けるダメージ1つに対して、物理装甲と光学装甲の修正総計を3倍にする。",
-          "effects": [
-            {
-              "target": "physical",
-              "value": "3",
-              "op": "mul",
-              "timing": "each",
-              "scope": "all",
-              "weapon": ""
-            },
-            {
-              "target": "optical",
-              "value": "3",
-              "op": "mul",
-              "timing": "each",
-              "scope": "all",
-              "weapon": ""
-            }
-          ],
-          "mode": {
-            "enabled": false,
-            "start": 0,
-            "upkeep": 0,
-            "recoilStats": {},
-            "recoilEffects": []
-          },
-          "hpLink": {
-            "enabled": false,
-            "min": 1,
-            "max": 0,
-            "allowZero": false,
-            "effects": []
-          },
-          "cassetteId": "SK-mwc3z7na-2svusav"
+          "cassetteId": "SK-mwdh4wjh-3uoro8g",
+          "equipLabel": "",
+          "name": "Attitude Control System（姿勢制御システム）"
         }
       ],
       "tokens": [],
