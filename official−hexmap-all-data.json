@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-15T14:12:40.397Z",
+  "exportedAt": "2026-11-15T17:32:42.542Z",
   "cassettes": {
     "weapons": [
       {
@@ -6105,6 +6105,134 @@
             "notes": "",
             "source": "",
             "date": "2026-11-15T14:07:11.108Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwi3wwwa-m84yhb3",
+        "name": "高機動",
+        "aliases": [],
+        "data": {
+          "name": "高機動",
+          "kind": "パイロットスキル",
+          "notes": "",
+          "displayText": "隣接するヘクスに移動し、好きな方向へ回頭する。\n「足止め」状態を解除する。\n1ラウンド1回。\n前ラウンドで使用していた場合、使用不可。",
+          "skillCategory": "移動",
+          "activationType": "active",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 1,
+            "uses": 0,
+            "oncePerRound": true,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-15T17:28:58.134Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwi4093r-vffiy8t",
+        "name": "鮮やかな撤退",
+        "aliases": [],
+        "data": {
+          "name": "鮮やかな撤退",
+          "kind": "パイロットスキル",
+          "notes": "",
+          "displayText": "自ラウンドの開始時のみ使用可能。\n任意の方向へ6マス移動した後、好きな方向へ回頭可能。\n「足止め」状態を解除する。\n",
+          "skillCategory": "移動",
+          "activationType": "active",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 1,
+            "uses": 0,
+            "oncePerRound": true,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-15T17:31:46.578Z"
           }
         ]
       }
