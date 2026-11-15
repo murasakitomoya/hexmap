@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-15T17:32:42.542Z",
+  "exportedAt": "2026-11-15T22:32:52.609Z",
   "cassettes": {
     "weapons": [
       {
@@ -5963,7 +5963,7 @@
           "notes": "ハロ！\nハロゲンキ！\nザンギョウ！ザンギョウ！\nキュウジツシュッキン！キュウジツシュッキン！\n\n…ロウキ",
           "displayText": "射撃値、格闘値に+2。\n任意のタイミングで効果のオン・オフが可能。",
           "skillCategory": "能力上昇",
-          "activationType": "active",
+          "activationType": "passive",
           "duration": {
             "enabled": true,
             "timed": false,
@@ -6020,9 +6020,9 @@
             "timing": "on",
             "en": 0,
             "ap": 0,
-            "cooldown": 1,
+            "cooldown": 0,
             "uses": 0,
-            "oncePerRound": true,
+            "oncePerRound": false,
             "upkeepChoice": false,
             "upkeepEn": 0,
             "upkeepAp": 0
@@ -6041,6 +6041,13 @@
             "notes": "",
             "source": "",
             "date": "2026-11-15T00:55:45.812Z"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "ハロ・ユニット(三菱自動車製)",
+            "notes": "ハロ！\nハロゲンキ！\nザンギョウ！ザンギョウ！\nキュウジツシュッキン！キュウジツシュッキン！\n\n…ロウキ",
+            "source": "",
+            "date": "2026-11-15T22:18:16.761Z"
           }
         ]
       },
