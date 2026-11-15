@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-15T00:56:46.948Z",
+  "exportedAt": "2026-11-15T01:00:59.276Z",
   "cassettes": {
     "weapons": [
       {
@@ -6880,7 +6880,7 @@
       "name": "リボーンズガンダムレグナント",
       "pilot": "ルイス・ハレヴィ",
       "hp": 100,
-      "en": 250,
+      "en": 300,
       "ap": 3,
       "forms": [
         {
@@ -6933,34 +6933,42 @@
       "weapons": [
         {
           "cassetteId": "WP-mwdh4wjg-t56vhjc",
+          "equipLabel": "",
           "name": "GNビームサーベル"
         },
         {
           "cassetteId": "WP-mwdh4wjg-nrl7vaa",
+          "equipLabel": "",
           "name": "GN小型クロー"
         },
         {
           "cassetteId": "WP-mwdh4wjg-dvpgx2n",
+          "equipLabel": "",
           "name": "GN大型クロー"
         },
         {
           "cassetteId": "WP-mwdh4wjg-kn57agm",
+          "equipLabel": "",
           "name": "GNビームライフル"
         },
         {
           "cassetteId": "WP-mwdh4wjg-ylzen2h",
+          "equipLabel": "",
           "name": "GNバスターキャノン"
         },
         {
           "cassetteId": "WP-mwdh4wjg-u4j28er",
+          "equipLabel": "",
           "name": "GNピストル"
         },
         {
           "cassetteId": "WP-mwdh4wjg-v4lyeyt",
+          "equipLabel": "",
           "name": "GNミサイルコンテナ"
         },
         {
           "cassetteId": "WP-mwdh4wjg-itr0l5m",
+          "equipLabel": "",
           "name": "ライザーソード"
         }
       ],
@@ -6979,18 +6987,22 @@
       "skills": [
         {
           "cassetteId": "SK-mwdh4wjh-q5u95b5",
+          "equipLabel": "",
           "name": "プレッシャー"
         },
         {
           "cassetteId": "SK-mwdh4wjh-gi1thyb",
+          "equipLabel": "",
           "name": "GNステルスフィールド"
         },
         {
           "cassetteId": "SK-mwdh4wjh-4lu7pt6",
+          "equipLabel": "",
           "name": "プラフスキー（GN）吸入ファン"
         },
         {
           "cassetteId": "SK-mwdh4wjh-35a6o7j",
+          "equipLabel": "",
           "name": "トランザム"
         }
       ],
