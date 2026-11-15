@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-14T14:36:48.435Z",
+  "exportedAt": "2026-11-15T00:56:46.948Z",
   "cassettes": {
     "weapons": [
       {
@@ -651,7 +651,7 @@
           ],
           "damage": "2D10",
           "passLow": true,
-          "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。",
+          "notes": "攻撃側の感覚値をダメージに上乗せ。(手動)",
           "fixedDamageBonus": 0,
           "extraDamageDice": "",
           "conditions": []
@@ -2236,9 +2236,7 @@
           "min": 3,
           "max": 8,
           "en": 50,
-          "normal": [
-            0
-          ],
+          "normal": [],
           "lock": [
             0
           ],
@@ -2247,7 +2245,7 @@
           "ammo": null,
           "shots": [
             {
-              "normal": 0,
+              "normal": null,
               "lock": 0
             }
           ],
@@ -2285,18 +2283,16 @@
           "min": 3,
           "max": 8,
           "en": 100,
-          "normal": [
-            0
-          ],
+          "normal": [],
           "lock": [
             0
           ],
           "damage": "10D10",
-          "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。\n使用後は次の自ラウンド終了時まで、名前にファンネルとつく武装は使用不可。",
+          "notes": "ロックオン攻撃のみ。\n攻撃側の感覚値をダメージに上乗せ。\n使用後は次の自ラウンド終了時まで、名前に〔ファンネル〕とつく武装は使用不可。",
           "ammo": null,
           "shots": [
             {
-              "normal": 0,
+              "normal": null,
               "lock": 0
             }
           ],
@@ -3726,9 +3722,9 @@
           "name": "GNステルスフィールド",
           "kind": "ブーストスキル",
           "notes": "発動条件=EN20～100を消費して発動。\n効果=自分と相手の命中判定結果に-3のペナルティ。\n効果=自分のターン終了時まで継続。\n効果=発動中に自身がダメージを受ける場合、消費ENに応じてダメージを軽減する。\n効果=軽減率は消費EN÷100。例：EN20消費時、48×0.2=9.6、端数切り捨てで9軽減し、39ダメージ。",
-          "displayText": "ENを任意の数値消費して発動(最少20最高100)。\n自分と相手の命中判定結果を-3。\n次の自ターン開始時まで継続。\n発動中に自身がダメージを受ける場合、消費ENに応じてダメージを軽減する。\n軽減率は消費EN÷100。小数点以下切り捨て。",
+          "displayText": "①相手の攻撃判定ダイスの前、もしくは相手のダメージ計算ダイスの後に発動可能。\nENを任意の数値消費して発動(最少20最高100)。\n自身が受けるダメージを、消費ENに応じてダメージを軽減する。\n軽減率は消費EN÷100。小数点以下切り捨て。\n\n②自分と相手の命中判定結果を-3。\n次の自ターン開始時まで継続。",
           "skillCategory": "防御系",
-          "activationType": "active",
+          "activationType": "reaction",
           "boost": {
             "stat": "",
             "stats": [],
@@ -5959,6 +5955,97 @@
             "notes": "",
             "source": "",
             "date": "2026-11-14T11:32:09.613Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwh4cazn-xuvep0j",
+        "name": "ハロ・ユニット(三菱自動車製)",
+        "aliases": [],
+        "data": {
+          "name": "ハロ・ユニット(三菱自動車製)",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "次の自ラウンド開始時まで、射撃値、格闘値に+2。",
+          "skillCategory": "能力上昇",
+          "activationType": "active",
+          "duration": {
+            "enabled": true,
+            "timed": true,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": true,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [
+            {
+              "kind": "modify",
+              "targetSide": "self",
+              "target": "格闘",
+              "multiTargets": [],
+              "op": "add",
+              "value": 2,
+              "check": "evade",
+              "stat": "感覚",
+              "weapon": "all",
+              "weaponName": "",
+              "range": 1
+            },
+            {
+              "kind": "modify",
+              "targetSide": "self",
+              "target": "射撃",
+              "multiTargets": [],
+              "op": "add",
+              "value": 2,
+              "check": "evade",
+              "stat": "感覚",
+              "weapon": "all",
+              "weaponName": "",
+              "range": 1
+            }
+          ],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 1,
+            "uses": 0,
+            "oncePerRound": true,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-15T00:55:45.812Z"
           }
         ]
       }
