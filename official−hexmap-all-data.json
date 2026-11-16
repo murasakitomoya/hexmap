@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-16T00:58:09.138Z",
+  "exportedAt": "2026-11-16T06:16:37.201Z",
   "cassettes": {
     "weapons": [
       {
@@ -3380,7 +3380,7 @@
           "name": "クロースマニューバ",
           "kind": "パイロットスキル",
           "notes": "分類=モーメントスキル\n効果=感覚武器の射程を1～2に変更する。",
-          "displayText": "感覚武器の射程を1～2に変更する。",
+          "displayText": "感覚武器の射程を1～2に変更する。\nこのラウンド終了時に射程はもとに戻る。",
           "skillCategory": "その他",
           "activationType": "active",
           "boost": {
@@ -4268,29 +4268,27 @@
             "rangeWeapon": "エクスカリバー",
             "rangePlus": 1
           },
-          "displayText": "武装〔エクスカリバー〕の射程を+1。",
+          "displayText": "武装〔エクスカリバー〕の射程を+1。\nラウンドが終了するまで有効。",
           "skillCategory": "能力上昇",
           "activationType": "active",
           "mode": {
             "start": 0,
             "upkeep": 0,
-            "enabled": false
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
           },
-          "simpleEffects": [
-            {
-              "kind": "range",
-              "targetSide": "enemy",
-              "target": "hit",
-              "multiTargets": [],
-              "op": "mul",
-              "value": 3,
-              "check": "evade",
-              "stat": "感覚",
-              "weapon": "specific",
-              "weaponName": "エクスカリバー",
-              "range": 1
-            }
-          ],
+          "simpleEffects": [],
           "simpleCost": {
             "timing": "none",
             "en": 0,
@@ -4298,6 +4296,7 @@
             "cooldown": 1,
             "uses": 0,
             "oncePerRound": true,
+            "upkeepChoice": false,
             "upkeepEn": 0,
             "upkeepAp": 0
           },
@@ -4306,7 +4305,14 @@
             "hit",
             "damage",
             "final"
-          ]
+          ],
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          }
         },
         "sources": [
           {
@@ -5249,7 +5255,7 @@
           "name": "瞬撃",
           "kind": "パイロットスキル",
           "notes": "",
-          "displayText": "武装1つに速攻(●)を付与。\n速攻の武装は1ラウンド中に1回AP消費無しで使用可能。",
+          "displayText": "武装1つに速攻(●)を付与。\n速攻の武装は1ラウンド中に1回AP消費無しで使用可能。\n\nラウンド終了時に速攻属性は外される。",
           "skillCategory": "攻撃系",
           "activationType": "active",
           "duration": {
@@ -6059,7 +6065,7 @@
           "name": "予測防御",
           "kind": "パイロットスキル",
           "notes": "",
-          "displayText": "3回発動するか、ダメージの累計が20以上になるまで使用可能。\n超過ダメージは発生しない。\n1ラウンド1回まで。",
+          "displayText": "3回発動するか、このスキルで防いだダメージの累計が20以上になるまで使用可能。\n超過ダメージは発生しない。\n1ラウンド1回まで。\nダメージは次ラウンド以降も持ち越し。",
           "skillCategory": "防御系",
           "activationType": "reaction",
           "duration": {
