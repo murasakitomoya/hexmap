@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-16T06:16:37.201Z",
+  "exportedAt": "2026-11-16T14:02:31.354Z",
   "cassettes": {
     "weapons": [
       {
@@ -6967,89 +6967,33 @@
       },
       "weapons": [
         {
-          "name": "ザクマシンガン",
-          "type": "射撃",
-          "attribute": "物理",
-          "shape": "fan",
-          "min": 2,
-          "max": 4,
-          "en": 15,
-          "ammo": null,
-          "normal": [
-            1,
-            2
-          ],
-          "lock": [
-            0,
-            1,
-            2
-          ],
-          "shots": [
-            {
-              "normal": 1,
-              "lock": 0
-            },
-            {
-              "normal": 2,
-              "lock": 1
-            },
-            {
-              "normal": null,
-              "lock": 2
-            }
-          ],
-          "damage": "2D6+5",
-          "passLow": false,
-          "notes": "属性=物理\n特殊ルール=命中補正は段階別。通常+1/+2、ロックオン±0/+1/+2。",
-          "cassetteId": "WP-mwc3z7n9-7uoifqr"
+          "cassetteId": "WP-mwdh4wjg-riq64uw",
+          "equipLabel": "",
+          "name": "ザクマシンガン"
         },
         {
-          "name": "ヒートホーク",
-          "type": "格闘",
-          "attribute": "物理",
-          "shape": "fan",
-          "min": 1,
-          "max": 1,
-          "en": 15,
-          "ammo": null,
-          "normal": [
-            3
-          ],
-          "lock": [
-            5
-          ],
-          "shots": [
-            {
-              "normal": 3,
-              "lock": 5
-            }
-          ],
-          "damage": "2D8+12",
-          "passLow": false,
-          "notes": "属性=物理",
-          "cassetteId": "WP-mwc3z7n9-crieo62"
+          "cassetteId": "WP-mwdh4wjg-4jxnyqf",
+          "equipLabel": "",
+          "name": "ヒートホーク"
         }
       ],
       "shields": [],
       "equipment": [],
       "skills": [
         {
-          "name": "高性能センサー",
-          "kind": "ブーストスキル",
-          "notes": "効果=戦闘時、このユニットの回避判定総計+1。\n発動条件=回避判定ダイスを振る前に宣言。\nコスト=EN20\n特殊ルール=クールタイム無し",
-          "cassetteId": "SK-mwc3z7na-3u9w1yr"
+          "cassetteId": "SK-mwdh4wjh-78gipsa",
+          "equipLabel": "",
+          "name": "高性能センサー"
         },
         {
-          "name": "隠密",
-          "kind": "パイロットスキル",
-          "notes": "効果=戦闘時、このユニットの回避判定総計+1。\n発動条件=回避判定ダイスを振る前に宣言。",
-          "cassetteId": "SK-mwc3z7na-co5qnch"
+          "cassetteId": "SK-mwdh4wjh-92ba2gq",
+          "equipLabel": "",
+          "name": "隠密"
         },
         {
-          "name": "闇夜のフェンリル隊",
-          "kind": "ブーストスキル",
-          "notes": "効果=任意の場所にザクIIトークンを2機召喚する。\n効果=本体のラウンド中に各トークンは独立AP2で行動する。\n効果=召喚したラウンドから行動可能。本体とトークンの行動順は自由。\n解除条件=撃破または3ラウンド経過でトークン消滅。",
-          "cassetteId": "SK-mwc3z7na-rjxlubz"
+          "cassetteId": "SK-mwdh4wjh-kzz9bsm",
+          "equipLabel": "",
+          "name": "闇夜のフェンリル隊"
         }
       ],
       "tokens": [
@@ -7104,8 +7048,11 @@
                 }
               ],
               "damage": "2D6+5",
+              "fixedDamageBonus": 0,
+              "extraDamageDice": "",
               "passLow": false,
-              "notes": "ザクマシンガン：射撃／扇／射程2〜4／通常命中+1/+2／ロックオン±0/+1/+2／2D6+5／物理／EN15"
+              "notes": "ザクマシンガン：射撃／扇／射程2〜4／通常命中+1/+2／ロックオン±0/+1/+2／2D6+5／物理／EN15",
+              "conditions": []
             },
             {
               "name": "ヒートホーク(トークン)",
@@ -7129,8 +7076,11 @@
                 }
               ],
               "damage": "2D8+12",
+              "fixedDamageBonus": 0,
+              "extraDamageDice": "",
               "passLow": false,
-              "notes": "ヒートホーク：格闘／扇／射程1／通常命中+3／ロックオン+5／2D8+12／物理／EN15"
+              "notes": "ヒートホーク：格闘／扇／射程1／通常命中+3／ロックオン+5／2D8+12／物理／EN15",
+              "conditions": []
             }
           ]
         }
@@ -7155,236 +7105,53 @@
       },
       "weapons": [
         {
-          "name": "さんごの剣",
-          "type": "格闘",
-          "attribute": "物理",
-          "shape": "fan",
-          "min": 1,
-          "max": 1,
-          "en": 10,
-          "ammo": null,
-          "normal": [
-            3
-          ],
-          "lock": [
-            5
-          ],
-          "shots": [
-            {
-              "normal": 3,
-              "lock": 5
-            }
-          ],
-          "damage": "2D6+15",
-          "passLow": false,
-          "notes": "属性=物理",
-          "cassetteId": "WP-mwc3z7n9-ou6a6i8"
+          "cassetteId": "WP-mwdh4wjg-jjsmgyu",
+          "equipLabel": "",
+          "name": "さんごの剣"
         },
         {
-          "name": "不動無明剣",
-          "type": "格闘",
-          "attribute": "物理",
-          "shape": "front",
-          "min": 1,
-          "max": 4,
-          "en": 20,
-          "ammo": null,
-          "normal": [
-            1
-          ],
-          "lock": [
-            3
-          ],
-          "shots": [
-            {
-              "normal": 1,
-              "lock": 3
-            }
-          ],
-          "damage": "3D10+5",
-          "passLow": false,
-          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、対象に「足止め」を付与する。",
-          "cassetteId": "WP-mwc3z7n9-ksyuu86"
+          "cassetteId": "WP-mwdh4wjg-ohb9sl0",
+          "equipLabel": "",
+          "name": "不動無明剣"
         },
         {
-          "name": "無双稲妻突き",
-          "type": "格闘",
-          "attribute": "物理",
-          "shape": "front",
-          "min": 1,
-          "max": 4,
-          "en": 20,
-          "ammo": null,
-          "normal": [
-            1
-          ],
-          "lock": [
-            3
-          ],
-          "shots": [
-            {
-              "normal": 1,
-              "lock": 3
-            }
-          ],
-          "damage": "3D10+5",
-          "passLow": false,
-          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、次の相手ターン中、パイロットスキル使用不可。",
-          "cassetteId": "WP-mwc3z7n9-d474x1b"
+          "cassetteId": "WP-mwdh4wjg-j10xld7",
+          "equipLabel": "",
+          "name": "無双稲妻突き"
         },
         {
-          "name": "聖光爆裂破",
-          "type": "格闘",
-          "attribute": "物理",
-          "shape": "front",
-          "min": 1,
-          "max": 4,
-          "en": 20,
-          "ammo": null,
-          "normal": [
-            1
-          ],
-          "lock": [
-            3
-          ],
-          "shots": [
-            {
-              "normal": 1,
-              "lock": 3
-            }
-          ],
-          "damage": "3D10+5",
-          "passLow": false,
-          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、次の相手ターン中、ブーストスキル使用不可。",
-          "cassetteId": "WP-mwc3z7n9-0e5iqsi"
+          "cassetteId": "WP-mwdh4wjg-is52zkm",
+          "equipLabel": "",
+          "name": "聖光爆裂破"
         },
         {
-          "name": "北斗骨砕打",
-          "type": "格闘",
-          "attribute": "物理",
-          "shape": "front",
-          "min": 1,
-          "max": 4,
-          "en": 20,
-          "ammo": null,
-          "normal": [
-            1
-          ],
-          "lock": [
-            3
-          ],
-          "shots": [
-            {
-              "normal": 1,
-              "lock": 3
-            }
-          ],
-          "damage": "3D10+5",
-          "passLow": false,
-          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、ダメージ+5。",
-          "cassetteId": "WP-mwc3z7na-noz3m3j"
+          "cassetteId": "WP-mwdh4wjg-qtyqtgc",
+          "equipLabel": "",
+          "name": "北斗骨砕打"
         },
         {
-          "name": "乱命割殺打",
-          "type": "格闘",
-          "attribute": "物理",
-          "shape": "front",
-          "min": 1,
-          "max": 4,
-          "en": 20,
-          "ammo": null,
-          "normal": [
-            1
-          ],
-          "lock": [
-            3
-          ],
-          "shots": [
-            {
-              "normal": 1,
-              "lock": 3
-            }
-          ],
-          "damage": "3D10+5",
-          "passLow": false,
-          "notes": "属性=物理\n特殊ルール=聖剣技対象武装。\n特殊ルール=命中成功時に1D10を振り、1が出た場合、相手の武装1つを指定。次の相手ターン中、その武装は使用不可。",
-          "cassetteId": "WP-mwc3z7na-9r7e3b8"
+          "cassetteId": "WP-mwdh4wjg-ozze8k0",
+          "equipLabel": "",
+          "name": "乱命割殺打"
         }
       ],
       "shields": [],
       "equipment": [],
       "skills": [
         {
-          "name": "聖剣技",
-          "kind": "ブーストスキル",
-          "notes": "効果=※印の武装に対し、相手は格闘値の代わりに回避値で回避判定してもよい。\n特殊ルール=密接状態（射程1）では格闘値で回避判定しなければならない。\n特殊ルール=対象武装は不動無明剣、無双稲妻突き、聖光爆裂破、北斗骨砕打、乱命割殺打。\n特殊ルール=常時発動可",
-          "effects": [],
-          "mode": {
-            "enabled": false,
-            "start": 0,
-            "upkeep": 0,
-            "recoilStats": {},
-            "recoilEffects": []
-          },
-          "hpLink": {
-            "enabled": false,
-            "min": 1,
-            "max": 0,
-            "allowZero": false,
-            "effects": []
-          },
-          "cassetteId": "SK-mwc3z7na-ncqz081"
+          "cassetteId": "SK-mwdh4wjh-vnzx164",
+          "equipLabel": "",
+          "name": "聖剣技"
         },
         {
-          "name": "集中",
-          "kind": "パイロットスキル",
-          "notes": "分類=モーメントスキル\n発動条件=自身のターン中、攻撃命中判定前。\n効果=自身の攻撃命中判定+2。",
-          "effects": [
-            {
-              "target": "hit",
-              "value": "2",
-              "op": "add",
-              "timing": "each",
-              "scope": "all",
-              "weapon": ""
-            }
-          ],
-          "mode": {
-            "enabled": false,
-            "start": 0,
-            "upkeep": 0,
-            "recoilStats": {},
-            "recoilEffects": []
-          },
-          "hpLink": {
-            "enabled": false,
-            "min": 1,
-            "max": 0,
-            "allowZero": false,
-            "effects": []
-          },
-          "cassetteId": "SK-mwc3z7na-49sm0ke"
+          "cassetteId": "SK-mwdh4wjh-wnv33a6",
+          "equipLabel": "",
+          "name": "集中"
         },
         {
-          "name": "突貫",
-          "kind": "パイロットスキル",
-          "notes": "分類=モーメントスキル\n効果=自身の移動を1〜2マス多く移動してもよい。\n効果=発動時、自身の「足止め」を解除する。",
-          "effects": [],
-          "mode": {
-            "enabled": false,
-            "start": 0,
-            "upkeep": 0,
-            "recoilStats": {},
-            "recoilEffects": []
-          },
-          "hpLink": {
-            "enabled": false,
-            "min": 1,
-            "max": 0,
-            "allowZero": false,
-            "effects": []
-          },
-          "cassetteId": "SK-mwc3z7na-dt8elpq"
+          "cassetteId": "SK-mwdh4wjh-rx0gpfe",
+          "equipLabel": "",
+          "name": "突貫"
         }
       ],
       "tokens": [],
