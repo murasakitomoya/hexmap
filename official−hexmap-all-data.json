@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-20T08:16:23.805Z",
+  "exportedAt": "2026-11-20T08:29:24.149Z",
   "cassettes": {
     "weapons": [
       {
@@ -3347,7 +3347,19 @@
           "mode": {
             "start": 0,
             "upkeep": 0,
-            "enabled": false
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
           },
           "simpleEffects": [
             {
@@ -3371,6 +3383,7 @@
             "cooldown": 0,
             "uses": 3,
             "oncePerRound": true,
+            "upkeepChoice": false,
             "upkeepEn": 0,
             "upkeepAp": 0
           },
@@ -3379,7 +3392,27 @@
             "hit",
             "damage",
             "final"
-          ]
+          ],
+          "npcActivationTiming": {
+            "enemyDeclare": false,
+            "enemyHit": false,
+            "enemyDamage": true,
+            "enemyOther": false,
+            "enemyOtherText": "",
+            "selfDeclare": false,
+            "selfHit": false,
+            "selfDamage": false,
+            "selfAny": false,
+            "selfOther": false,
+            "selfOtherText": ""
+          },
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          }
         },
         "sources": [
           {
@@ -7453,7 +7486,46 @@
       "hp": 100,
       "en": 400,
       "ap": 3,
-      "forms": [],
+      "forms": [
+        {
+          "name": "通常",
+          "actionType": "起動",
+          "forward": 1,
+          "full": 3,
+          "strafe": 1,
+          "backward": 1,
+          "freeTurn": 60,
+          "ap": 3,
+          "notes": "任意での変形は不可。",
+          "stats": {
+            "格闘": 1,
+            "射撃": 1,
+            "回避": 3,
+            "感覚": 5,
+            "物理装甲": 2,
+            "光学装甲": 2
+          }
+        },
+        {
+          "name": "ヴァルヴァロ(脱出)",
+          "actionType": "高速",
+          "forward": 2,
+          "full": 5,
+          "strafe": 1,
+          "backward": 0,
+          "freeTurn": 120,
+          "ap": 3,
+          "notes": "形態の遡行は不可。",
+          "stats": {
+            "格闘": 1,
+            "射撃": 1,
+            "回避": 5,
+            "感覚": 5,
+            "物理装甲": 1,
+            "光学装甲": 1
+          }
+        }
+      ],
       "stats": {
         "格闘": 1,
         "射撃": 1,
