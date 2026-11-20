@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-20T08:29:24.149Z",
+  "exportedAt": "2026-11-20T23:23:58.006Z",
   "cassettes": {
     "weapons": [
       {
@@ -5287,7 +5287,7 @@
           "kind": "ブーストスキル",
           "notes": "効果=※印の武装に対し、相手は格闘値の代わりに回避値で回避判定してもよい。\n特殊ルール=密接状態（射程1）では格闘値で回避判定しなければならない。\n特殊ルール=対象武装は不動無明剣、無双稲妻突き、聖光爆裂破、北斗骨砕打、乱命割殺打。\n特殊ルール=常時発動可",
           "displayText": "以下の武装に対し、相手は格闘値の代わりに回避値で回避判定してもよい。\n密接状態（射程1）では格闘値で回避判定しなければならない。\n対象武装は不動無明剣、無双稲妻突き、聖光爆裂破、北斗骨砕打、乱命割殺打。",
-          "skillCategory": "特殊",
+          "skillCategory": "その他",
           "activationType": "passive",
           "boost": {
             "stat": "",
@@ -5873,6 +5873,10 @@
             "selfAny": false,
             "selfOther": false,
             "selfOtherText": ""
+          },
+          "revival": {
+            "enabled": true,
+            "hp": 15
           }
         },
         "sources": [
@@ -6769,7 +6773,7 @@
           "notes": "ハロ！\nハロゲンキ！\nザンギョウ！ザンギョウ！\nキュウジツシュッキン！キュウジツシュッキン！\n\n…ロウキ",
           "displayText": "射撃値、格闘値に+2。\n任意のタイミングで効果のオン・オフが可能。",
           "skillCategory": "能力上昇",
-          "activationType": "active",
+          "activationType": "passive",
           "duration": {
             "enabled": true,
             "timed": false,
@@ -7180,15 +7184,15 @@
       },
       {
         "id": "SK-mwohhl6m-7jptpxf",
-        "name": "脱出機構(グレイテストサザビー)",
+        "name": "脱出機能(グレイテストサザビー)",
         "aliases": [],
         "data": {
-          "name": "脱出機構(グレイテストサザビー)",
+          "name": "脱出機能(グレイテストサザビー)",
           "kind": "ブーストスキル",
           "notes": "",
           "displayText": "この機体のHPが0になったときに1度だけ発動。\nHPを15にし、勝利条件を無視して戦闘を続ける。\nENは脱出前のものを引き継ぐ(最大250)。\n\n脱出後は〔ヴァルヴァロ〕と名のつく武装のみ使用可能。\nスキルは全て引き継ぐ。",
           "skillCategory": "その他",
-          "activationType": "reaction",
+          "activationType": "passive",
           "duration": {
             "enabled": false,
             "timed": false,
@@ -7243,6 +7247,10 @@
             "selfAny": false,
             "selfOther": false,
             "selfOtherText": ""
+          },
+          "revival": {
+            "enabled": true,
+            "hp": 15
           }
         },
         "sources": [
@@ -7265,7 +7273,7 @@
           "notes": "",
           "displayText": "EN+150(合計で400)。\n回避値-1。\n\nENを150以上使用したら、このスキルを無効化できる。",
           "skillCategory": "特殊",
-          "activationType": "active",
+          "activationType": "passive",
           "duration": {
             "enabled": true,
             "timed": false,
