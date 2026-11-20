@@ -1670,10 +1670,52 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
 /* NPC tactical advisor v0.4: AP-constrained offensive skill planning, suggestions only. */
 (()=>{
 const panel=document.createElement('details');panel.className='panel compact-toggle';panel.id='npcAdvisor';
-panel.innerHTML=`<summary>🤖 NPC対戦モード（Ver.0.8・ダメージ独立判断版）</summary><div class="muted" style="font-size:12px">対戦相手：🔵 ブラボー（固定）</div><div class="fields" style="margin-top:8px"><label>リアクション方針<select id="npcDefensePolicy"><option value="assault">🔥 猛攻（可能なら使用）</option><option value="steady">🛡️ 堅実（HP条件）</option></select></label><label>堅実：発動HP％以下<input id="npcDefenseHp" type="number" min="1" max="100" value="50"></label></div><label style="display:block;font-size:12px;margin-top:5px"><input type="checkbox" id="npcAutoShield" checked> 装備中のシールドを自動選択（ダメージ確定は手動）</label><button id="npcThink" type="button" style="width:100%;margin-top:10px">🧠 AP内の行動を考える</button><div class="regrow" style="margin-top:10px"><div class="npc-stage-row"><button id="npcDeclare" type="button">⚔️ 攻撃</button><button id="npcHit" type="button">🎯 命中</button><button id="npcMiss" type="button">💨 回避成功</button></div><div class="npc-damage-row"><input id="npcDamageValue" type="number" min="0" step="1" inputmode="numeric" placeholder="ダメージ値" aria-label="ダメージ値"><button id="npcDamage" type="button">ダメージ🔥</button></div><div class="muted" style="font-size:11px;margin-top:5px">各ボタンは独立して判断します。ダメージは下の確認欄で確定してください。</div><div id="npcDeclareStatus" class="muted" aria-live="polite" style="margin-top:7px">ボタンを押した時点の機体・武装・状態で防御判断します。</div></div><div id="npcOutput" style="white-space:pre-wrap;line-height:1.65;margin-top:9px;font-size:13px" aria-live="polite">機体別APと攻撃スキルを考慮して行動を提案します。提案のみで自動実行しません。</div>`;
+panel.innerHTML=`<summary>🤖 NPC対戦モード（Ver.0.9.1・武装一覧レイアウト修正版）</summary><div class="muted" style="font-size:12px">対戦相手：🔵 ブラボー（固定）</div><div class="fields" style="margin-top:8px"><label>リアクション方針<select id="npcDefensePolicy"><option value="assault">🔥 猛攻（可能なら使用）</option><option value="steady">🛡️ 堅実（HP条件）</option></select></label><label>堅実：発動HP％以下<input id="npcDefenseHp" type="number" min="1" max="100" value="50"></label></div><label style="display:block;font-size:12px;margin-top:5px"><input type="checkbox" id="npcAutoShield" checked> 装備中のシールドを自動選択（ダメージ確定は手動）</label><div class="regrow" style="margin-top:9px"><label style="font-size:13px;display:flex;align-items:center;gap:6px"><input type="checkbox" id="npcWeaponLimit" style="width:18px!important;height:18px!important;min-width:18px!important;vertical-align:middle;margin:0 6px 0 0;padding:0"> 武装使用制限あり</label><details id="npcWeaponFold" style="margin-top:7px"><summary>⚔️ 武装（全武装使用可能）</summary><div id="npcWeaponChoices" style="display:grid;gap:5px;margin:8px 0"></div><div class="regrow"><button type="button" id="npcWeaponAll">全選択</button><button type="button" id="npcWeaponNone">全解除</button></div></details></div><button id="npcThink" type="button" style="width:100%;margin-top:10px">🧠 AP内の行動を考える</button><div class="regrow" style="margin-top:10px"><div class="npc-stage-row"><button id="npcDeclare" type="button">⚔️ 攻撃</button><button id="npcHit" type="button">🎯 命中</button><button id="npcMiss" type="button">💨 回避成功</button></div><div class="npc-damage-row"><input id="npcDamageValue" type="number" min="0" step="1" inputmode="numeric" placeholder="ダメージ値" aria-label="ダメージ値"><button id="npcDamage" type="button">ダメージ🔥</button></div><div class="muted" style="font-size:11px;margin-top:5px">各ボタンは独立して判断します。ダメージは下の確認欄で確定してください。</div><div id="npcDeclareStatus" class="muted" aria-live="polite" style="margin-top:7px">ボタンを押した時点の機体・武装・状態で防御判断します。</div></div><div id="npcOutput" style="white-space:pre-wrap;line-height:1.65;margin-top:9px;font-size:13px" aria-live="polite">機体別APと攻撃スキルを考慮して行動を提案します。提案のみで自動実行しません。</div>`;
 document.getElementById('battleTab').append(panel);
 const out=panel.querySelector('#npcOutput');
 const NPC_SIDE=1;
+// This UI controls only which NPC weapons are considered by the tactical planner.
+// Keep weapon indexes stable within each machine; avoid mutating cassette data.
+const weaponLimitToggle=panel.querySelector('#npcWeaponLimit');
+const weaponFold=panel.querySelector('#npcWeaponFold');
+const weaponChoices=panel.querySelector('#npcWeaponChoices');
+let weaponMachineKey=null;
+let weaponAllowed=[];
+function currentNpcWeapons(){
+ const machine=machineFor(NPC_SIDE);
+ return {machine,weapons:(machine?.weapons||[]).filter(w=>w&&w.name)};
+}
+function refreshWeaponLimit(force=false){
+ const {machine,weapons}=currentNpcWeapons();
+ const key=JSON.stringify([machine?.id||machine?.name||'',weapons.map(w=>[w.id||'',w.name])]);
+ if(force||key!==weaponMachineKey){
+  weaponMachineKey=key;
+  weaponAllowed=weapons.map(()=>true);
+  weaponChoices.replaceChildren();
+  weapons.forEach((w,i)=>{
+   const label=document.createElement('label');
+   label.style.cssText='display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:8px;width:100%;min-width:0;font-size:13px;line-height:1.45;cursor:pointer;padding:4px 0;text-align:left';
+   const check=document.createElement('input');check.type='checkbox';check.checked=true;check.style.cssText='width:18px!important;height:18px!important;min-width:18px!important;max-width:18px!important;flex:0 0 18px;margin:0;padding:0;box-sizing:border-box';
+   check.dataset.weaponIndex=String(i);
+   check.addEventListener('change',()=>{weaponAllowed[i]=check.checked;updateWeaponLimitView()});
+   const name=document.createElement('span');name.textContent=w.name;name.style.cssText='flex:1;min-width:0;overflow-wrap:anywhere;text-align:left';label.append(check,name);
+   weaponChoices.append(label);
+  });
+ }
+ updateWeaponLimitView();
+}
+function updateWeaponLimitView(){
+ const {weapons}=currentNpcWeapons();
+ const limited=weaponLimitToggle.checked;
+ weaponChoices.querySelectorAll('input[type=checkbox]').forEach((c,i)=>{c.disabled=!limited;c.checked=!!weaponAllowed[i]});
+ const count=weaponAllowed.filter(Boolean).length;
+ weaponFold.querySelector('summary').textContent=`⚔️ 武装（${limited?count+' / '+weapons.length+' 使用可能':'全武装使用可能'}）`;
+}
+weaponLimitToggle.addEventListener('change',updateWeaponLimitView);
+panel.querySelector('#npcWeaponAll').addEventListener('click',()=>{refreshWeaponLimit();weaponAllowed.fill(true);updateWeaponLimitView()});
+panel.querySelector('#npcWeaponNone').addEventListener('click',()=>{refreshWeaponLimit();weaponAllowed.fill(false);updateWeaponLimitView()});
+refreshWeaponLimit();
+
 function npcStageStatus(msg){panel.querySelector('#npcDeclareStatus').textContent=msg}
 function npcStageButtons(){
  // Event-driven reactions: no required sequence between attack, hit and damage.
@@ -1703,7 +1745,11 @@ function compute(){try{
  const halo=skillByName(skills,'ハロ・ユニット(三菱自動車製)'),resSkill=skillByName(skills,'サイコ・レゾナンス'),focusSkill=skillByName(skills,'集中'),instantSkill=skillByName(skills,'瞬撃');
  const haloOn=!!halo&&activeSkillAllowed(side,halo);
  const resReady=activeSkillAllowed(side,resSkill),focusReady=activeSkillAllowed(side,focusSkill),instantReady=activeSkillAllowed(side,instantSkill);
- const maxAP=Number(form?.ap??machine.ap),en=Number(document.getElementById(side?'enB':'enA').value),weapons=(machine.weapons||[]).filter(w=>w&&w.name);
+ refreshWeaponLimit();
+ const allWeapons=(machine.weapons||[]).filter(w=>w&&w.name);
+ const weapons=allWeapons.filter((w,i)=>!weaponLimitToggle.checked||weaponAllowed[i]);
+ const maxAP=Number(form?.ap??machine.ap),en=Number(document.getElementById(side?'enB':'enA').value);
+ if(weaponLimitToggle.checked&&!weapons.length){out.textContent='⚠️ 武装使用制限がONですが、使用可能な武装が選択されていません。';return}
  if(!Number.isFinite(maxAP)||maxAP<0||maxAP>12){out.textContent='⚠️ 機体のAP設定を確認してください（0～12に対応）。';return}
  const start={q:me.q,r:me.r,d:me.d,ap:maxAP,en:Number.isFinite(en)?en:0,freeTurn:false,quick:false,attacks:0,damage:0,resonance:false,focus:false,instant:false,actions:[]};
  const initialDistance=distance(start,enemy),maxRange=Math.max(1,...weapons.map(w=>Number(w.max)||0));

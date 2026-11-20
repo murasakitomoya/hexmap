@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-20T00:52:56.984Z",
+  "exportedAt": "2026-11-20T05:06:36.566Z",
   "cassettes": {
     "weapons": [
       {
@@ -131,15 +131,15 @@
       },
       {
         "id": "WP-mwdh4wjg-19gar97",
-        "name": "ショートビームカービン",
+        "name": "●ショートビームカービン",
         "aliases": [],
         "data": {
-          "name": "ショートビームカービン",
+          "name": "●ショートビームカービン",
           "type": "射撃",
           "attribute": "光学",
           "shape": "front",
           "min": 1,
-          "max": 4,
+          "max": 3,
           "en": 10,
           "ammo": null,
           "normal": [
@@ -156,7 +156,10 @@
           ],
           "damage": "3D8+5",
           "passLow": false,
-          "notes": "光学。速攻：1ラウンド1回AP消費0"
+          "notes": "光学。速攻：1ラウンド1回AP消費0",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -165,6 +168,13 @@
             "notes": "光学。速攻：1ラウンド1回AP消費0",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "ショートビームカービン",
+            "notes": "光学。速攻：1ラウンド1回AP消費0",
+            "source": "",
+            "date": "2026-11-20T05:04:13.378Z"
           }
         ]
       },
@@ -721,10 +731,10 @@
       },
       {
         "id": "WP-mwdh4wjg-5vb1d72",
-        "name": "胸部マシンキャノン",
+        "name": "●胸部マシンキャノン",
         "aliases": [],
         "data": {
-          "name": "胸部マシンキャノン",
+          "name": "●胸部マシンキャノン",
           "type": "射撃",
           "attribute": "物理",
           "shape": "fan",
@@ -746,7 +756,10 @@
           ],
           "damage": "1D6",
           "passLow": false,
-          "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。"
+          "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -755,15 +768,22 @@
             "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "胸部マシンキャノン",
+            "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。",
+            "source": "",
+            "date": "2026-11-20T04:50:47.886Z"
           }
         ]
       },
       {
         "id": "WP-mwdh4wjg-3rn7k7s",
-        "name": "シールドグレネード",
+        "name": "●シールドグレネード",
         "aliases": [],
         "data": {
-          "name": "シールドグレネード",
+          "name": "●シールドグレネード",
           "type": "射撃",
           "attribute": "物理",
           "shape": "front",
@@ -785,7 +805,10 @@
           ],
           "damage": "1D4+1D8+1D10",
           "passLow": false,
-          "notes": "属性=物理\n特殊ルール=速攻可能武器。大型シールドとの装備連動は要確認。"
+          "notes": "属性=物理\n特殊ルール=速攻可能武器。大型シールドとの装備連動は要確認。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -794,6 +817,13 @@
             "notes": "属性=物理\n特殊ルール=速攻可能武器。大型シールドとの装備連動は要確認。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "シールドグレネード",
+            "notes": "属性=物理\n特殊ルール=速攻可能武器。大型シールドとの装備連動は要確認。",
+            "source": "",
+            "date": "2026-11-20T05:03:46.366Z"
           }
         ]
       },
@@ -877,10 +907,10 @@
       },
       {
         "id": "WP-mwdh4wjg-7x7ofce",
-        "name": "トマホーク投擲",
+        "name": "●トマホーク投擲",
         "aliases": [],
         "data": {
-          "name": "トマホーク投擲",
+          "name": "●トマホーク投擲",
           "type": "格闘",
           "attribute": "光学",
           "shape": "fan",
@@ -902,7 +932,10 @@
           ],
           "damage": "2D8+8",
           "passLow": false,
-          "notes": "属性=光学\n特殊ルール=速攻可能武器。"
+          "notes": "属性=光学\n特殊ルール=速攻可能武器。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -911,6 +944,13 @@
             "notes": "属性=光学\n特殊ルール=速攻可能武器。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "トマホーク投擲",
+            "notes": "属性=光学\n特殊ルール=速攻可能武器。",
+            "source": "",
+            "date": "2026-11-20T05:04:28.890Z"
           }
         ]
       },
@@ -994,10 +1034,10 @@
       },
       {
         "id": "WP-mwdh4wjg-hy1kmd1",
-        "name": "ヴァルヴァロ：マシンキャノン",
+        "name": "●ヴァルヴァロ：マシンキャノン",
         "aliases": [],
         "data": {
-          "name": "ヴァルヴァロ：マシンキャノン",
+          "name": "●ヴァルヴァロ：マシンキャノン",
           "type": "射撃",
           "attribute": "物理",
           "shape": "fan",
@@ -1019,7 +1059,10 @@
           ],
           "damage": "1D6",
           "passLow": false,
-          "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。\n特殊ルール=ヴァルヴァロユニット専用武装。本体とEN共有。"
+          "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。\n特殊ルール=ヴァルヴァロユニット専用武装。本体とEN共有。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -1028,15 +1071,22 @@
             "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。\n特殊ルール=ヴァルヴァロユニット専用武装。本体とEN共有。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "ヴァルヴァロ：マシンキャノン",
+            "notes": "属性=物理\n特殊ルール=速攻可能武器。命中時、相手に回避ペナルティ+1（1ラウンド）。適用方法は要確認。\n特殊ルール=ヴァルヴァロユニット専用武装。本体とEN共有。",
+            "source": "",
+            "date": "2026-11-20T05:02:15.885Z"
           }
         ]
       },
       {
         "id": "WP-mwdh4wjg-9mflc5b",
-        "name": "ヴァルヴァロ：クローアーム",
+        "name": "●ヴァルヴァロ：クローアーム",
         "aliases": [],
         "data": {
-          "name": "ヴァルヴァロ：クローアーム",
+          "name": "●ヴァルヴァロ：クローアーム",
           "type": "格闘",
           "attribute": "物理",
           "shape": "fan",
@@ -1058,7 +1108,10 @@
           ],
           "damage": "2D6+10",
           "passLow": false,
-          "notes": "属性=物理\n特殊ルール=速攻可能武器。ヴァルヴァロユニット専用武装。"
+          "notes": "属性=物理\n特殊ルール=速攻可能武器。ヴァルヴァロユニット専用武装。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -1067,6 +1120,13 @@
             "notes": "属性=物理\n特殊ルール=速攻可能武器。ヴァルヴァロユニット専用武装。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "ヴァルヴァロ：クローアーム",
+            "notes": "属性=物理\n特殊ルール=速攻可能武器。ヴァルヴァロユニット専用武装。",
+            "source": "",
+            "date": "2026-11-20T04:50:30.068Z"
           }
         ]
       },
@@ -1228,10 +1288,10 @@
       },
       {
         "id": "WP-mwdh4wjg-nrl7vaa",
-        "name": "GN小型クロー",
+        "name": "●GN小型クロー",
         "aliases": [],
         "data": {
-          "name": "GN小型クロー",
+          "name": "●GN小型クロー",
           "type": "格闘",
           "attribute": "物理/光学",
           "shape": "fan",
@@ -1253,7 +1313,10 @@
           ],
           "damage": "2D6+10",
           "passLow": false,
-          "notes": "属性=物理/光学\n特殊ルール=速攻可能武器。"
+          "notes": "属性=物理/光学\n特殊ルール=速攻可能武器。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -1262,6 +1325,13 @@
             "notes": "属性=物理/光学\n特殊ルール=速攻可能武器。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "GN小型クロー",
+            "notes": "属性=物理/光学\n特殊ルール=速攻可能武器。",
+            "source": "",
+            "date": "2026-11-20T04:48:32.086Z"
           }
         ]
       },
@@ -1345,10 +1415,10 @@
       },
       {
         "id": "WP-mwdh4wjg-u4j28er",
-        "name": "GNピストル",
+        "name": "●GNピストル",
         "aliases": [],
         "data": {
-          "name": "GNピストル",
+          "name": "●GNピストル",
           "type": "射撃",
           "attribute": "光学",
           "shape": "front",
@@ -1808,10 +1878,10 @@
       },
       {
         "id": "WP-mwdh4wjg-p6vpr4o",
-        "name": "フラッシュエッジ",
+        "name": "●フラッシュエッジ",
         "aliases": [],
         "data": {
-          "name": "フラッシュエッジ",
+          "name": "●フラッシュエッジ",
           "type": "格闘",
           "attribute": "光学",
           "shape": "fan",
@@ -1833,7 +1903,10 @@
           ],
           "damage": "2D8+8",
           "passLow": false,
-          "notes": "属性=光学\n特殊ルール=ロックオン補正は原文「+1/+4」。使い分け条件未指定。\n特殊ルール=⚫︎印あり。速攻。"
+          "notes": "属性=光学\n特殊ルール=ロックオン補正は原文「+1/+4」。使い分け条件未指定。\n特殊ルール=⚫︎印あり。速攻。",
+          "fixedDamageBonus": 0,
+          "extraDamageDice": "",
+          "conditions": []
         },
         "sources": [
           {
@@ -1842,6 +1915,13 @@
             "notes": "属性=光学\n特殊ルール=ロックオン補正は原文「+1/+4」。使い分け条件未指定。\n特殊ルール=⚫︎印あり。速攻。",
             "source": "",
             "date": "移行時"
+          },
+          {
+            "machine": "編集前の記録",
+            "name": "フラッシュエッジ",
+            "notes": "属性=光学\n特殊ルール=ロックオン補正は原文「+1/+4」。使い分け条件未指定。\n特殊ルール=⚫︎印あり。速攻。",
+            "source": "",
+            "date": "2026-11-20T05:04:42.686Z"
           }
         ]
       },
@@ -6326,6 +6406,148 @@
             "date": "2026-11-16T00:51:53.062Z"
           }
         ]
+      },
+      {
+        "id": "SK-mwohhl6m-7jptpxf",
+        "name": "脱出機構(グレイテストサザビー)",
+        "aliases": [],
+        "data": {
+          "name": "脱出機構(グレイテストサザビー)",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "この機体のHPが0になったときに1度だけ発動。\nHPを15にし、勝利条件を無視して戦闘を続ける。\nENは脱出前のものを引き継ぐ(最大250)。\n\n脱出後は〔ヴァルヴァロ〕と名のつく武装のみ使用可能。\nスキルは全て引き継ぐ。",
+          "skillCategory": "その他",
+          "activationType": "reaction",
+          "duration": {
+            "enabled": false,
+            "timed": false,
+            "manual": false,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": false,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 1,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-20T04:42:17.693Z"
+          }
+        ]
+      },
+      {
+        "id": "SK-mwoht3j0-9jp4ur0",
+        "name": "プロペラントタンク(グレイテストサザビー)",
+        "aliases": [],
+        "data": {
+          "name": "プロペラントタンク(グレイテストサザビー)",
+          "kind": "ブーストスキル",
+          "notes": "",
+          "displayText": "EN+150(合計で400)。\n回避値-1。\n\nENを150以上使用したら、このスキルを無効化できる。",
+          "skillCategory": "特殊",
+          "activationType": "active",
+          "duration": {
+            "enabled": true,
+            "timed": false,
+            "manual": true,
+            "round": 1,
+            "boundary": "start"
+          },
+          "mode": {
+            "start": 0,
+            "upkeep": 0,
+            "enabled": true,
+            "recoilEnabled": false,
+            "recoilStats": {},
+            "recoilMulti": {
+              "stats": [],
+              "value": "-2"
+            },
+            "recoilEffects": [],
+            "recoilEnd": {
+              "round": 1,
+              "boundary": "start"
+            },
+            "notes": ""
+          },
+          "simpleEffects": [
+            {
+              "kind": "modify",
+              "targetSide": "self",
+              "target": "evade",
+              "multiTargets": [],
+              "op": "sub",
+              "value": 1,
+              "check": "evade",
+              "stat": "感覚",
+              "weapon": "all",
+              "weaponName": "",
+              "range": 1
+            }
+          ],
+          "simpleCost": {
+            "timing": "on",
+            "en": 0,
+            "ap": 0,
+            "cooldown": 0,
+            "uses": 0,
+            "oncePerRound": false,
+            "upkeepChoice": false,
+            "upkeepEn": 0,
+            "upkeepAp": 0
+          },
+          "simpleActivation": "on",
+          "simpleTimings": [
+            "hit",
+            "damage",
+            "final"
+          ]
+        },
+        "sources": [
+          {
+            "machine": "編集前の記録",
+            "name": "",
+            "notes": "",
+            "source": "",
+            "date": "2026-11-20T04:46:12.615Z"
+          }
+        ]
       }
     ]
   },
@@ -6505,12 +6727,12 @@
         {
           "cassetteId": "WP-mwdh4wjg-5vb1d72",
           "equipLabel": "",
-          "name": "胸部マシンキャノン"
+          "name": "●胸部マシンキャノン"
         },
         {
           "cassetteId": "WP-mwdh4wjg-3rn7k7s",
           "equipLabel": "",
-          "name": "シールドグレネード"
+          "name": "●シールドグレネード"
         },
         {
           "cassetteId": "WP-mwdh4wjg-v4lnfae",
@@ -6525,7 +6747,7 @@
         {
           "cassetteId": "WP-mwdh4wjg-7x7ofce",
           "equipLabel": "",
-          "name": "トマホーク投擲"
+          "name": "●トマホーク投擲"
         },
         {
           "cassetteId": "WP-mwdh4wjg-ld9pius",
@@ -6540,12 +6762,12 @@
         {
           "cassetteId": "WP-mwdh4wjg-hy1kmd1",
           "equipLabel": "",
-          "name": "ヴァルヴァロ：マシンキャノン"
+          "name": "●ヴァルヴァロ：マシンキャノン"
         },
         {
           "cassetteId": "WP-mwdh4wjg-9mflc5b",
           "equipLabel": "",
-          "name": "ヴァルヴァロ：クローアーム"
+          "name": "●ヴァルヴァロ：クローアーム"
         },
         {
           "cassetteId": "WP-mwdh4wjg-2qj1v0s",
@@ -6605,6 +6827,16 @@
           "cassetteId": "SK-mwh4cazn-xuvep0j",
           "equipLabel": "",
           "name": "ハロ・ユニット(三菱自動車製)"
+        },
+        {
+          "cassetteId": "SK-mwoht3j0-9jp4ur0",
+          "equipLabel": "",
+          "name": "プロペラントタンク(グレイテストサザビー)"
+        },
+        {
+          "cassetteId": "SK-mwohhl6m-7jptpxf",
+          "equipLabel": "",
+          "name": "脱出機構(グレイテストサザビー)"
         }
       ],
       "tokens": [],
