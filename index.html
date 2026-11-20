@@ -103,7 +103,7 @@
 #weaponEditor .cassette-equip-spec{display:flex;flex-direction:column;gap:4px;background:#f1f5f9;border-radius:7px;padding:9px;min-width:0;overflow-wrap:anywhere}
 #weaponEditor .cassette-equip-spec strong{font-size:14px}
 #weaponEditor .cassette-equip-spec small{font-size:11px}
-</style><style>.npc-stage-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.npc-stage-row button{padding:9px 2px;font-size:clamp(11px,3vw,14px);white-space:nowrap}.npc-damage-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px;margin-top:7px}.npc-damage-row input{width:100%}.npc-damage-row button{font-size:14px;padding:8px 12px}#npcAdvisor button:disabled{opacity:.45;cursor:not-allowed}</style><main><div class="tabs"><button class="active" id="tabBattle">⚔️ ヘクスマップ</button><button id="tabData">📋 機体データ</button><button id="tabRegister">🔧 機体登録</button></div><div id="dataTab" style="display:none"><h2>📋 アルファ・ブラボー 機体データ</h2><div id="unitDataCards"></div></div><div id="battleTab"><h2>汎用ヘクスマップ Ver.2.2.8｜範囲指定・一括保存</h2><div id="mapwrap"><svg aria-label="15列11行のヘクスマップ" id="map" viewbox="0 0 700 465"></svg></div><button id="phaseChange" type="button"><span class="phase-num" id="phaseA">0</span><span>フェイズチェンジ</span><span class="phase-num" id="phaseB">0</span></button><section aria-label="ユニット状態" class="panel"><div class="unitstats"><div class="unitcard chosen" id="cardA"><button id="unitA" type="button">🔴 アルファ</button><div class="unitloc" id="locA"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignA" placeholder="🔎 機体名を検索" type="search"/><select id="assignA" style="width:100%"></select><button id="setA" type="button">この機体をセット</button></details><div class="muted" id="machineA"></div><div class="transform-control" id="transformA"></div><div class="numbers"><label>HP<input id="hpA" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enA" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteA" placeholder="状態・装備など" rows="3"></textarea></label></details></div><div class="unitcard" id="cardB"><button id="unitB" type="button">🔵 ブラボー</button><div class="unitloc" id="locB"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignB" placeholder="🔎 機体名を検索" type="search"/><select id="assignB" style="width:100%"></select><button id="setB" type="button">この機体をセット</button></details><div class="muted" id="machineB"></div><div class="transform-control" id="transformB"></div><div class="numbers"><label>HP<input id="hpB" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enB" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteB" placeholder="状態・装備など" rows="3"></textarea></label></details></div></div></section><details class="panel compact-toggle" id="optionGear"><summary id="optionGearTitle">オプション兵装 ♟️🛡️🪖</summary>
+</style><style>.npc-stage-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.npc-stage-row button{padding:9px 2px;font-size:clamp(11px,3vw,14px);white-space:nowrap}.npc-damage-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px;margin-top:7px}.npc-damage-row input{width:100%}.npc-damage-row button{font-size:14px;padding:8px 12px}#npcAdvisor button:disabled{opacity:.45;cursor:not-allowed}</style><style>.fac-npc-timing{margin:12px 0;padding:10px;border:1px solid #cbd5e1;border-radius:9px}.fac-npc-timing>summary{font-weight:700;cursor:pointer}.fac-npc-timing-choice{display:flex!important;align-items:center;gap:8px;padding:5px 0;font-size:13px}.fac-npc-timing-choice input{width:18px!important;height:18px!important;flex:none;margin:0}.fac-npc-timing-other{width:100%;margin:3px 0 8px;box-sizing:border-box}</style><main><div class="tabs"><button class="active" id="tabBattle">⚔️ ヘクスマップ</button><button id="tabData">📋 機体データ</button><button id="tabRegister">🔧 機体登録</button></div><div id="dataTab" style="display:none"><h2>📋 アルファ・ブラボー 機体データ</h2><div id="unitDataCards"></div></div><div id="battleTab"><h2>汎用ヘクスマップ Ver.2.2.8｜範囲指定・一括保存</h2><div id="mapwrap"><svg aria-label="15列11行のヘクスマップ" id="map" viewbox="0 0 700 465"></svg></div><button id="phaseChange" type="button"><span class="phase-num" id="phaseA">0</span><span>フェイズチェンジ</span><span class="phase-num" id="phaseB">0</span></button><section aria-label="ユニット状態" class="panel"><div class="unitstats"><div class="unitcard chosen" id="cardA"><button id="unitA" type="button">🔴 アルファ</button><div class="unitloc" id="locA"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignA" placeholder="🔎 機体名を検索" type="search"/><select id="assignA" style="width:100%"></select><button id="setA" type="button">この機体をセット</button></details><div class="muted" id="machineA"></div><div class="transform-control" id="transformA"></div><div class="numbers"><label>HP<input id="hpA" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enA" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteA" placeholder="状態・装備など" rows="3"></textarea></label></details></div><div class="unitcard" id="cardB"><button id="unitB" type="button">🔵 ブラボー</button><div class="unitloc" id="locB"></div><details><summary style="font-size:12px;cursor:pointer">機体のセット／変更</summary><input class="machine-search" id="searchAssignB" placeholder="🔎 機体名を検索" type="search"/><select id="assignB" style="width:100%"></select><button id="setB" type="button">この機体をセット</button></details><div class="muted" id="machineB"></div><div class="transform-control" id="transformB"></div><div class="numbers"><label>HP<input id="hpB" inputmode="numeric" type="number" value="100"/></label><label>EN<input id="enB" inputmode="numeric" type="number" value="250"/></label></div><details class="compact-toggle"><summary>備考欄</summary><label>備考欄<textarea id="noteB" placeholder="状態・装備など" rows="3"></textarea></label></details></div></div></section><details class="panel compact-toggle" id="optionGear"><summary id="optionGearTitle">オプション兵装 ♟️🛡️🪖</summary>
 <div id="gearAccordion" class="gear-accordion">
 <div class="gear-choice-row"><b>♟️ トークン</b><button type="button" data-gear-kind="token" data-gear-side="0">🔴 アルファ</button><button type="button" data-gear-kind="token" data-gear-side="1">🔵 ブラボー</button></div>
 <div class="gear-choice-row"><b>🛡️ シールド</b><button type="button" data-gear-kind="shield" data-gear-side="0">🔴 アルファ</button><button type="button" data-gear-kind="shield" data-gear-side="1">🔵 ブラボー</button></div>
@@ -1385,6 +1385,28 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
  const displayText=kind==='skills'?field(f,'一覧表示用の文章',c.data.displayText??c.data.notes??'','textarea'):null;if(displayText)displayText.parentElement.classList.add('wide');
  const skillCategory=kind==='skills'?field(f,'スキルカテゴリ（手動選択）',c.data.skillCategory||'その他','select',[['攻撃系','攻撃系'],['防御系','防御系'],['能力上昇','能力上昇'],['移動','移動'],['特殊','特殊'],['その他','その他']]):null;
  const skillType=kind==='skills'?field(f,'発動タイプ',c.data.activationType||c.data.skillType||((c.data.skillTemplate?.modules||[]).some(m=>m.trigger==='automatic')?'reaction':(c.data.skillTemplate?.modules||[]).some(m=>m.trigger==='passive')?'passive':'active'),'select',[['active','アクティブ'],['reaction','リアクション'],['passive','パッシブ']]):null;
+ let readNpcTimings=null;
+ if(kind==='skills'){
+  const timingBox=el('details',panel);timingBox.className='fac-npc-timing';timingBox.open=false;
+  el('summary',timingBox,'⏱️ 発動可能タイミング');
+  el('p',timingBox,'複数選択できます。未設定の既存カセットは従来の判定を使用します。','fac-muted');
+  const stored=c.data.npcActivationTiming||{};
+  const opts=[['enemyDeclare','⚔️ 攻撃宣言時'],['enemyHit','🎯 命中判定後'],['enemyDamage','🔥 ダメージ決定後'],['enemyOther','その他'],['selfDeclare','⚔️ 攻撃宣言時'],['selfHit','🎯 命中判定後'],['selfDamage','🔥 ダメージ決定後'],['selfAny','いつでも'],['selfOther','その他']];
+  const controls={};
+  for(const [idx,group] of [['相手ラウンド',opts.slice(0,4)],['自ラウンド',opts.slice(4)]]){
+   const heading=el('b',timingBox,'● '+idx);heading.style.display='block';heading.style.margin='10px 0 4px';
+   for(const [key,label] of group){
+    const line=el('label',timingBox);line.className='fac-npc-timing-choice';
+    const check=el('input',line);check.type='checkbox';check.checked=!!stored[key];controls[key]=check;
+    line.append(document.createTextNode(label));
+    if(key.endsWith('Other')){
+     const fieldInput=el('input',timingBox);fieldInput.type='text';fieldInput.className='fac-npc-timing-other';fieldInput.placeholder='発動タイミングを入力';fieldInput.value=stored[key+'Text']||'';controls[key+'Text']=fieldInput;
+     const sync=()=>{fieldInput.hidden=!check.checked};check.addEventListener('change',sync);sync();
+    }
+   }
+  }
+  readNpcTimings=()=>Object.fromEntries(Object.entries(controls).map(([key,control])=>[key,key.endsWith('Text')?control.value.trim():control.checked]));
+ }
  const numeric={};if(kind==='weapons'){
   const choices={type:[['格闘','格闘'],['射撃','射撃'],['感覚','感覚']],attribute:[['物理','物理'],['光学','光学'],['物理/光学','物理／光学'],['未設定','未設定']],shape:[['front','前'],['fan','扇'],['line','線'],['all','全']]};
   for(const [key,label] of [['type','攻撃種別'],['attribute','属性'],['shape','射程タイプ']])numeric[key]=field(f,label,c.data[key], 'select',choices[key]);
@@ -1517,7 +1539,7 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
  const notesFold=kind==='skills'?el('details',panel):f;if(kind==='skills')el('summary',notesFold,'📜 補足説明・原文（必要な場合のみ）');const notes=field(notesFold,'効果・特殊ルール',c.data.notes||'','textarea');notes.parentElement.classList.add('wide');
  const adv=el('details',panel);el('summary',adv,'🔧 データ詳細（上級者向け）');el('p',adv,'既存の細かな設定はこのJSONにも保持されます。編集するときは正しいJSON形式で入力してね。','fac-muted');const raw=el('textarea',adv);raw.value=JSON.stringify(c.data,null,2);raw.style.minHeight='170px';
  const source=el('details',panel);el('summary',source,'📜 元になった文章を確認（保存済み・編集不可）');if(!c.sources.length)el('p',source,'原文未登録。新規作成後は編集前の説明を履歴に保存するよ。','fac-muted');for(const rec of c.sources){const d=el('details',source);el('summary',d,(rec.machine||'登録時')+'：'+rec.name);el('pre',d,'説明：\n'+(rec.notes||'（なし）')+'\n\nキャラシート原文：\n'+(rec.source||library.find(m=>m.name===rec.machine)?.source||'（未収録）'),'fac-source')}
- const acts=el('div',panel,undefined,'fac-action');button(acts,'💾 カセットを保存',()=>{let data;try{data=JSON.parse(raw.value);if(!data||Array.isArray(data)||typeof data!=='object')throw Error('オブジェクトが必要')}catch(e){alert('JSONの形式が正しくありません：'+e.message);return}const title=name.value.trim();if(!title){alert('カセット名を入力してください');return}data.name=title;data.notes=notes.value;if(kind==='skills'){data.displayText=displayText.value;data.skillCategory=skillCategory.value;data.activationType=skillType.value;}
+ const acts=el('div',panel,undefined,'fac-action');button(acts,'💾 カセットを保存',()=>{let data;try{data=JSON.parse(raw.value);if(!data||Array.isArray(data)||typeof data!=='object')throw Error('オブジェクトが必要')}catch(e){alert('JSONの形式が正しくありません：'+e.message);return}const title=name.value.trim();if(!title){alert('カセット名を入力してください');return}data.name=title;data.notes=notes.value;if(kind==='skills'){data.displayText=displayText.value;data.skillCategory=skillCategory.value;data.activationType=skillType.value;data.npcActivationTiming=readNpcTimings();}
  if(kind==='weapons'){for(const k of ['type','attribute','shape','damage'])data[k]=numeric[k].value;for(const k of ['min','max','en'])data[k]=Number(numeric[k].value)||0;data.ammo=numeric.ammo.value===''?null:Math.max(0,Number(numeric.ammo.value)||0);for(const k of ['normal','lock'])data[k]=numeric[k].value.split(/[\/／]/).map(x=>x.trim()).filter(x=>x!==''&&x!=='不可').map(Number).filter(Number.isFinite);data.shots=Array.from({length:Math.max(data.normal.length,data.lock.length)},(_,i)=>({normal:data.normal[i]??null,lock:data.lock[i]??null}));data.passLow=numeric.passLow.value==='yes';data.fixedDamageBonus=Number(numeric.fixedDamageBonus.value)||0;data.extraDamageDice=numeric.extraDamageDice.value.trim();data.conditions=numeric.readConditions();if(!validCompositeDamage(data.damage)|| (data.extraDamageDice&&!validCompositeDamage(data.extraDamageDice))){alert('ダメージ式を確認してください。例：1D6+10D10+7（D4/D6/D8/D10/D12/D20/D100対応）');return}}
  else{data.kind=category.value;const recoilEffects=numeric.readRecoilEffects();const recoilStats={};for(const [stat,input] of Object.entries(numeric.recoilStats))if(input.value.trim())recoilStats[stat]=input.value.trim();data.duration=numeric.readDuration();data.mode={...(data.mode||{}),start:0,upkeep:0,enabled:data.duration.enabled,recoilEnabled:numeric.readRecoilEnabled(),recoilStats,recoilMulti:numeric.readRecoilMulti(),recoilEffects,recoilEnd:{round:Number(numeric.recoilRound.value)||1,boundary:numeric.recoilBoundary.value},notes:numeric.modeNote.value};/* 使用制限は skillTemplate に保存 */}
  if(kind==='skills'&&templateUI){data.simpleEffects=templateUI();data.simpleCost=costRead();data.simpleActivation=activation.value;data.simpleTimings=Object.keys(timingChecks).filter(k=>timingChecks[k].checked);if(data.simpleEffects.some(e=>e.kind==='modify'&&(!Number.isFinite(e.value)||(e.op==='div'&&e.value===0)||(Array.isArray(e.multiTargets)&&e.multiTargets.length===0&&e._multiEnabled)))){alert('数値を確認してください。複数同時選択は1項目以上チェックし、0で割らないでください。');return;}data.simpleEffects.forEach(e=>delete e._multiEnabled);}
@@ -1670,7 +1692,7 @@ el('rollDice').onclick=()=>{const count=Number(el('diceCount').value),faces=Numb
 /* NPC tactical advisor v0.4: AP-constrained offensive skill planning, suggestions only. */
 (()=>{
 const panel=document.createElement('details');panel.className='panel compact-toggle';panel.id='npcAdvisor';
-panel.innerHTML=`<summary>🤖 NPC対戦モード（Ver.0.9.1・武装一覧レイアウト修正版）</summary><div class="muted" style="font-size:12px">対戦相手：🔵 ブラボー（固定）</div><div class="fields" style="margin-top:8px"><label>リアクション方針<select id="npcDefensePolicy"><option value="assault">🔥 猛攻（可能なら使用）</option><option value="steady">🛡️ 堅実（HP条件）</option></select></label><label>堅実：発動HP％以下<input id="npcDefenseHp" type="number" min="1" max="100" value="50"></label></div><label style="display:block;font-size:12px;margin-top:5px"><input type="checkbox" id="npcAutoShield" checked> 装備中のシールドを自動選択（ダメージ確定は手動）</label><div class="regrow" style="margin-top:9px"><label style="font-size:13px;display:flex;align-items:center;gap:6px"><input type="checkbox" id="npcWeaponLimit" style="width:18px!important;height:18px!important;min-width:18px!important;vertical-align:middle;margin:0 6px 0 0;padding:0"> 武装使用制限あり</label><details id="npcWeaponFold" style="margin-top:7px"><summary>⚔️ 武装（全武装使用可能）</summary><div id="npcWeaponChoices" style="display:grid;gap:5px;margin:8px 0"></div><div class="regrow"><button type="button" id="npcWeaponAll">全選択</button><button type="button" id="npcWeaponNone">全解除</button></div></details></div><button id="npcThink" type="button" style="width:100%;margin-top:10px">🧠 AP内の行動を考える</button><div class="regrow" style="margin-top:10px"><div class="npc-stage-row"><button id="npcDeclare" type="button">⚔️ 攻撃</button><button id="npcHit" type="button">🎯 命中</button><button id="npcMiss" type="button">💨 回避成功</button></div><div class="npc-damage-row"><input id="npcDamageValue" type="number" min="0" step="1" inputmode="numeric" placeholder="ダメージ値" aria-label="ダメージ値"><button id="npcDamage" type="button">ダメージ🔥</button></div><div class="muted" style="font-size:11px;margin-top:5px">各ボタンは独立して判断します。ダメージは下の確認欄で確定してください。</div><div id="npcDeclareStatus" class="muted" aria-live="polite" style="margin-top:7px">ボタンを押した時点の機体・武装・状態で防御判断します。</div></div><div id="npcOutput" style="white-space:pre-wrap;line-height:1.65;margin-top:9px;font-size:13px" aria-live="polite">機体別APと攻撃スキルを考慮して行動を提案します。提案のみで自動実行しません。</div>`;
+panel.innerHTML=`<summary>🤖 NPC対戦モード（Ver.1.0・発動タイミング対応）</summary><div class="muted" style="font-size:12px">対戦相手：🔵 ブラボー（固定）</div><div class="fields" style="margin-top:8px"><label>リアクション方針<select id="npcDefensePolicy"><option value="assault">🔥 猛攻（可能なら使用）</option><option value="steady">🛡️ 堅実（HP条件）</option></select></label><label>堅実：発動HP％以下<input id="npcDefenseHp" type="number" min="1" max="100" value="50"></label></div><label style="display:block;font-size:12px;margin-top:5px"><input type="checkbox" id="npcAutoShield" checked> 装備中のシールドを自動選択（ダメージ確定は手動）</label><div class="regrow" style="margin-top:9px"><label style="font-size:13px;display:flex;align-items:center;gap:6px"><input type="checkbox" id="npcWeaponLimit" style="width:18px!important;height:18px!important;min-width:18px!important;vertical-align:middle;margin:0 6px 0 0;padding:0"> 武装使用制限あり</label><details id="npcWeaponFold" style="margin-top:7px"><summary>⚔️ 武装（全武装使用可能）</summary><div id="npcWeaponChoices" style="display:grid;gap:5px;margin:8px 0"></div><div class="regrow"><button type="button" id="npcWeaponAll">全選択</button><button type="button" id="npcWeaponNone">全解除</button></div></details></div><button id="npcThink" type="button" style="width:100%;margin-top:10px">🧠 AP内の行動を考える</button><div class="regrow" style="margin-top:10px"><div class="npc-stage-row"><button id="npcDeclare" type="button">⚔️ 攻撃</button><button id="npcHit" type="button">🎯 命中</button><button id="npcMiss" type="button">💨 回避成功</button></div><div class="npc-damage-row"><input id="npcDamageValue" type="number" min="0" step="1" inputmode="numeric" placeholder="ダメージ値" aria-label="ダメージ値"><button id="npcDamage" type="button">ダメージ🔥</button></div><div class="muted" style="font-size:11px;margin-top:5px">各ボタンは独立して判断します。ダメージは下の確認欄で確定してください。</div><div id="npcDeclareStatus" class="muted" aria-live="polite" style="margin-top:7px">ボタンを押した時点の機体・武装・状態で防御判断します。</div></div><div id="npcOutput" style="white-space:pre-wrap;line-height:1.65;margin-top:9px;font-size:13px" aria-live="polite">機体別APと攻撃スキルを考慮して行動を提案します。提案のみで自動実行しません。</div>`;
 document.getElementById('battleTab').append(panel);
 const out=panel.querySelector('#npcOutput');
 const NPC_SIDE=1;
@@ -1802,6 +1824,12 @@ function clearNpcReaction(){
  npcArmed=[];
 }
 function npcTiming(s){
+ const t=s.npcActivationTiming;
+ if(t&&typeof t==='object'){
+  const selected=[t.enemyDeclare?'declare':null,t.enemyHit?'hit':null,t.enemyDamage?'damage':null].filter(Boolean);
+  return selected;
+ }
+
  const desc=[s.notes,s.description,s.source,s.activationTiming,s.simpleTiming].filter(v=>typeof v==='string').join(' ');
  if(/ダメージ(値|確定|算出|決定)(後|時)|ダメージを受け(た|る)時|被ダメージ時/.test(desc))return 'damage';
  if(/命中(後|時|した時|確定後)|被弾(時|後)/.test(desc))return 'hit';
@@ -1815,11 +1843,16 @@ function npcReactionReason(side,s,stage='declare'){
  if(skillMode(side,s)!=='off')return 'すでに発動中／反動中';
  const ready=skillReadyError(side,s);if(ready)return ready;
  const timing=npcTiming(s);if(!timing)return 'リアクション時期を識別できない';
- if(timing!==stage)return '発動時期が異なる（'+timing+'）';
+ if(Array.isArray(timing)?!timing.includes(stage):timing!==stage)return '発動時期が異なる';
  const effects=skillEffectsFor(side,s);
  const allowed=stage==='declare'?['evade','回避']:stage==='hit'?['physical','optical','物理装甲','光学装甲']:['physical','optical','物理装甲','光学装甲'];
- if(!effects.some(e=>allowed.includes(e.target)&&(!e.targetSide||e.targetSide==='self')&&Number(e.value)>0))return '対応する数値型の防御効果なし';
- if(effects.some(e=>e.targetSide==='enemy'||!allowed.includes(e.target)))return '複合効果は安全のため手動';
+ const isStatSwap=stage==='declare'&&/NT的直感/.test(s.name||'')&&/回避判定時に感覚値を使用/.test([s.notes,s.displayText].join(' '));
+ if(isStatSwap){
+  const stats=statsFor(side),evade=Number(stats['回避'])||0,sense=Number(stats['感覚'])||0;
+  // Passive modifiers are already included by the battle engine's stat resolver.
+  if(sense<=evade&&!/サイコフレーム/.test((machineFor(side)?.skills||[]).map(x=>x.name).join(' ')))return '能力値置換の利点なし';
+ }else if(!effects.some(e=>allowed.includes(e.target)&&(!e.targetSide||e.targetSide==='self')&&Number(e.value)>0))return '対応する数値型の防御効果なし';
+ if(!isStatSwap&&effects.some(e=>e.targetSide==='enemy'||!allowed.includes(e.target)))return '複合効果は安全のため手動';
  if(shouldRecoil(s)||isDurationSkill(s))return '反動／持続型は手動';
  const c=simpleCostInfo(s);
  if(Number(document.getElementById('en'+(side?'B':'A')).value)<c.en)return 'EN不足';
@@ -1845,7 +1878,13 @@ function npcActivate(side,stage,damage=null){
   if(reason){skipped.push(skill.name+'：'+reason);continue;}
   if(!npcShouldUse(side,skill,damage)){skipped.push(skill.name+'：堅実HP条件未達');continue;}
   skillStateSet(side,skill,'active',true,false);
-  if(skillMode(side,skill)==='active'){npcArmed.push({side,skill});used.push(skill.name)}
+  if(skillMode(side,skill)==='active'){
+   if(stage==='declare'&&/NT的直感/.test(skill.name||'')){
+    const defStat=document.getElementById('defStat');
+    if(defStat)defStat.value='感覚';
+   }
+   npcArmed.push({side,skill});used.push(skill.name)
+  }
   else skipped.push(skill.name+'：発動処理が失敗');
  }
  return {used,skipped};
@@ -1877,7 +1916,7 @@ panel.querySelector('#npcDeclare').addEventListener('click',()=>{
  const result=sel===attacker?npcActivate(side,'declare'):{used:[],skipped:[]};
  const triggered=result.used;
  const target=side===1?'🔵 ブラボー':'🔴 アルファ';
- status.textContent=`⚔️ 攻撃宣言を受理：${target}へ「${weaponName}」／距離${distance(units[attacker],units[side])}／射線${lineOk?'クリア':'遮断'}。${rangeOk===null?'射程判定は攻撃側ユニットを選択して確認してください。':rangeOk?'射程内。':'射程外。'} ${sel!==attacker?'⚠️ 攻撃側ユニットを選択してください。防御自動発動は保留。':triggered.length?'🛡️ 自動防御：'+triggered.join('、')+'（次の命中判定まで有効）':'発動なし。'+result.skipped.map(x=>'［'+x+'］').join(' ')} ※カセットの数値効果と発動時期を確認。`;
+ status.textContent=`⚔️ 攻撃宣言を受理：${target}へ「${weaponName}」／距離${distance(units[attacker],units[side])}／射線${lineOk?'クリア':'遮断'}。${rangeOk===null?'射程判定は攻撃側ユニットを選択して確認してください。':rangeOk?'射程内。':'射程外。'} ${sel!==attacker?'⚠️ 攻撃側ユニットを選択してください。防御自動発動は保留。':triggered.length?'🛡️ 自動防御：'+triggered.join('、')+'（次の命中判定まで有効）' :'発動なし。'}`;
 });
 panel.querySelector('#npcHit').addEventListener('click',()=>{
  clearNpcReaction();
