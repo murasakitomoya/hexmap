@@ -1,7 +1,7 @@
 {
   "format": "hexmap-combined-v1",
   "schemaVersion": 2,
-  "exportedAt": "2026-11-16T14:02:31.354Z",
+  "exportedAt": "2026-11-20T00:52:56.984Z",
   "cassettes": {
     "weapons": [
       {
@@ -4548,7 +4548,7 @@
           "name": "隠密",
           "kind": "パイロットスキル",
           "notes": "効果=戦闘時、このユニットの回避判定総計+1。\n発動条件=回避判定ダイスを振る前に宣言。",
-          "displayText": "命中判定ダイスを振る前に発動可能。\nこのユニットの回避判定総計を+1。\n攻撃宣言1回分に影響。",
+          "displayText": "相手の攻撃宣言時、命中判定の前に発動可能。\nこのユニットの回避判定総計を+1。\n攻撃宣言1回分に影響。",
           "skillCategory": "防御系",
           "activationType": "reaction",
           "boost": {
